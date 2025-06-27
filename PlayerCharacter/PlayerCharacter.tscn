@@ -18,3 +18,4 @@ texture = ExtResource("1_pult7")
 shape = SubResource("RectangleShape2D_pe5a2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -147)
