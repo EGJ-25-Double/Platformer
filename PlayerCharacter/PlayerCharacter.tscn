@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
 size = Vector2(20, 50)
 
-[node name="PlayerCharacter" type="RigidBody2D"]
+[node name="PlayerCharacter" type="CharacterBody2D"]
 script = ExtResource("1_v4vvu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
