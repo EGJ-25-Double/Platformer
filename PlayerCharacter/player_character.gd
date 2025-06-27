@@ -2,7 +2,7 @@ extends RigidBody2D
 
 @export var speed = 400
 
-func _process(delta):
+func _physics_process(delta: float) -> void:
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_left"):
 		velocity.x += -1
@@ -10,5 +10,4 @@ func _process(delta):
 		velocity.x += 1
 		
 	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
-	position += velocity * delta
+		linear_velocity = velocity.normalized() * speed
