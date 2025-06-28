@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://euonwkia5iwt" path="res://assets/character/jambe_droiteAsset_47.png" id="5_dyuu2"]
 [ext_resource type="Texture2D" uid="uid://beaffkby5jpbh" path="res://assets/character/jambe_gaucheAsset_48.png" id="6_ofxpx"]
 [ext_resource type="Texture2D" uid="uid://2alave1lskma" path="res://assets/character/corpsAsset_49.png" id="7_6mx01"]
-[ext_resource type="Script" uid="uid://cnkd55vdp7d00" path="res://PlayerCharacter/PlayerCharacterAnimation.gd" id="10_nbdcw"]
+[ext_resource type="Script" path="res://PlayerCharacter/PlayerCharacterAnimation.gd" id="10_nbdcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
 size = Vector2(42, 50)
@@ -329,3 +329,5 @@ root_node = NodePath("%Sprite/FootR")
 tree_root = SubResource("AnimationNodeStateMachine_nbdcw")
 anim_player = NodePath("../AnimationPlayer")
 script = ExtResource("10_nbdcw")
+
+[node name="Climb" type="Node" parent="."]
