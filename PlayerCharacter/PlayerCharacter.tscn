@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
 [ext_resource type="Texture2D" uid="uid://bfb4whhloeotg" path="res://assets/character/teteAsset_50.png" id="2_jglra"]
 [ext_resource type="Texture2D" uid="uid://c2j4wmiv2stdq" path="res://assets/character/bras_droitAsset_45.png" id="3_5vfnn"]
-[ext_resource type="Script" uid="uid://b8qhorun64qce" path="res://PlayerCharacter/power_selection.gd" id="3_u1221"]
+[ext_resource type="Script" path="res://PlayerCharacter/power_selection.gd" id="3_u1221"]
 [ext_resource type="Texture2D" uid="uid://cvcl1cpu488nk" path="res://assets/character/bras_gaucheAsset_46.png" id="4_nbdcw"]
 [ext_resource type="Texture2D" uid="uid://euonwkia5iwt" path="res://assets/character/jambe_droiteAsset_47.png" id="5_dyuu2"]
 [ext_resource type="Texture2D" uid="uid://beaffkby5jpbh" path="res://assets/character/jambe_gaucheAsset_48.png" id="6_ofxpx"]
@@ -259,8 +259,8 @@ states/Run/position = Vector2(462, 100.5)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_ofxpx"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_6mx01"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_nbdcw")]
 
 [node name="PlayerCharacter" type="CharacterBody2D"]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 7
+collision_mask = 7
 script = ExtResource("1_v4vvu")
 
 [node name="Sprite" type="Node2D" parent="."]

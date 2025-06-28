@@ -47,6 +47,10 @@ change_skin={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_3="curtain layer"
+
 [rendering]
 
 2d/snap/snap_2d_transforms_to_pixel=true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dc8utgufiqqq4"]
+[gd_scene load_steps=14 format=4 uid="uid://dc8utgufiqqq4"]
 
 [ext_resource type="Texture2D" uid="uid://xku6sbedgwr6" path="res://assets/city_/midback_banderole2Asset 31.png" id="2_jjrxe"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="2_l804v"]
@@ -8,10 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://n7dsyd0cbri3" path="res://assets/posters/poster2.png" id="4_2lufi"]
 [ext_resource type="Texture2D" uid="uid://c30d4cv8jf0o3" path="res://assets/city_/midback_stand2Asset 26.png" id="4_qmjlt"]
 [ext_resource type="AudioStream" uid="uid://dw8bsb1nesa3a" path="res://sounds/EGJ25_MusiqueAlienV1.mp3" id="9_jjrxe"]
-[ext_resource type="Texture2D" uid="uid://8kbyctgpkx18" path="res://assets/posters/poster3.png" id="11_e2kap"]
 [ext_resource type="PackedScene" uid="uid://cxt54yhtnihov" path="res://Portal/Portal.tscn" id="9_qmjlt"]
-[ext_resource type="TileSet" uid="uid://cqei60bxwj1u0" path="res://map/map2.tres" id="10_e2kap"]
+[ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="10_e2kap"]
+[ext_resource type="Texture2D" uid="uid://8kbyctgpkx18" path="res://assets/posters/poster3.png" id="11_e2kap"]
 [ext_resource type="Texture2D" uid="uid://brvbavs3r1ju3" path="res://assets/character_r.png" id="12_e2kap"]
+[ext_resource type="PackedScene" uid="uid://c401n4ovod8nj" path="res://Curtains/Curtains.tscn" id="13_gyiq0"]
 
 [node name="Map" type="Node2D"]
 
@@ -111,12 +112,31 @@ autoplay = true
 position = Vector2(3224, 13.9999)
 scale = Vector2(0.104, 0.104)
 texture = ExtResource("11_e2kap")
-[node name="Node" type="Node" parent="."]
 
-[node name="Portal2" parent="Node" node_paths=PackedStringArray("connected_portal") instance=ExtResource("9_qmjlt")]
+[node name="Portals" type="Node" parent="."]
+
+[node name="Portal2" parent="Portals" node_paths=PackedStringArray("connected_portal") instance=ExtResource("9_qmjlt")]
 position = Vector2(1594, 1658)
 connected_portal = NodePath("../Portal")
 
-[node name="Portal" parent="Node" node_paths=PackedStringArray("connected_portal") instance=ExtResource("9_qmjlt")]
+[node name="Portal" parent="Portals" node_paths=PackedStringArray("connected_portal") instance=ExtResource("9_qmjlt")]
 position = Vector2(1965, 208)
 connected_portal = NodePath("../Portal2")
+
+[node name="Curtains" type="Node2D" parent="."]
+position = Vector2(474, 0)
+
+[node name="Curtains5" parent="Curtains" instance=ExtResource("13_gyiq0")]
+position = Vector2(949, 29)
+
+[node name="Curtains4" parent="Curtains" instance=ExtResource("13_gyiq0")]
+position = Vector2(949, 79)
+
+[node name="Curtains3" parent="Curtains" instance=ExtResource("13_gyiq0")]
+position = Vector2(949, 127)
+
+[node name="Curtains2" parent="Curtains" instance=ExtResource("13_gyiq0")]
+position = Vector2(949, 176)
+
+[node name="Curtains" parent="Curtains" instance=ExtResource("13_gyiq0")]
+position = Vector2(949, 226)
