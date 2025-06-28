@@ -13,6 +13,6 @@ func _input(event):
 			current_jump += 1
 			player.velocity = Vector2(0, -1) * player.jump_impulse * jump_impulse_ratio
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if player.is_on_floor():
 		current_jump = 0

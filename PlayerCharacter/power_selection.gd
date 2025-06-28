@@ -7,12 +7,6 @@ func _input(event):
 	if event.is_action_pressed("change_skin"):
 		get_next_skin()
 
-func _ready():
-	pass
-
-func _process(delta):
-	pass
-
 func set_current_skin():
 	for child in get_children():
 		remove_child(child)

@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://df5bbatndur1y" path="res://assets/character/Layers02/Alien_GJ_0000s_0006_tail07.png" id="9_dyuu2"]
 [ext_resource type="Texture2D" uid="uid://dpxoe7y5iif7l" path="res://assets/character/Skins/Alien_masques_0005_Al.png" id="9_u4e74"]
 [ext_resource type="Script" uid="uid://cnkd55vdp7d00" path="res://PlayerCharacter/PlayerCharacterAnimation.gd" id="10_nbdcw"]
-[ext_resource type="Script" uid="uid://bfieuqqmw1qfl" path="res://power/double_jump.gd" id="12_6mx01"]
+[ext_resource type="Script" path="res://power/double_jump.gd" id="12_6mx01"]
 [ext_resource type="Script" uid="uid://cn4bi4yt4c28e" path="res://power/wall_jump.gd" id="13_hs44b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
