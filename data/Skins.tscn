@@ -1,28 +1,35 @@
-[gd_scene load_steps=8 format=3 uid="uid://cm1w3uhtb8rvw"]
+[gd_scene load_steps=10 format=3 uid="uid://cm1w3uhtb8rvw"]
 
 [ext_resource type="Script" uid="uid://hrmdlkuy34x5" path="res://data/skins_set.gd" id="1_8avya"]
 [ext_resource type="Script" uid="uid://ulincx2500mc" path="res://data/skin_data.gd" id="2_m6tei"]
 [ext_resource type="Script" uid="uid://cn4bi4yt4c28e" path="res://power/wall_jump.gd" id="3_8mq4t"]
 [ext_resource type="Script" uid="uid://bapg6kecuicq5" path="res://power/pass_through_curtains.gd" id="4_6pg5i"]
+[ext_resource type="Texture2D" uid="uid://y8g27b3mhb27" path="res://assets/character/Skins/Alien_masques_0003_Spouderman.png" id="4_pymlq"]
 
 [sub_resource type="Resource" id="Resource_m6tei"]
 script = ExtResource("2_m6tei")
-skin_name = "default"
+skin_name = "None"
 metadata/_custom_type_script = "uid://ulincx2500mc"
 
 [sub_resource type="Resource" id="Resource_pymlq"]
 script = ExtResource("2_m6tei")
-skin_name = "mickey"
+skin_name = "Mickey"
 power = ExtResource("4_6pg5i")
 metadata/_custom_type_script = "uid://ulincx2500mc"
 
 [sub_resource type="Resource" id="Resource_6pg5i"]
 script = ExtResource("2_m6tei")
-skin_name = "spider_man"
+skin_name = "SpiderMan"
 power = ExtResource("3_8mq4t")
+pickable_texture = ExtResource("4_pymlq")
+metadata/_custom_type_script = "uid://ulincx2500mc"
+
+[sub_resource type="Resource" id="Resource_sk570"]
+script = ExtResource("2_m6tei")
+skin_name = "Vador"
 metadata/_custom_type_script = "uid://ulincx2500mc"
 
 [node name="Skins" type="Node"]
 script = ExtResource("1_8avya")
-skins = Array[ExtResource("2_m6tei")]([SubResource("Resource_m6tei"), SubResource("Resource_pymlq"), SubResource("Resource_6pg5i")])
+skins = Array[ExtResource("2_m6tei")]([SubResource("Resource_m6tei"), SubResource("Resource_pymlq"), SubResource("Resource_6pg5i"), SubResource("Resource_sk570")])
 metadata/_custom_type_script = "uid://hrmdlkuy34x5"

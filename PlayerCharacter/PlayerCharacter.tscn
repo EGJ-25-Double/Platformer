@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://ds3igeg01sjso"]
+[gd_scene load_steps=50 format=3 uid="uid://ds3igeg01sjso"]
 
 [ext_resource type="Script" uid="uid://dnvemqwbwwoih" path="res://PlayerCharacter/player_character.gd" id="1_v4vvu"]
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
@@ -6,11 +6,16 @@
 [ext_resource type="Script" uid="uid://b8qhorun64qce" path="res://PlayerCharacter/power_selection.gd" id="3_u1221"]
 [ext_resource type="Texture2D" uid="uid://dnmtotscxnpcl" path="res://assets/character/Layers02/Alien_GJ_0000s_0005_arm06.png" id="4_dyuu2"]
 [ext_resource type="Texture2D" uid="uid://cq67bsqlx1hhm" path="res://assets/character/Skins/Alien_masques_0000_Dv.png" id="4_hs44b"]
+[ext_resource type="Texture2D" uid="uid://bintc73usa4mt" path="res://assets/character/Skins/Alien_masques_0001_Link.png" id="5_i84k0"]
 [ext_resource type="Texture2D" uid="uid://b3d8u8wmaa37v" path="res://assets/character/Layers02/Alien_GJ_0000s_0001_arm02.png" id="5_ofxpx"]
 [ext_resource type="Texture2D" uid="uid://sq2humyimsk" path="res://assets/character/Layers02/Alien_GJ_0000s_0003_Leg04.png" id="6_nbdcw"]
+[ext_resource type="Texture2D" uid="uid://duch0k1tm8s4y" path="res://assets/character/Skins/Alien_masques_0002_Mickey.png" id="6_uutuo"]
+[ext_resource type="Texture2D" uid="uid://y8g27b3mhb27" path="res://assets/character/Skins/Alien_masques_0003_Spouderman.png" id="7_jj1e1"]
 [ext_resource type="Texture2D" uid="uid://dxbuhjl7pmddw" path="res://assets/character/Layers02/Alien_GJ_0000s_0002_Leg03.png" id="7_nbdcw"]
+[ext_resource type="Texture2D" uid="uid://dnfh7l0bg0x1p" path="res://assets/character/Skins/Alien_masques_0004_Sailor.png" id="8_6h7vh"]
 [ext_resource type="Texture2D" uid="uid://clit7bi8cpi4n" path="res://assets/character/Layers02/Alien_GJ_0000s_0004_Layer-1.png" id="8_nbdcw"]
 [ext_resource type="Texture2D" uid="uid://df5bbatndur1y" path="res://assets/character/Layers02/Alien_GJ_0000s_0006_tail07.png" id="9_dyuu2"]
+[ext_resource type="Texture2D" uid="uid://dpxoe7y5iif7l" path="res://assets/character/Skins/Alien_masques_0005_Al.png" id="9_u4e74"]
 [ext_resource type="Script" uid="uid://cnkd55vdp7d00" path="res://PlayerCharacter/PlayerCharacterAnimation.gd" id="10_nbdcw"]
 [ext_resource type="Script" uid="uid://bfieuqqmw1qfl" path="res://power/double_jump.gd" id="12_6mx01"]
 [ext_resource type="Script" uid="uid://cn4bi4yt4c28e" path="res://power/wall_jump.gd" id="13_hs44b"]
@@ -121,6 +126,58 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_hs44b"]
+resource_name = "Hanged"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/FootR:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.785397]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite/FootL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/HandR:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.309]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite/HandL:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
 }
 
 [sub_resource type="Animation" id="Animation_52dax"]
@@ -373,58 +430,6 @@ tracks/4/keys = {
 "values": [Vector2(-700, -1500), Vector2(-700, -1500)]
 }
 
-[sub_resource type="Animation" id="Animation_hs44b"]
-resource_name = "Hanged"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite/FootR:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.785397]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite/FootL:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.5708]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite/HandR:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.309]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite/HandL:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.5708]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u1221"]
 _data = {
 &"Climb": SubResource("Animation_ofxpx"),
@@ -465,12 +470,6 @@ xfade_time = 0.1
 switch_mode = 1
 advance_mode = 2
 advance_expression = "state == RUN"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nbdcw"]
-xfade_time = 0.1
-switch_mode = 1
-advance_mode = 2
-advance_expression = "state != RUN"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dyuu2"]
 xfade_time = 0.1
@@ -562,11 +561,43 @@ scale = Vector2(4.45, 4.45)
 texture = ExtResource("3_nbdcw")
 offset = Vector2(-176, 114)
 
-[node name="SkinMask" type="Sprite2D" parent="Sprite/Head"]
-visible = false
+[node name="Masks" type="Node2D" parent="Sprite/Head"]
+unique_name_in_owner = true
 position = Vector2(-292, 138)
+
+[node name="Vador" type="Sprite2D" parent="Sprite/Head/Masks"]
+visible = false
 texture = ExtResource("4_hs44b")
-offset = Vector2(-8, -29)
+offset = Vector2(2, 2)
+
+[node name="Link" type="Sprite2D" parent="Sprite/Head/Masks"]
+visible = false
+texture = ExtResource("5_i84k0")
+offset = Vector2(8, 0)
+
+[node name="Mickey" type="Sprite2D" parent="Sprite/Head/Masks"]
+visible = false
+position = Vector2(-14, -28)
+texture = ExtResource("6_uutuo")
+offset = Vector2(8, 0)
+
+[node name="SpiderMan" type="Sprite2D" parent="Sprite/Head/Masks"]
+visible = false
+position = Vector2(-16, 42)
+texture = ExtResource("7_jj1e1")
+offset = Vector2(8, 0)
+
+[node name="Sailor" type="Sprite2D" parent="Sprite/Head/Masks"]
+visible = false
+position = Vector2(22, 40)
+texture = ExtResource("8_6h7vh")
+offset = Vector2(8, 0)
+
+[node name="AI" type="Sprite2D" parent="Sprite/Head/Masks"]
+visible = false
+position = Vector2(2, -66)
+texture = ExtResource("9_u4e74")
+offset = Vector2(8, 0)
 
 [node name="HandR" type="Sprite2D" parent="Sprite"]
 position = Vector2(-1200, -1000)
@@ -638,6 +669,8 @@ process_mode = 4
 
 [node name="DoubleJump" type="Node" parent="PowerDefault"]
 script = ExtResource("12_6mx01")
+withOwner = true
 
 [node name="WallJump" type="Node" parent="PowerDefault"]
 script = ExtResource("13_hs44b")
+withOwner = true
