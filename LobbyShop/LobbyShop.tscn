@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://866ayky724h0"]
+
+[ext_resource type="Texture2D" uid="uid://d0a4ijswtedqk" path="res://LobbyShop/LobbyShop.png" id="1_agay1"]
+[ext_resource type="Script" uid="uid://c33edcer1x1s4" path="res://LobbyShop/lobby_shop.gd" id="1_coted"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_coted"]
+size = Vector2(300, 300)
+
+[node name="LobbyShop" type="Area2D"]
+script = ExtResource("1_coted")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.00001, -1)
+scale = Vector2(0.911854, 0.867052)
+texture = ExtResource("1_agay1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_coted")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
