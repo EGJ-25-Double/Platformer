@@ -113,7 +113,6 @@ scale = Vector2(0.366659, 0.233161)
 texture = ExtResource("4_jjrxe")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-visible = false
 texture_filter = 1
 position = Vector2(-583, -142)
 scale = Vector2(10, 10)

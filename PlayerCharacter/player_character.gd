@@ -3,14 +3,18 @@ class_name PlayerCharacter extends CharacterBody2D
 @export var jump_impulse = 400
 @export var speed = 600.0
 @export var acceleration := 1800.0
-@export var friction := 1000.0
+@export var friction := 1200.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("jump") and is_on_floor() :
+	if event.is_action_pressed("jump") and is_on_floor():
 		print(is_on_floor())
 		velocity.y = -jump_impulse
+
+
+func _process(delta: float) -> void:
+	pass
 
 func _physics_process(delta: float) -> void:
 	var direction = 0.0

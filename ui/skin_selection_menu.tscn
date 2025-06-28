@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bc4lp53848c3g"]
+[gd_scene load_steps=2 format=3 uid="uid://bc4lp53848c3g"]
+
+[ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="1_8hhec"]
 
 [node name="SkinSelectionMenu" type="CanvasLayer"]
 
@@ -13,7 +15,17 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 
-[node name="SubViewport" type="SubViewport" parent="CenterContainer/VBoxContainer/PanelContainer"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CenterContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="CenterContainer/VBoxContainer/PanelContainer/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(60, 60)
+render_target_update_mode = 4
+
+[node name="PlayerCharacter" parent="CenterContainer/VBoxContainer/PanelContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_8hhec")]
+position = Vector2(28, 31)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2

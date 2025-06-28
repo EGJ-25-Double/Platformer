@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ds3igeg01sjso"]
+[gd_scene load_steps=5 format=3 uid="uid://ds3igeg01sjso"]
 
 [ext_resource type="Texture2D" uid="uid://boiue1s7djcct" path="res://icon.svg" id="1_pult7"]
 [ext_resource type="Script" uid="uid://dnvemqwbwwoih" path="res://PlayerCharacter/player_character.gd" id="1_v4vvu"]
+[ext_resource type="Script" uid="uid://cn4bi4yt4c28e" path="res://power/double_jump.gd" id="3_52dax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
 size = Vector2(20, 50)
@@ -19,3 +20,10 @@ shape = SubResource("RectangleShape2D_pe5a2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -147)
+
+[node name="Power" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="DoubleJumpPower" type="Node" parent="Power"]
+script = ExtResource("3_52dax")
+metadata/_custom_type_script = "uid://cn4bi4yt4c28e"
