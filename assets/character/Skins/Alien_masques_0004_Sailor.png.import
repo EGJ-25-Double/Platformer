@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beaffkby5jpbh"
-path="res://.godot/imported/jambe_gaucheAsset_48.png-6ff3bd76700a19de51522affcf4b2865.ctex"
+uid="uid://dnfh7l0bg0x1p"
+path="res://.godot/imported/Alien_masques_0004_Sailor.png-96d014cd47e75807f18874accf91c153.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/jambe_gaucheAsset_48.png"
-dest_files=["res://.godot/imported/jambe_gaucheAsset_48.png-6ff3bd76700a19de51522affcf4b2865.ctex"]
+source_file="res://assets/character/Skins/Alien_masques_0004_Sailor.png"
+dest_files=["res://.godot/imported/Alien_masques_0004_Sailor.png-96d014cd47e75807f18874accf91c153.ctex"]
 
 [params]
 

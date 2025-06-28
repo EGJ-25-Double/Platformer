@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://euonwkia5iwt"
-path="res://.godot/imported/jambe_droiteAsset_47.png-b432b5a7a61f9b5bba9d969a908eff2a.ctex"
+uid="uid://bintc73usa4mt"
+path="res://.godot/imported/Alien_masques_0001_Link.png-4fbbee99b6bd038ecd80780ecb9f35d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/jambe_droiteAsset_47.png"
-dest_files=["res://.godot/imported/jambe_droiteAsset_47.png-b432b5a7a61f9b5bba9d969a908eff2a.ctex"]
+source_file="res://assets/character/Skins/Alien_masques_0001_Link.png"
+dest_files=["res://.godot/imported/Alien_masques_0001_Link.png-4fbbee99b6bd038ecd80780ecb9f35d2.ctex"]
 
 [params]
 

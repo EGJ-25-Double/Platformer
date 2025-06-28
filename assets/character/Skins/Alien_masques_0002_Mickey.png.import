@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2j4wmiv2stdq"
-path="res://.godot/imported/bras_droitAsset_45.png-382a023b076ca70b8cfa5e6907db80cf.ctex"
+uid="uid://duch0k1tm8s4y"
+path="res://.godot/imported/Alien_masques_0002_Mickey.png-6206438d34a47fd1eebb6e8874fd50b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/bras_droitAsset_45.png"
-dest_files=["res://.godot/imported/bras_droitAsset_45.png-382a023b076ca70b8cfa5e6907db80cf.ctex"]
+source_file="res://assets/character/Skins/Alien_masques_0002_Mickey.png"
+dest_files=["res://.godot/imported/Alien_masques_0002_Mickey.png-6206438d34a47fd1eebb6e8874fd50b7.ctex"]
 
 [params]
 

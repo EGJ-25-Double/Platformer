@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfb4whhloeotg"
-path="res://.godot/imported/teteAsset_50.png-2228143bca1daf466fe3dcca3539dce2.ctex"
+uid="uid://y8g27b3mhb27"
+path="res://.godot/imported/Alien_masques_0003_Spouderman.png-8790cac232e1be778cb2b9c216d572af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/teteAsset_50.png"
-dest_files=["res://.godot/imported/teteAsset_50.png-2228143bca1daf466fe3dcca3539dce2.ctex"]
+source_file="res://assets/character/Skins/Alien_masques_0003_Spouderman.png"
+dest_files=["res://.godot/imported/Alien_masques_0003_Spouderman.png-8790cac232e1be778cb2b9c216d572af.ctex"]
 
 [params]
 
