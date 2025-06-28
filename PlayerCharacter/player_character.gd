@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, friction * delta)
 
 	if not is_on_floor():
-		velocity.y += gravity * (wall_gravity_ratio if is_on_wall() else 1) * delta
+		velocity.y += gravity * (wall_gravity_ratio if is_on_wall() and velocity.y > 0 else 1) * delta
 	move_and_slide()
 	
 	if velocity.x > 0:
