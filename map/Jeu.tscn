@@ -9,7 +9,7 @@
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="7_xpr5j"]
 [ext_resource type="Shader" uid="uid://b682goxc1s5ob" path="res://assets/BG/Ground/GroundFill.gdshader" id="8_isquk"]
 [ext_resource type="Texture2D" uid="uid://wuyfial0i7pl" path="res://assets/BG/Ground/BlackFill.png" id="9_ig5i8"]
-[ext_resource type="Script" uid="uid://jcbqq4eqib8p" path="res://map/background_invisible.gd" id="10_gl2p0"]
+[ext_resource type="Script" path="res://map/background_invisible.gd" id="10_gl2p0"]
 [ext_resource type="PackedScene" uid="uid://dc8pes0fpyysg" path="res://map/full_map.tscn" id="10_kawow"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8s6nd"]
@@ -67,7 +67,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_gl2p0")]
-position = Vector2(2779, -70)
+position = Vector2(3817, -164)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_5y575")
@@ -95,6 +95,16 @@ texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
 position = Vector2(-2544.42, -3016.2)
 scale = Vector2(0.397317, 0.826267)
+texture = ExtResource("9_ig5i8")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
+
+[node name="Sprite2D17" type="Sprite2D" parent="Outside"]
+show_behind_parent = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8s6nd")
+position = Vector2(4928.71, 3233.1)
+scale = Vector2(0.580658, 0.785967)
 texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
@@ -136,6 +146,66 @@ texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
 position = Vector2(-3246, 1645.1)
 scale = Vector2(0.204009, 0.396034)
+texture = ExtResource("9_ig5i8")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
+
+[node name="Sprite2D18" type="Sprite2D" parent="Outside"]
+show_behind_parent = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8s6nd")
+position = Vector2(-2750.52, 1102)
+scale = Vector2(0.303104, 0.215)
+texture = ExtResource("9_ig5i8")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
+
+[node name="Sprite2D19" type="Sprite2D" parent="Outside"]
+show_behind_parent = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8s6nd")
+position = Vector2(-427.5, 690.001)
+scale = Vector2(0.1705, 0.0790002)
+texture = ExtResource("9_ig5i8")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
+
+[node name="Sprite2D20" type="Sprite2D" parent="Outside"]
+show_behind_parent = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8s6nd")
+position = Vector2(153.5, 772.5)
+scale = Vector2(0.0543, 0.1065)
+texture = ExtResource("9_ig5i8")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
+
+[node name="Sprite2D21" type="Sprite2D" parent="Outside"]
+show_behind_parent = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8s6nd")
+position = Vector2(192.75, 1771.5)
+scale = Vector2(0.04655, 0.104833)
+texture = ExtResource("9_ig5i8")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
+
+[node name="Sprite2D22" type="Sprite2D" parent="Outside"]
+show_behind_parent = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8s6nd")
+position = Vector2(-428.75, 1605.5)
+scale = Vector2(0.17085, 0.0495)
+texture = ExtResource("9_ig5i8")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
+
+[node name="Sprite2D23" type="Sprite2D" parent="Outside"]
+show_behind_parent = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8s6nd")
+position = Vector2(-844.75, 1385.5)
+scale = Vector2(0.08885, 0.0321667)
 texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
@@ -270,11 +340,9 @@ region_rect = Rect2(0, 0, 10000, 6000)
 script = ExtResource("10_gl2p0")
 
 [node name="Area2D" type="Area2D" parent="Outside/to_make_invisible"]
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Outside/to_make_invisible/Area2D"]
 position = Vector2(-1264.65, 633.971)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_5y575")
 
 [node name="Map" parent="." instance=ExtResource("10_kawow")]

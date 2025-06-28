@@ -28,13 +28,24 @@ position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_e2kap")
 
 [node name="Short3" type="StaticBody2D" parent="Platforms1"]
-position = Vector2(680, 1661)
+position = Vector2(687, 1682)
 
 [node name="Sprite2D" type="Sprite2D" parent="Platforms1/Short3"]
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_gl75a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms1/Short3"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_e2kap")
+
+[node name="Short4" type="StaticBody2D" parent="Platforms1"]
+position = Vector2(511, 1595)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms1/Short4"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_gl75a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms1/Short4"]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_e2kap")
 
