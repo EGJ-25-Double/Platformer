@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://hrmdlkuy34x5" path="res://data/skins_set.gd" id="1_8avya"]
 [ext_resource type="Script" uid="uid://ulincx2500mc" path="res://data/skin_data.gd" id="2_m6tei"]
-[ext_resource type="Script" uid="uid://cn4bi4yt4c28e" path="res://power/wall_jump.gd" id="3_8mq4t"]
 [ext_resource type="Texture2D" uid="uid://duch0k1tm8s4y" path="res://assets/character/Skins/Alien_masques_0002_Mickey.png" id="3_euo2t"]
 [ext_resource type="Script" uid="uid://bapg6kecuicq5" path="res://power/pass_through_curtains.gd" id="4_6pg5i"]
 [ext_resource type="Texture2D" uid="uid://y8g27b3mhb27" path="res://assets/character/Skins/Alien_masques_0003_Spouderman.png" id="4_pymlq"]
+[ext_resource type="Script" uid="uid://dv0ct56qpv81v" path="res://power/climb.gd" id="6_euo2t"]
 [ext_resource type="Texture2D" uid="uid://cq67bsqlx1hhm" path="res://assets/character/Skins/Alien_masques_0000_Dv.png" id="7_p7v80"]
 
 [sub_resource type="Resource" id="Resource_m6tei"]
@@ -23,7 +23,7 @@ metadata/_custom_type_script = "uid://ulincx2500mc"
 [sub_resource type="Resource" id="Resource_6pg5i"]
 script = ExtResource("2_m6tei")
 skin_name = "SpiderMan"
-power = ExtResource("3_8mq4t")
+power = ExtResource("6_euo2t")
 pickable_texture = ExtResource("4_pymlq")
 metadata/_custom_type_script = "uid://ulincx2500mc"
 

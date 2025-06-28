@@ -540,6 +540,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(254.205, -81.8042)
 
 [node name="PlayerCharacter" type="CharacterBody2D"]
+z_index = 5
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("1_v4vvu")
