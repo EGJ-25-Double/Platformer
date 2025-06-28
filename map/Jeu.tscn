@@ -63,7 +63,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_gl2p0")]
-position = Vector2(381, 2294)
+position = Vector2(2525, 71)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_5y575")
@@ -82,6 +82,7 @@ scale = Vector2(0.08, 0.08)
 [node name="Level1" parent="Levels" instance=ExtResource("6_gl2p0")]
 
 [node name="Outside" type="TileMapLayer" parent="."]
+z_index = 1
 tile_set = ExtResource("7_xpr5j")
 
 [node name="Sprite2D8" type="Sprite2D" parent="Outside"]
@@ -252,7 +253,7 @@ offset = Vector2(-4979.54, -140.616)
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
 
-[node name="Sprite2D17" type="Sprite2D" parent="Outside"]
+[node name="to_make_invisible" type="Sprite2D" parent="Outside"]
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
