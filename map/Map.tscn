@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=13 format=4 uid="uid://dc8utgufiqqq4"]
-=======
 [gd_scene load_steps=14 format=4 uid="uid://dc8utgufiqqq4"]
->>>>>>> 5cc9ab5 (lvls)
 
 [ext_resource type="Texture2D" uid="uid://xku6sbedgwr6" path="res://assets/city_/midback_banderole2Asset 31.png" id="2_jjrxe"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="2_l804v"]
@@ -13,11 +9,8 @@
 [ext_resource type="AudioStream" uid="uid://dxyo1rrulgy4h" path="res://sounds/Musique/EGJ25_Musique_HumanWorldV2.mp3" id="8_qmjlt"]
 [ext_resource type="PackedScene" uid="uid://cxt54yhtnihov" path="res://Portal/Portal.tscn" id="9_qmjlt"]
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="10_e2kap"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://866ayky724h0" path="res://LobbyShop/LobbyShop.tscn" id="11_2lufi"]
-=======
 [ext_resource type="Texture2D" uid="uid://bb00kfyvv54fd" path="res://assets/platforms/platform_shortAsset 5.png" id="11_2lufi"]
->>>>>>> 5cc9ab5 (lvls)
 [ext_resource type="Texture2D" uid="uid://8kbyctgpkx18" path="res://assets/posters/poster3.png" id="11_e2kap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmjlt"]
@@ -120,13 +113,6 @@ connected_portal = NodePath("../Portal2")
 
 [node name="Levels" type="Node2D" parent="."]
 
-<<<<<<< HEAD
-[node name="StaticBody2D" type="StaticBody2D" parent="Platforms"]
-position = Vector2(1515, -399)
-
-[node name="Sprite2D" type="Sprite2D" parent="Platforms/StaticBody2D"]
-scale = Vector2(0.1, 0.1)
-=======
 [node name="Level1" type="Node2D" parent="Levels"]
 
 [node name="Platforms" type="Node2D" parent="Levels/Level1"]
@@ -138,16 +124,13 @@ position = Vector2(3265, 430)
 
 [node name="Sprite2D" type="Sprite2D" parent="Levels/Level1/Platforms/Long/Long1"]
 scale = Vector2(0.05, 0.05)
->>>>>>> 5cc9ab5 (lvls)
 texture = ExtResource("5_qmjlt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Level1/Platforms/Long/Long1"]
 shape = SubResource("RectangleShape2D_qmjlt")
 
-<<<<<<< HEAD
 [node name="LobbyShop" parent="Platforms" instance=ExtResource("11_2lufi")]
 position = Vector2(974, 709)
-=======
 [node name="Long3" type="StaticBody2D" parent="Levels/Level1/Platforms/Long"]
 position = Vector2(3304, -58)
 
