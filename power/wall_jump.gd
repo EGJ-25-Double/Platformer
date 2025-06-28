@@ -1,6 +1,7 @@
 class_name DoubleJumpPower extends Power
 
 @export var max_wall_jump := 2
+@export var jump_impulse_ratio := 1.4
 
 var current_wall_jump := 0
 
@@ -14,7 +15,7 @@ func _input(event):
 				return
 			var direction = -1 if collision.get_normal().x <= 0 else 1
 			current_wall_jump += 1
-			player.velocity = Vector2(direction, -1) * player.jump_impulse
+			player.velocity = Vector2(direction * 0.75, -1) * player.jump_impulse * jump_impulse_ratio
 
 func _process(delta: float) -> void:
 	if player.is_on_floor():
