@@ -21,5 +21,5 @@ func _input(event: InputEvent) -> void:
 	if not active:
 		return
 	if event.is_action_pressed("interact"):
-		$"/root/GameState".skins_owned.append(costume)
+		GameState.add_skin(costume.skin_name)
 		queue_free()
