@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://n7dsyd0cbri3" path="res://assets/posters/poster2.png" id="4_2lufi"]
 [ext_resource type="Texture2D" uid="uid://b4wveyawhaltc" path="res://assets/platforms/platform_longAsset 4.png" id="5_qmjlt"]
 [ext_resource type="AudioStream" uid="uid://dxyo1rrulgy4h" path="res://sounds/Musique/EGJ25_Musique_HumanWorldV2.mp3" id="8_qmjlt"]
-[ext_resource type="PackedScene" uid="uid://cxt54yhtnihov" path="res://Portal/Portal.tscn" id="9_qmjlt"]
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="10_e2kap"]
 [ext_resource type="Texture2D" uid="uid://bb00kfyvv54fd" path="res://assets/platforms/platform_shortAsset 5.png" id="11_2lufi"]
 [ext_resource type="Texture2D" uid="uid://8kbyctgpkx18" path="res://assets/posters/poster3.png" id="11_e2kap"]
+[ext_resource type="PackedScene" uid="uid://866ayky724h0" path="res://LobbyShop/LobbyShop.tscn" id="11_gyiq0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmjlt"]
 size = Vector2(150, 34)
@@ -97,18 +97,6 @@ autoplay = true
 position = Vector2(3753, 388)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("11_e2kap")
-
-[node name="Node" type="Node" parent="."]
-
-[node name="Portals" type="Node" parent="."]
-
-[node name="Portal2" parent="Portals" node_paths=PackedStringArray("connected_portal") instance=ExtResource("9_qmjlt")]
-position = Vector2(1594, 1658)
-connected_portal = NodePath("../Portal")
-
-[node name="Portal" parent="Portals" node_paths=PackedStringArray("connected_portal") instance=ExtResource("9_qmjlt")]
-position = Vector2(1965, 208)
-connected_portal = NodePath("../Portal2")
 
 [node name="Levels" type="Node2D" parent="."]
 
@@ -258,3 +246,6 @@ texture = ExtResource("11_2lufi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Level1/Platforms/Short/Short9"]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_e2kap")
+
+[node name="LobbyShop" parent="." instance=ExtResource("11_gyiq0")]
+position = Vector2(1048, 713)
