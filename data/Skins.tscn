@@ -1,14 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm1w3uhtb8rvw"]
+[gd_scene load_steps=6 format=3 uid="uid://cm1w3uhtb8rvw"]
 
 [ext_resource type="Script" uid="uid://hrmdlkuy34x5" path="res://data/skins_set.gd" id="1_8avya"]
 [ext_resource type="Script" uid="uid://ulincx2500mc" path="res://data/skin_data.gd" id="2_m6tei"]
+[ext_resource type="Script" uid="uid://cn4bi4yt4c28e" path="res://power/wall_jump.gd" id="3_8mq4t"]
 
 [sub_resource type="Resource" id="Resource_m6tei"]
 script = ExtResource("2_m6tei")
 skin_name = "default"
 metadata/_custom_type_script = "uid://ulincx2500mc"
 
+[sub_resource type="Resource" id="Resource_6pg5i"]
+script = ExtResource("2_m6tei")
+skin_name = "spider_man"
+power = ExtResource("3_8mq4t")
+metadata/_custom_type_script = "uid://ulincx2500mc"
+
 [node name="Skins" type="Node"]
 script = ExtResource("1_8avya")
-skins = Array[ExtResource("2_m6tei")]([SubResource("Resource_m6tei")])
+skins = Array[ExtResource("2_m6tei")]([SubResource("Resource_m6tei"), SubResource("Resource_6pg5i")])
 metadata/_custom_type_script = "uid://hrmdlkuy34x5"

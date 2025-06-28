@@ -1,8 +1,8 @@
 class_name DoubleJumpPower extends Power
 
-@export var max_wall_jump := 1
+@export var max_wall_jump := 2
+
 var current_wall_jump := 0
-@onready var player = owner as PlayerCharacter
 
 func _input(event):
 		if event.is_action_pressed("jump") and not player.is_on_floor() and player.is_on_wall():
