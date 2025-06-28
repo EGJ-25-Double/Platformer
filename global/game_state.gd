@@ -10,6 +10,7 @@ var skins_owned: Array[SkinData]
 func _ready():
 	add_skin("default")
 	add_skin("spider_man")
+	add_skin("mickey")
 
 func add_skin(name: String):
 	var new_skin = skins_list.skins.filter(func (s: SkinData): return s.skin_name == name)[0]

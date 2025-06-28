@@ -7,6 +7,15 @@ class_name PlayerCharacter extends CharacterBody2D
 @onready var time_since_last_teleport = 1000.0
 var teleport_cooldown = 5.0
 
+@onready var anim_player: AnimationPlayer = %AnimationPlayer
+
+enum AnimState {
+	DEFAULT,
+	CLIMBING,
+}
+
+var animState := AnimState.DEFAULT
+
 @onready var sprite: Node2D = %Sprite
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")

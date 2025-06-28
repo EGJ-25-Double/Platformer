@@ -21,5 +21,10 @@ func _process(delta):
 		state = RUN if player.velocity.x else IDLE
 	elif player.is_on_wall() and player.velocity.y >= 0:
 		state = HANGED
+	elif player.animState == player.AnimState.CLIMBING:
+		if player.velocity.x:
+			state = RUN
+		else:
+			state = CLIMB
 	else:
 		state = JUMP
