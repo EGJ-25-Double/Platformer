@@ -13,7 +13,7 @@
 [ext_resource type="Script" uid="uid://cnkd55vdp7d00" path="res://PlayerCharacter/PlayerCharacterAnimation.gd" id="10_nbdcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
-size = Vector2(42, 50)
+size = Vector2(80, 148)
 
 [sub_resource type="Animation" id="Animation_ofxpx"]
 resource_name = "climb"
@@ -455,7 +455,7 @@ script = ExtResource("1_v4vvu")
 [node name="Sprite" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -2.38419e-07)
-scale = Vector2(0.01, 0.01)
+scale = Vector2(0.03, 0.03)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite"]
 visible = false
@@ -509,6 +509,7 @@ shape = SubResource("RectangleShape2D_pe5a2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -147)
+zoom = Vector2(0.5, 0.5)
 
 [node name="Power" type="Node" parent="."]
 unique_name_in_owner = true
