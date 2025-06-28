@@ -400,11 +400,13 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6mx01"]
 xfade_time = 0.1
+switch_mode = 1
 advance_mode = 2
 advance_expression = "state == RUN"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nbdcw"]
 xfade_time = 0.1
+switch_mode = 1
 advance_mode = 2
 advance_expression = "state != RUN"
 
