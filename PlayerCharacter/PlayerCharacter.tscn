@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
 [ext_resource type="Texture2D" uid="uid://bfb4whhloeotg" path="res://assets/character/teteAsset_50.png" id="2_jglra"]
 [ext_resource type="Texture2D" uid="uid://c2j4wmiv2stdq" path="res://assets/character/bras_droitAsset_45.png" id="3_5vfnn"]
-[ext_resource type="Script" uid="uid://b8qhorun64qce" path="res://PlayerCharacter/power_selection.gd" id="3_u1221"]
+[ext_resource type="Script" path="res://PlayerCharacter/power_selection.gd" id="3_u1221"]
 [ext_resource type="Texture2D" uid="uid://cvcl1cpu488nk" path="res://assets/character/bras_gaucheAsset_46.png" id="4_nbdcw"]
 [ext_resource type="Texture2D" uid="uid://euonwkia5iwt" path="res://assets/character/jambe_droiteAsset_47.png" id="5_dyuu2"]
 [ext_resource type="Texture2D" uid="uid://beaffkby5jpbh" path="res://assets/character/jambe_gaucheAsset_48.png" id="6_ofxpx"]
 [ext_resource type="Texture2D" uid="uid://2alave1lskma" path="res://assets/character/corpsAsset_49.png" id="7_6mx01"]
-[ext_resource type="Script" uid="uid://cnkd55vdp7d00" path="res://PlayerCharacter/PlayerCharacterAnimation.gd" id="10_nbdcw"]
+[ext_resource type="Script" path="res://PlayerCharacter/PlayerCharacterAnimation.gd" id="10_nbdcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
 size = Vector2(42, 50)
