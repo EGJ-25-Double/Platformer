@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cvfjjujwlemnx"]
+[gd_scene load_steps=20 format=4 uid="uid://cvfjjujwlemnx"]
 
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="1_v0djm"]
 [ext_resource type="Texture2D" uid="uid://dd6dhiqfdtpno" path="res://assets/BG/Ground/Random ppl.png" id="5_qgfnt"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://brvbavs3r1ju3" path="res://assets/character_r.png" id="10_c61v4"]
 [ext_resource type="AudioStream" path="res://sounds/EGJ25_MusiqueAlienV1.mp3" id="11_kitu8"]
 [ext_resource type="Texture2D" uid="uid://8kbyctgpkx18" path="res://assets/posters/poster3.png" id="12_456gm"]
+[ext_resource type="Texture2D" uid="uid://lhvnnigi5dpb" path="res://assets/BG/Ceiling.png" id="13_jd1dk"]
 [ext_resource type="PackedScene" uid="uid://cxt54yhtnihov" path="res://Portal/Portal.tscn" id="13_rpegu"]
 [ext_resource type="PackedScene" uid="uid://c401n4ovod8nj" path="res://Curtains/Curtains.tscn" id="14_lhfy4"]
 [ext_resource type="Texture2D" uid="uid://dvltym6351gci" path="res://assets/BG/Ground/Tileset.png" id="15_usoyh"]
@@ -67,6 +68,11 @@ tile_proxies/coords_level = [[0, Vector2i(0, 9)], [8, Vector2i(0, 9)], [0, Vecto
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mhmws"]
 shader = ExtResource("16_j81ec")
 shader_parameter/albedo_texture = ExtResource("17_hv34f")
+shader_parameter/albedo = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x5fb5"]
+shader = ExtResource("16_j81ec")
+shader_parameter/albedo_texture = ExtResource("13_jd1dk")
 shader_parameter/albedo = Color(0, 0, 0, 1)
 
 [node name="Map" type="Node2D"]
@@ -226,3 +232,14 @@ region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
 
 [node name="PPl" type="Node2D" parent="ART"]
+
+[node name="Ceiling" type="Sprite2D" parent="ART"]
+show_behind_parent = true
+z_index = -545
+texture_repeat = 2
+material = SubResource("ShaderMaterial_x5fb5")
+position = Vector2(725, 34)
+scale = Vector2(0.14445, 0.135021)
+texture = ExtResource("13_jd1dk")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
