@@ -5,6 +5,7 @@ class_name PlayerCharacter extends CharacterBody2D
 @export var acceleration := 1800.0
 @export var friction := 1200.0
 @onready var time_since_last_teleport = 1000.0
+@onready var skin_node = %Masks
 var teleport_cooldown = 5.0
 
 @onready var anim_player: AnimationPlayer = %AnimationPlayer
