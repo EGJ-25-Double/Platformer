@@ -13,7 +13,7 @@
 [ext_resource type="Script" uid="uid://cnkd55vdp7d00" path="res://PlayerCharacter/PlayerCharacterAnimation.gd" id="10_nbdcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
-size = Vector2(80, 148)
+size = Vector2(78, 92)
 
 [sub_resource type="Animation" id="Animation_ofxpx"]
 resource_name = "climb"
@@ -451,11 +451,12 @@ graph_offset = Vector2(222, 230.67)
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("1_v4vvu")
+speed = 700.0
 
 [node name="Sprite" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -2.38419e-07)
-scale = Vector2(0.03, 0.03)
+scale = Vector2(0.02, 0.02)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite"]
 visible = false
@@ -505,11 +506,11 @@ texture = ExtResource("9_dyuu2")
 offset = Vector2(166, 88)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_pe5a2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -147)
-zoom = Vector2(0.5, 0.5)
+position = Vector2(-4, -231)
 
 [node name="Power" type="Node" parent="."]
 unique_name_in_owner = true

@@ -1,6 +1,6 @@
 class_name PlayerCharacter extends CharacterBody2D
 
-@export var jump_impulse = 400
+@export var jump_impulse = 800
 @export var speed = 600.0
 @export var acceleration := 1800.0
 @export var friction := 1200.0
