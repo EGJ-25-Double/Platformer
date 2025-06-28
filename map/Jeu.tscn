@@ -67,7 +67,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_gl2p0")]
-position = Vector2(2525, 71)
+position = Vector2(2779, -70)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_5y575")
