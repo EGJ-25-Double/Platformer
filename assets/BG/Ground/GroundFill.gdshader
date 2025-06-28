@@ -1,5 +1,5 @@
 shader_type canvas_item;
-uniform sampler2D albedo_texture: source_color; 
+uniform sampler2D albedo_texture: source_color;
 uniform vec3 albedo : source_color;
 varying vec2 world_position;
 void vertex() {
