@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ds3igeg01sjso"]
+[gd_scene load_steps=34 format=3 uid="uid://ds3igeg01sjso"]
 
 [ext_resource type="Script" uid="uid://dnvemqwbwwoih" path="res://PlayerCharacter/player_character.gd" id="1_v4vvu"]
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
@@ -53,7 +53,7 @@ tracks/2/keys = {
 }
 tracks/3/type = "value"
 tracks/3/imported = false
-tracks/3/enabled = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("Sprite/Body:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
@@ -99,7 +99,7 @@ tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
+"update": 0,
 "values": [-0.0673252, 1.309]
 }
 tracks/3/type = "value"
@@ -111,7 +111,7 @@ tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
+"update": 0,
 "values": [0.108663, 2.09439]
 }
 
@@ -260,7 +260,7 @@ tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0.1, 0.4),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
+"update": 0,
 "values": [0.261799, 0.261799]
 }
 tracks/4/type = "value"
@@ -276,13 +276,126 @@ tracks/4/keys = {
 "values": [Vector2(-700, -1500), Vector2(-700, -1500)]
 }
 
+[sub_resource type="Animation" id="Animation_ofxpx"]
+resource_name = "climb"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/FootR:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.261799, 0.785397, -0.261799, 0.785397, -0.261799]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite/FootL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.5, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0472, 0.0, 1.0472, 0.0, 1.0472]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/HandR:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.5, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.309, -0.0673252, 1.309, -0.0673252, 1.309]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite/HandL:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 2.09439, 0.0, 2.09439, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6mx01"]
+resource_name = "ClimbWait"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/FootR:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.261799]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite/FootL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0472]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/HandR:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.309]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite/HandL:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u1221"]
 _data = {
+&"Climb": SubResource("Animation_ofxpx"),
+&"ClimbWait": SubResource("Animation_6mx01"),
 &"Idle": SubResource("Animation_52dax"),
 &"Jump": SubResource("Animation_dyuu2"),
 &"RESET": SubResource("Animation_nbdcw"),
 &"Run": SubResource("Animation_5vfnn")
 }
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ofxpx"]
+animation = &"Climb"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6mx01"]
+animation = &"ClimbWait"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5vfnn"]
 animation = &"Idle"
@@ -315,15 +428,35 @@ advance_expression = "state == JUMP"
 advance_mode = 2
 advance_expression = "state != JUMP"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hs44b"]
+advance_mode = 2
+advance_expression = "state == CLIMB"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0nfi7"]
+advance_mode = 2
+advance_expression = "player.velocity.y > -20.0 && player.velocity.y < 20.0"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_glb63"]
+advance_mode = 2
+advance_expression = "player.velocity.y > 20.0 || player.velocity.y < -20.0"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7qrv0"]
+advance_mode = 2
+advance_expression = "state != CLIMB"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nbdcw"]
+states/Climb/node = SubResource("AnimationNodeAnimation_ofxpx")
+states/Climb/position = Vector2(742.25, 283.585)
+states/ClimbWait/node = SubResource("AnimationNodeAnimation_6mx01")
+states/ClimbWait/position = Vector2(745.5, 393.67)
 states/Idle/node = SubResource("AnimationNodeAnimation_5vfnn")
 states/Idle/position = Vector2(504.25, 101.688)
 states/Jump/node = SubResource("AnimationNodeAnimation_nbdcw")
 states/Jump/position = Vector2(504, 284.5)
 states/Run/node = SubResource("AnimationNodeAnimation_dyuu2")
 states/Run/position = Vector2(743, 99.625)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_ofxpx"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_6mx01"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_nbdcw"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_dyuu2"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_i84k0")]
-graph_offset = Vector2(45.9999, 42.67)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_ofxpx"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_6mx01"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_nbdcw"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_dyuu2"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_i84k0"), "Idle", "Climb", SubResource("AnimationNodeStateMachineTransition_hs44b"), "Climb", "ClimbWait", SubResource("AnimationNodeStateMachineTransition_0nfi7"), "ClimbWait", "Climb", SubResource("AnimationNodeStateMachineTransition_glb63"), "Climb", "Idle", SubResource("AnimationNodeStateMachineTransition_7qrv0")]
+graph_offset = Vector2(222, 230.67)
 
 [node name="PlayerCharacter" type="CharacterBody2D"]
 collision_layer = 7
