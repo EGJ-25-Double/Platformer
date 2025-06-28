@@ -8,9 +8,7 @@ var has_sound := false
 var skins_owned: Array[SkinData]
 
 func _ready():
-	add_skin("None")
-	add_skin("SpiderMan")
-	add_skin("Mickey")
+	add_skin("default")
 
 func add_skin(name: String):
 	var new_skin = skins_list.skins.filter(func (s: SkinData): return s.skin_name == name)[0]
