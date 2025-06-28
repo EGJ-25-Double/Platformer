@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hrmdlkuy34x5" path="res://data/skins_set.gd" id="1_8avya"]
 [ext_resource type="Script" uid="uid://ulincx2500mc" path="res://data/skin_data.gd" id="2_m6tei"]
-[ext_resource type="Script" uid="uid://cn4bi4yt4c28e" path="res://power/wall_jump.gd" id="3_8mq4t"]
+[ext_resource type="Script" uid="uid://dv0ct56qpv81v" path="res://power/climb.gd" id="3_8mq4t"]
 
 [sub_resource type="Resource" id="Resource_m6tei"]
 script = ExtResource("2_m6tei")
