@@ -1,12 +1,15 @@
-[gd_scene load_steps=9 format=4 uid="uid://dc8utgufiqqq4"]
+[gd_scene load_steps=12 format=4 uid="uid://dc8utgufiqqq4"]
 
 [ext_resource type="Texture2D" uid="uid://xku6sbedgwr6" path="res://assets/city_/midback_banderole2Asset 31.png" id="2_jjrxe"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="2_l804v"]
 [ext_resource type="Texture2D" uid="uid://nk7klgk7ldey" path="res://assets/city_/midback_dino_codedAsset 19.png" id="2_pgc66"]
 [ext_resource type="Texture2D" uid="uid://bocurfhrcrun" path="res://assets/city_/midback_stand1Asset 25.png" id="3_jjrxe"]
+[ext_resource type="Texture2D" uid="uid://ucigce1jw6tf" path="res://assets/posters/poster1.png" id="3_qmjlt"]
+[ext_resource type="Texture2D" uid="uid://n7dsyd0cbri3" path="res://assets/posters/poster2.png" id="4_2lufi"]
 [ext_resource type="Texture2D" uid="uid://c30d4cv8jf0o3" path="res://assets/city_/midback_stand2Asset 26.png" id="4_qmjlt"]
 [ext_resource type="AudioStream" uid="uid://dw8bsb1nesa3a" path="res://sounds/EGJ25_MusiqueAlienV1.mp3" id="9_jjrxe"]
-[ext_resource type="TileSet" uid="uid://cqei60bxwj1u0" path="res://map/map2.tres" id="10_e2kap"]
+[ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="10_e2kap"]
+[ext_resource type="Texture2D" uid="uid://8kbyctgpkx18" path="res://assets/posters/poster3.png" id="11_e2kap"]
 [ext_resource type="Texture2D" uid="uid://brvbavs3r1ju3" path="res://assets/character_r.png" id="12_e2kap"]
 
 [node name="Map" type="Node2D"]
@@ -43,6 +46,16 @@ texture = ExtResource("2_jjrxe")
 position = Vector2(1158, 204)
 scale = Vector2(0.0483247, 0.0483247)
 texture = ExtResource("2_pgc66")
+
+[node name="Poster1" type="Sprite2D" parent="ParallaxBackground/MidleBack"]
+position = Vector2(1859, 155)
+scale = Vector2(0.103995, 0.103995)
+texture = ExtResource("3_qmjlt")
+
+[node name="Poster2" type="Sprite2D" parent="ParallaxBackground/MidleBack"]
+position = Vector2(2869, 167)
+scale = Vector2(0.104, 0.104)
+texture = ExtResource("4_2lufi")
 
 [node name="MiddleFront" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(-614, -148)
@@ -92,3 +105,8 @@ texture = ExtResource("12_e2kap")
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_jjrxe")
 autoplay = true
+
+[node name="Poster3" type="Sprite2D" parent="."]
+position = Vector2(3224, 13.9999)
+scale = Vector2(0.104, 0.104)
+texture = ExtResource("11_e2kap")
