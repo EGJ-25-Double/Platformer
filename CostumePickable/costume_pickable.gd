@@ -1,6 +1,7 @@
 class_name CostumePickable extends Area2D
 
-@export var costume: SkinData
+@export var skin_name: String
+@onready var costume = GameState.get_skin_by_name(skin_name)
 
 var active = false
 

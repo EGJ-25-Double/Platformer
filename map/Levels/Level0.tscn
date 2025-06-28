@@ -1,23 +1,13 @@
-[gd_scene load_steps=16 format=4 uid="uid://dya8720w6ifxb"]
+[gd_scene load_steps=12 format=4 uid="uid://dya8720w6ifxb"]
 
 [ext_resource type="Texture2D" uid="uid://lhvnnigi5dpb" path="res://assets/BG/Ceiling.png" id="1_13r8s"]
 [ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="1_21cwq"]
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="2_4v188"]
-[ext_resource type="Texture2D" uid="uid://y8g27b3mhb27" path="res://assets/character/Skins/Alien_masques_0003_Spouderman.png" id="2_vvwg7"]
-[ext_resource type="Script" path="res://power/climb.gd" id="3_fks5p"]
 [ext_resource type="Texture2D" uid="uid://buk3i837ilsvk" path="res://assets/BG/gradient.png" id="3_gca8g"]
 [ext_resource type="TileSet" uid="uid://2qktjpb68id8" path="res://assets/BG/People.tres" id="4_2rp7w"]
-[ext_resource type="Script" uid="uid://ulincx2500mc" path="res://data/skin_data.gd" id="4_5sy7u"]
 [ext_resource type="Texture2D" uid="uid://dvltym6351gci" path="res://assets/BG/Ground/Tileset.png" id="5_21cwq"]
 [ext_resource type="Shader" uid="uid://b682goxc1s5ob" path="res://assets/BG/Ground/GroundFill.gdshader" id="6_vvwg7"]
 [ext_resource type="Texture2D" uid="uid://wuyfial0i7pl" path="res://assets/BG/Ground/BlackFill.png" id="7_fks5p"]
-
-[sub_resource type="Resource" id="Resource_hbdtv"]
-script = ExtResource("4_5sy7u")
-skin_name = "SpiderMan"
-power = ExtResource("3_fks5p")
-pickable_texture = ExtResource("2_vvwg7")
-metadata/_custom_type_script = "uid://ulincx2500mc"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5sy7u"]
 texture = ExtResource("5_21cwq")
@@ -55,7 +45,7 @@ shader_parameter/albedo = Color(0, 0, 0, 1)
 
 [node name="CostumePickable" parent="." instance=ExtResource("1_21cwq")]
 position = Vector2(673, 31)
-costume = SubResource("Resource_hbdtv")
+skin_name = "SpiderMan"
 
 [node name="ART" type="Parallax2D" parent="."]
 z_index = -1
