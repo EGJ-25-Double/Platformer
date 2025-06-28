@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dnvemqwbwwoih" path="res://PlayerCharacter/player_character.gd" id="1_v4vvu"]
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
 [ext_resource type="Texture2D" uid="uid://hn4ittqq4cqi" path="res://assets/character/Layers02/Alien_GJ_0000s_0000_Head01.png" id="3_nbdcw"]
-[ext_resource type="Script" uid="uid://b8qhorun64qce" path="res://PlayerCharacter/power_selection.gd" id="3_u1221"]
+[ext_resource type="Script" path="res://PlayerCharacter/power_selection.gd" id="3_u1221"]
 [ext_resource type="Texture2D" uid="uid://dnmtotscxnpcl" path="res://assets/character/Layers02/Alien_GJ_0000s_0005_arm06.png" id="4_dyuu2"]
 [ext_resource type="Texture2D" uid="uid://cq67bsqlx1hhm" path="res://assets/character/Skins/Alien_masques_0000_Dv.png" id="4_hs44b"]
 [ext_resource type="Texture2D" uid="uid://bintc73usa4mt" path="res://assets/character/Skins/Alien_masques_0001_Link.png" id="5_i84k0"]
