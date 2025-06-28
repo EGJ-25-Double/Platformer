@@ -7,6 +7,8 @@ class_name PlayerCharacter extends CharacterBody2D
 @onready var time_since_last_teleport = 1000.0
 var teleport_cooldown = 5.0
 
+@onready var sprite = %Sprite
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _input(event: InputEvent) -> void:
@@ -33,3 +35,8 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	move_and_slide()
+	
+	if velocity.x > 0:
+		sprite.flip_h = true
+	elif velocity.x < 0:
+		sprite.flip_h = false
