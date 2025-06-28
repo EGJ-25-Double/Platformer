@@ -665,10 +665,11 @@ anim_player = NodePath("../AnimationPlayer")
 script = ExtResource("10_nbdcw")
 
 [node name="PowerDefault" type="Node" parent="."]
-process_mode = 4
 
 [node name="DoubleJump" type="Node" parent="PowerDefault"]
 script = ExtResource("12_6mx01")
+withOwner = true
 
 [node name="WallJump" type="Node" parent="PowerDefault"]
 script = ExtResource("13_hs44b")
+withOwner = true

@@ -4,6 +4,7 @@ class_name PlayerCharacter extends CharacterBody2D
 @export var speed = 600.0
 @export var acceleration := 1800.0
 @export var friction := 1200.0
+@export var wall_gravity_ratio := 0.2
 @onready var time_since_last_teleport = 1000.0
 @onready var skin_node = %Masks
 var teleport_cooldown = 5.0
@@ -43,7 +44,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, friction * delta)
 
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += gravity * (wall_gravity_ratio if is_on_wall() else 1) * delta
 	move_and_slide()
 	
 	if velocity.x > 0:
