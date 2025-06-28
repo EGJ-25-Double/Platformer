@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2alave1lskma"
-path="res://.godot/imported/corpsAsset_49.png-c5eee77c30ab6e2bb1eefd4dcae981f1.ctex"
+uid="uid://dpxoe7y5iif7l"
+path="res://.godot/imported/Alien_masques_0005_Al.png-3f80227ebb43f06a9564759fe13e6f58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/corpsAsset_49.png"
-dest_files=["res://.godot/imported/corpsAsset_49.png-c5eee77c30ab6e2bb1eefd4dcae981f1.ctex"]
+source_file="res://assets/character/Skins/Alien_masques_0005_Al.png"
+dest_files=["res://.godot/imported/Alien_masques_0005_Al.png-3f80227ebb43f06a9564759fe13e6f58.ctex"]
 
 [params]
 
