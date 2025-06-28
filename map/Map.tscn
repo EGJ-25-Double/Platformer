@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dc8utgufiqqq4"]
+[gd_scene load_steps=13 format=4 uid="uid://dc8utgufiqqq4"]
 
 [ext_resource type="Texture2D" uid="uid://xku6sbedgwr6" path="res://assets/city_/midback_banderole2Asset 31.png" id="2_jjrxe"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="2_l804v"]
@@ -10,7 +10,6 @@
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="10_e2kap"]
 [ext_resource type="Texture2D" uid="uid://bb00kfyvv54fd" path="res://assets/platforms/platform_shortAsset 5.png" id="11_2lufi"]
 [ext_resource type="Texture2D" uid="uid://8kbyctgpkx18" path="res://assets/posters/poster3.png" id="11_e2kap"]
-[ext_resource type="PackedScene" uid="uid://866ayky724h0" path="res://LobbyShop/LobbyShop.tscn" id="11_gyiq0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmjlt"]
 size = Vector2(150, 34)
@@ -246,6 +245,3 @@ texture = ExtResource("11_2lufi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Level1/Platforms/Short/Short9"]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_e2kap")
-
-[node name="LobbyShop" parent="." instance=ExtResource("11_gyiq0")]
-position = Vector2(1048, 713)
