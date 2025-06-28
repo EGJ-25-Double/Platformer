@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=4 uid="uid://cvfjjujwlemnx"]
+[gd_scene load_steps=16 format=4 uid="uid://cvfjjujwlemnx"]
 
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="1_v0djm"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="8_mirko"]
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="9_rqr8j"]
 [ext_resource type="Texture2D" uid="uid://buk3i837ilsvk" path="res://assets/BG/gradient.png" id="9_x5fb5"]
-[ext_resource type="TileSet" uid="uid://bdlg7wux0be5x" path="res://assets/BG/People.tres" id="10_jd1dk"]
-[ext_resource type="AudioStream" path="res://sounds/EGJ25_MusiqueAlienV1.mp3" id="11_kitu8"]
+[ext_resource type="TileSet" uid="uid://2qktjpb68id8" path="res://assets/BG/People.tres" id="10_jd1dk"]
 [ext_resource type="Texture2D" uid="uid://8kbyctgpkx18" path="res://assets/posters/poster3.png" id="12_456gm"]
 [ext_resource type="Texture2D" uid="uid://lhvnnigi5dpb" path="res://assets/BG/Ceiling.png" id="13_jd1dk"]
 [ext_resource type="PackedScene" uid="uid://cxt54yhtnihov" path="res://Portal/Portal.tscn" id="13_rpegu"]
@@ -94,7 +93,6 @@ tile_set = ExtResource("9_rqr8j")
 collision_enabled = false
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_kitu8")
 autoplay = true
 
 [node name="Poster3" type="Sprite2D" parent="."]
