@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ds3igeg01sjso"]
+[gd_scene load_steps=22 format=3 uid="uid://ds3igeg01sjso"]
 
 [ext_resource type="Script" uid="uid://dnvemqwbwwoih" path="res://PlayerCharacter/player_character.gd" id="1_v4vvu"]
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://euonwkia5iwt" path="res://assets/character/jambe_droiteAsset_47.png" id="5_dyuu2"]
 [ext_resource type="Texture2D" uid="uid://beaffkby5jpbh" path="res://assets/character/jambe_gaucheAsset_48.png" id="6_ofxpx"]
 [ext_resource type="Texture2D" uid="uid://2alave1lskma" path="res://assets/character/corpsAsset_49.png" id="7_6mx01"]
+[ext_resource type="Script" uid="uid://cnkd55vdp7d00" path="res://PlayerCharacter/PlayerCharacterAnimation.gd" id="10_nbdcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
 size = Vector2(42, 50)
@@ -110,9 +111,119 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(1.91138, 2.48668)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../FootL:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Body:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Head:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-600, -1900)]
+}
 
 [sub_resource type="Animation" id="Animation_5vfnn"]
 resource_name = "Run"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../FootL:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.523598, 0.785398]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.261799, -0.785397]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Body:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.100311, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.523598, -0.523598]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Head:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0.261799, 0.261799]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-700, -1500), Vector2(-700, -1500)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u1221"]
 _data = {
@@ -120,6 +231,32 @@ _data = {
 &"RESET": SubResource("Animation_nbdcw"),
 &"Run": SubResource("Animation_5vfnn")
 }
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5vfnn"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dyuu2"]
+animation = &"Run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ofxpx"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6mx01"]
+switch_mode = 1
+advance_mode = 2
+advance_expression = "state == RUN"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nbdcw"]
+switch_mode = 1
+advance_mode = 2
+advance_expression = "state == IDLE"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nbdcw"]
+states/Idle/node = SubResource("AnimationNodeAnimation_5vfnn")
+states/Idle/position = Vector2(350, 100.375)
+states/Run/node = SubResource("AnimationNodeAnimation_dyuu2")
+states/Run/position = Vector2(462, 100.5)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_ofxpx"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_6mx01"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_nbdcw")]
 
 [node name="PlayerCharacter" type="CharacterBody2D"]
 collision_layer = 3
@@ -132,6 +269,7 @@ position = Vector2(0, -2.38419e-07)
 scale = Vector2(0.01, 0.01)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite"]
+visible = false
 texture = ExtResource("2_5vfnn")
 
 [node name="Head" type="Sprite2D" parent="Sprite"]
@@ -157,9 +295,10 @@ texture = ExtResource("5_dyuu2")
 offset = Vector2(-320, 600)
 
 [node name="FootL" type="Sprite2D" parent="Sprite"]
-position = Vector2(1400, 1000)
+position = Vector2(900, -200)
 scale = Vector2(1.59635, 1.99734)
 texture = ExtResource("6_ofxpx")
+offset = Vector2(320, 600)
 
 [node name="Body" type="Sprite2D" parent="Sprite"]
 position = Vector2(-6.10352e-05, -1000)
@@ -177,8 +316,16 @@ unique_name_in_owner = true
 script = ExtResource("3_u1221")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 root_node = NodePath("../Sprite/FootR")
 libraries = {
 &"": SubResource("AnimationLibrary_u1221")
 }
 autoplay = "Idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%Sprite/FootR")
+tree_root = SubResource("AnimationNodeStateMachine_nbdcw")
+anim_player = NodePath("../AnimationPlayer")
+script = ExtResource("10_nbdcw")
