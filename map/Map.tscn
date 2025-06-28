@@ -8,8 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://n7dsyd0cbri3" path="res://assets/posters/poster2.png" id="4_2lufi"]
 [ext_resource type="Texture2D" uid="uid://c30d4cv8jf0o3" path="res://assets/city_/midback_stand2Asset 26.png" id="4_qmjlt"]
 [ext_resource type="AudioStream" uid="uid://dw8bsb1nesa3a" path="res://sounds/EGJ25_MusiqueAlienV1.mp3" id="9_jjrxe"]
-[ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="10_e2kap"]
 [ext_resource type="Texture2D" uid="uid://8kbyctgpkx18" path="res://assets/posters/poster3.png" id="11_e2kap"]
+[ext_resource type="PackedScene" uid="uid://cxt54yhtnihov" path="res://Portal/Portal.tscn" id="9_qmjlt"]
+[ext_resource type="TileSet" uid="uid://cqei60bxwj1u0" path="res://map/map2.tres" id="10_e2kap"]
 [ext_resource type="Texture2D" uid="uid://brvbavs3r1ju3" path="res://assets/character_r.png" id="12_e2kap"]
 
 [node name="Map" type="Node2D"]
@@ -110,3 +111,12 @@ autoplay = true
 position = Vector2(3224, 13.9999)
 scale = Vector2(0.104, 0.104)
 texture = ExtResource("11_e2kap")
+[node name="Node" type="Node" parent="."]
+
+[node name="Portal2" parent="Node" node_paths=PackedStringArray("connected_portal") instance=ExtResource("9_qmjlt")]
+position = Vector2(1594, 1658)
+connected_portal = NodePath("../Portal")
+
+[node name="Portal" parent="Node" node_paths=PackedStringArray("connected_portal") instance=ExtResource("9_qmjlt")]
+position = Vector2(1965, 208)
+connected_portal = NodePath("../Portal2")

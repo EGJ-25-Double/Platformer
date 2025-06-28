@@ -4,6 +4,8 @@ class_name PlayerCharacter extends CharacterBody2D
 @export var speed = 600.0
 @export var acceleration := 1800.0
 @export var friction := 1200.0
+@onready var time_since_last_teleport = 1000.0
+var teleport_cooldown = 5.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -14,7 +16,7 @@ func _input(event: InputEvent) -> void:
 
 
 func _process(delta: float) -> void:
-	pass
+	time_since_last_teleport += delta
 
 func _physics_process(delta: float) -> void:
 	var direction = 0.0
