@@ -5,6 +5,9 @@ class_name PlayerCharacterAnimation extends AnimationTree
 enum {
 	IDLE,
 	RUN,
+	JUMP,
+	HANGED,
+	CLIMB,
 }
 
 var state
@@ -14,7 +17,9 @@ func _ready():
 
 
 func _process(delta):
-	if player.is_on_floor() and player.velocity.x:
-		state = RUN
+	if player.is_on_floor():
+		state = RUN if player.velocity.x else IDLE
+	elif player.is_on_wall() and player.velocity.y >= 0:
+		state = HANGED
 	else:
-		state = IDLE
+		state = JUMP
