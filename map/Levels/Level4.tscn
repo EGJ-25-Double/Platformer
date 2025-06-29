@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://bhrdw4rjoqr2k"]
+[gd_scene load_steps=6 format=4 uid="uid://bhrdw4rjoqr2k"]
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_0a07s"]
 [ext_resource type="PackedScene" uid="uid://cv28xrom8uhf1" path="res://Ladder/Ladder.tscn" id="2_6tffa"]
 [ext_resource type="PackedScene" uid="uid://wujrjphnoovi" path="res://InvisibleWall/InvisibleWall.tscn" id="3_3uecj"]
 [ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="4_3uecj"]
+[ext_resource type="Texture2D" uid="uid://b3kq1rdrm2srj" path="res://assets/scene.png" id="5_3uecj"]
 
 [node name="Level4" type="Node2D"]
 
@@ -702,3 +703,9 @@ position = Vector2(1632, -1544)
 visible = false
 position = Vector2(1256, -1728)
 skin_name = "Vador"
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-132, -1772)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("5_3uecj")
