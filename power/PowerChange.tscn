@@ -1,0 +1,119 @@
+[gd_scene load_steps=27 format=3 uid="uid://isasdsxpofj8"]
+
+[ext_resource type="Script" uid="uid://o652awmhgxox" path="res://power/power_change.gd" id="1_3aqmx"]
+[ext_resource type="Texture2D" uid="uid://bdhj6b8dnjv6v" path="res://assets/PoufAnim/Miror_0001_Calque-62.png" id="2_kdxt5"]
+[ext_resource type="Texture2D" uid="uid://xlt7jbepooou" path="res://assets/PoufAnim/Miror_0003_Calque-62.png" id="3_bqdii"]
+[ext_resource type="Texture2D" uid="uid://c2g2njeyshuhx" path="res://assets/PoufAnim/Miror_0005_Calque-62.png" id="4_cmmx4"]
+[ext_resource type="Texture2D" uid="uid://d08gfyh3k5syn" path="res://assets/PoufAnim/Miror_0007_Calque-61.png" id="5_odn0t"]
+[ext_resource type="Texture2D" uid="uid://cnuociaj0th6h" path="res://assets/PoufAnim/Miror_0009_Calque-60.png" id="6_pc11a"]
+[ext_resource type="Texture2D" uid="uid://p0djku5jklek" path="res://assets/PoufAnim/Miror_0011_Calque-59.png" id="7_xrw81"]
+[ext_resource type="Texture2D" uid="uid://bgk2jwqoim6rw" path="res://assets/PoufAnim/Miror_0002_Calque-63.png" id="8_sw0iu"]
+[ext_resource type="Texture2D" uid="uid://butdbu1o6eylu" path="res://assets/PoufAnim/Miror_0004_Calque-63.png" id="9_qxhtd"]
+[ext_resource type="Texture2D" uid="uid://csmtqmbycrlju" path="res://assets/PoufAnim/Miror_0006_Calque-63.png" id="10_8ycrp"]
+[ext_resource type="Texture2D" uid="uid://blewre8puwmg4" path="res://assets/PoufAnim/Miror_0008_Calque-63.png" id="11_c4j82"]
+[ext_resource type="Texture2D" uid="uid://cip5oqk1140is" path="res://assets/PoufAnim/Miror_0010_Calque-63.png" id="12_4vo6t"]
+[ext_resource type="Texture2D" uid="uid://dkukc6yb3opu0" path="res://assets/PoufAnim/Miror_0012_Calque-63.png" id="13_kxy8p"]
+[ext_resource type="Texture2D" uid="uid://bfu6lus05yd18" path="res://assets/PoufAnim/Miror_0013_Calque-59.png" id="14_v4xra"]
+[ext_resource type="Texture2D" uid="uid://03rb2geuxpv5" path="res://assets/PoufAnim/Miror_0014_Calque-59.png" id="15_hfb5n"]
+[ext_resource type="Texture2D" uid="uid://c2amubqdxewyk" path="res://assets/PoufAnim/Miror_0015_Calque-69.png" id="16_m4pdb"]
+[ext_resource type="Texture2D" uid="uid://c415bqpbooi4f" path="res://assets/PoufAnim/Miror_0016_Calque-70.png" id="17_oh6gq"]
+[ext_resource type="Texture2D" uid="uid://jbmh8fsgqxew" path="res://assets/PoufAnim/Miror_0017_Calque-62.png" id="18_1axq3"]
+[ext_resource type="Texture2D" uid="uid://c66jvisnfmlu6" path="res://assets/PoufAnim/Miror_0018_Calque-62.png" id="19_5gjhu"]
+[ext_resource type="Texture2D" uid="uid://dyfkcnvnjxn3i" path="res://assets/PoufAnim/Miror_0019_Calque-62.png" id="20_7on7n"]
+[ext_resource type="Texture2D" uid="uid://ccg27ncanilx2" path="res://assets/PoufAnim/Miror_0020_Calque-62.png" id="21_p3inj"]
+[ext_resource type="Texture2D" uid="uid://cgg2f2r7lvxxj" path="res://assets/PoufAnim/Miror_0021_Calque-62.png" id="22_1j23r"]
+[ext_resource type="Texture2D" uid="uid://ctm2ce83kq3pv" path="res://assets/PoufAnim/Miror_0022_Calque-61.png" id="23_isjrc"]
+[ext_resource type="Texture2D" uid="uid://c0gtxron6afc3" path="res://assets/PoufAnim/Miror_0023_Calque-60.png" id="24_1ol3h"]
+[ext_resource type="Texture2D" uid="uid://baxmmp8ymabl5" path="res://assets/PoufAnim/Miror_0024_Calque-59.png" id="25_likbc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fenoc"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": ExtResource("2_kdxt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bqdii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cmmx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_odn0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pc11a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xrw81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sw0iu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qxhtd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8ycrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c4j82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4vo6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kxy8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_v4xra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hfb5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_m4pdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_oh6gq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1axq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_5gjhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7on7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_p3inj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1j23r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_isjrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1ol3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_likbc")
+}],
+"loop": false,
+"name": &"default",
+"speed": 23.0
+}]
+
+[node name="PowerChange" type="Node2D"]
+script = ExtResource("1_3aqmx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_fenoc")
+autoplay = "default"
+frame = 23
+speed_scale = -1.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -118,8 +118,8 @@ tile_set = ExtResource("3_5y575")
 [node name="Gradient" type="Sprite2D" parent="ParallaxBackground/ParalaxZone2"]
 modulate = Color(0, 0, 0.505882, 0.403922)
 z_index = -2
-position = Vector2(1874.5, -663.75)
-scale = Vector2(15.7781, 9.35469)
+position = Vector2(1874.5, -20.4998)
+scale = Vector2(15.7781, 5.33438)
 texture = ExtResource("1_5y575")
 
 [node name="Gradient2" type="Sprite2D" parent="ParallaxBackground/ParalaxZone2"]
