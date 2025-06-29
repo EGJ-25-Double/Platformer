@@ -444,18 +444,9 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-4773, -5211)
-scale = Vector2(0.0440646, 0.513083)
-texture = ExtResource("9_ig5i8")
-region_enabled = true
-region_rect = Rect2(0, 0, 10000, 6000)
-
-[node name="Sprite2D37" type="Sprite2D" parent="Outside"]
-show_behind_parent = true
-texture_repeat = 2
-material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-2713.16, 596.5)
-scale = Vector2(0.106232, 0.213833)
+position = Vector2(-4841.29, -3847.94)
+rotation = 1.5708
+scale = Vector2(0.289653, 0.652436)
 texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
@@ -464,38 +455,19 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-6639, -2801.25)
-scale = Vector2(0.0440646, 0.27925)
+position = Vector2(-2481.17, -3732.21)
+rotation = 1.5708
+scale = Vector2(0.286308, 0.146799)
 texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
 
-[node name="Sprite2D39" type="Sprite2D" parent="Outside"]
+[node name="Sprite2D37" type="Sprite2D" parent="Outside"]
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-7132.34, -2965.25)
-scale = Vector2(0.0547323, 0.27925)
-texture = ExtResource("9_ig5i8")
-region_enabled = true
-region_rect = Rect2(0, 0, 10000, 6000)
-
-[node name="Sprite2D40" type="Sprite2D" parent="Outside"]
-show_behind_parent = true
-texture_repeat = 2
-material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-7670, -2634.25)
-scale = Vector2(0.0547323, 0.27925)
-texture = ExtResource("9_ig5i8")
-region_enabled = true
-region_rect = Rect2(0, 0, 10000, 6000)
-
-[node name="Sprite2D41" type="Sprite2D" parent="Outside"]
-show_behind_parent = true
-texture_repeat = 2
-material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-8086, -2392.25)
-scale = Vector2(0.0547323, 0.27925)
+position = Vector2(-4553.5, 588.499)
+scale = Vector2(0.4743, 0.2165)
 texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
@@ -504,8 +476,8 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-9010.67, -1659.75)
-scale = Vector2(0.189666, 0.469167)
+position = Vector2(-8802, -1768)
+scale = Vector2(0.189666, 1.30667)
 texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
@@ -514,8 +486,8 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-9981.58, -373.063)
-scale = Vector2(0.0920831, 0.131708)
+position = Vector2(-7348.71, -3994.44)
+scale = Vector2(0.115341, 0.565854)
 texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
@@ -524,58 +496,8 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-7818.17, 204.062)
-scale = Vector2(0.0754415, 0.159021)
-texture = ExtResource("9_ig5i8")
-region_enabled = true
-region_rect = Rect2(0, 0, 10000, 6000)
-
-[node name="Sprite2D45" type="Sprite2D" parent="Outside"]
-show_behind_parent = true
-texture_repeat = 2
-material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-8455.17, -41.9375)
-scale = Vector2(0.0754415, 0.159021)
-texture = ExtResource("9_ig5i8")
-region_enabled = true
-region_rect = Rect2(0, 0, 10000, 6000)
-
-[node name="Sprite2D46" type="Sprite2D" parent="Outside"]
-show_behind_parent = true
-texture_repeat = 2
-material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-8784.17, -288.938)
-scale = Vector2(0.0754415, 0.159021)
-texture = ExtResource("9_ig5i8")
-region_enabled = true
-region_rect = Rect2(0, 0, 10000, 6000)
-
-[node name="Sprite2D47" type="Sprite2D" parent="Outside"]
-show_behind_parent = true
-texture_repeat = 2
-material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-9130.77, -454.938)
-scale = Vector2(0.0789208, 0.159021)
-texture = ExtResource("9_ig5i8")
-region_enabled = true
-region_rect = Rect2(0, 0, 10000, 6000)
-
-[node name="Sprite2D48" type="Sprite2D" parent="Outside"]
-show_behind_parent = true
-texture_repeat = 2
-material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-9130.97, -1033.97)
-scale = Vector2(0.0295604, 0.0506771)
-texture = ExtResource("9_ig5i8")
-region_enabled = true
-region_rect = Rect2(0, 0, 10000, 6000)
-
-[node name="Sprite2D49" type="Sprite2D" parent="Outside"]
-show_behind_parent = true
-texture_repeat = 2
-material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-8884.17, -867.938)
-scale = Vector2(0.0295604, 0.0506771)
+position = Vector2(-7355.4, 354.469)
+scale = Vector2(0.111121, 0.697177)
 texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
