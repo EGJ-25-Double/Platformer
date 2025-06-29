@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://b5tko8bdcr62r" path="res://map/Levels/LevelStargate.tscn" id="13_vok5r"]
 [ext_resource type="Texture2D" uid="uid://dsiic4vmttln2" path="res://assets/posters/maytheforce.png" id="15_dsy6r"]
 [ext_resource type="PackedScene" uid="uid://b8853x6x6xtqg" path="res://menu_pause.tscn" id="17_cemdi"]
+[ext_resource type="Texture2D" uid="uid://bw4tq017twrt" path="res://assets/clue2-double.png" id="19_eawsn"]
+[ext_resource type="Texture2D" uid="uid://d2xhtdml43jdx" path="res://assets/clue4.png" id="20_d2aln"]
 [ext_resource type="Texture2D" uid="uid://c6tmdqpoyh3au" path="res://assets/posters/chien1.png" id="25_7myag"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8s6nd"]
@@ -212,7 +214,7 @@ tile_map_data = PackedByteArray("AACwACIAAAAAAAAAAADTACwAAAAEAAIAAAD4ACwAAAAHAAI
 tile_set = ExtResource("3_5y575")
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_gl2p0")]
-position = Vector2(-1498, 2185)
+position = Vector2(-1990, 2210)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 process_mode = 3
@@ -692,6 +694,14 @@ offset = Vector2(-1350, -340)
 z_index = -2
 
 [node name="Chien1" type="Sprite2D" parent="Clue"]
-position = Vector2(2512, -260)
+position = Vector2(2723, -466)
 scale = Vector2(0.14, 0.14)
 texture = ExtResource("25_7myag")
+
+[node name="Clue2-double" type="Sprite2D" parent="."]
+position = Vector2(4283, -1816)
+texture = ExtResource("19_eawsn")
+
+[node name="Clue4" type="Sprite2D" parent="."]
+position = Vector2(-5239, -2023)
+texture = ExtResource("20_d2aln")
