@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://wujrjphnoovi" path="res://InvisibleWall/InvisibleWall.tscn" id="3_3uecj"]
 [ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="4_3uecj"]
 [ext_resource type="Texture2D" uid="uid://b3kq1rdrm2srj" path="res://assets/scene.png" id="5_3uecj"]
-[ext_resource type="Script" uid="uid://wiun1ls2lqap" path="res://map/Levels/scene.gd" id="6_hihk3"]
+[ext_resource type="Script" path="res://map/Levels/scene.gd" id="6_hihk3"]
 [ext_resource type="PackedScene" uid="uid://bkcflwywxj5dl" path="res://map/CheckPoint/CheckPoint.tscn" id="7_hihk3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3uecj"]

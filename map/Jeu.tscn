@@ -577,6 +577,7 @@ region_rect = Rect2(0, 0, 10000, 6000)
 [node name="Map" parent="." instance=ExtResource("10_kawow")]
 
 [node name="MenuPause" type="CanvasLayer" parent="."]
+process_mode = 3
 script = ExtResource("14_ouisi")
 
 [node name="Background" type="TextureRect" parent="MenuPause"]

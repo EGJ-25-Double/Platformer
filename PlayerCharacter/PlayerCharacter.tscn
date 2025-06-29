@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://ds3igeg01sjso"]
+[gd_scene load_steps=64 format=3 uid="uid://ds3igeg01sjso"]
 
 [ext_resource type="Script" uid="uid://dnvemqwbwwoih" path="res://PlayerCharacter/player_character.gd" id="1_v4vvu"]
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://clit7bi8cpi4n" path="res://assets/character/Layers02/Alien_GJ_0000s_0004_Layer-1.png" id="8_nbdcw"]
 [ext_resource type="Texture2D" uid="uid://df5bbatndur1y" path="res://assets/character/Layers02/Alien_GJ_0000s_0006_tail07.png" id="9_dyuu2"]
 [ext_resource type="Texture2D" uid="uid://dpxoe7y5iif7l" path="res://assets/character/Skins/Alien_masques_0005_Al.png" id="9_u4e74"]
+[ext_resource type="Texture2D" uid="uid://b8wbhqnjcdxxm" path="res://assets/character/Skins/Mario.png" id="10_6h5in"]
 [ext_resource type="Script" uid="uid://cnkd55vdp7d00" path="res://PlayerCharacter/PlayerCharacterAnimation.gd" id="10_nbdcw"]
 [ext_resource type="Script" uid="uid://bfieuqqmw1qfl" path="res://power/double_jump.gd" id="12_6mx01"]
 [ext_resource type="Script" uid="uid://cn4bi4yt4c28e" path="res://power/wall_jump.gd" id="13_hs44b"]
@@ -26,7 +27,7 @@
 [ext_resource type="AudioStream" uid="uid://b11dy2242ii4w" path="res://sounds/SFX/EGJ25_SFX_AlienStep3_V1.mp3" id="22_d5bsx"]
 [ext_resource type="AudioStream" uid="uid://dlm57lo5o41l1" path="res://sounds/SFX/EGJ25_SFX_AlienClimb_V1.mp3" id="25_87y2k"]
 [ext_resource type="Texture2D" uid="uid://dltmxg3wlvlm" path="res://assets/Themes/Keyboard.png" id="26_4sspf"]
-[ext_resource type="Script" uid="uid://cojdry6dce78p" path="res://PlayerCharacter/flash.gd" id="27_6h5in"]
+[ext_resource type="Script" path="res://PlayerCharacter/flash.gd" id="27_6h5in"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
 size = Vector2(64, 92)
@@ -704,6 +705,10 @@ visible = false
 position = Vector2(2, -66)
 texture = ExtResource("9_u4e74")
 offset = Vector2(8, 0)
+
+[node name="Mario" type="Sprite2D" parent="Sprite/Head/Masks"]
+visible = false
+texture = ExtResource("10_6h5in")
 
 [node name="HandR" type="Sprite2D" parent="Sprite"]
 position = Vector2(-1200, -1000)

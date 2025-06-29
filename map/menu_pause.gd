@@ -8,6 +8,7 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		visible = true
+		$VBoxContainer/PlayBtn.grab_focus()
 
 func _on_play_btn_pressed() -> void:
 	visible = false
