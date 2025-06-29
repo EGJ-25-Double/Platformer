@@ -19,6 +19,9 @@ var current_skin: SkinData
 
 var can_move := true
 
+@onready var tremor := $"JumpFeedback/Sprite2D"
+var tremor_tween: Tween
+var previous_velocity: Vector2 = Vector2.ZERO
 
 
 enum AnimState {
@@ -34,10 +37,12 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	GameState.player = self
+	tremor.hide()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("jump") and (animState == AnimState.CLIMBING or is_on_floor()):
 		audio_jump.play()
+		premature_kill_land_tremor()
 		velocity.y = -jump_impulse
 	elif event.is_action_pressed("reset") and GameState.current_checkpoint != null:
 		tp_checkpoint()
@@ -69,6 +74,10 @@ func _physics_process(delta: float) -> void:
 		sprite.scale.x = -abs(sprite.scale.x)
 	elif velocity.x < 0:
 		sprite.scale.x = abs(sprite.scale.x)
+	
+	if is_on_floor() and velocity.y < previous_velocity.y:
+		land_tremor()
+	previous_velocity = velocity
 
 func show_key_power():
 	if not key_power:
@@ -87,3 +96,19 @@ func tp_checkpoint():
 		key_checkpoint = null
 
 	global_position = GameState.current_checkpoint.global_position
+	
+func land_tremor() -> void:
+	tremor.material.set_shader_parameter("time", 0.0)
+	tremor.show()
+
+	if is_instance_valid(tremor_tween) and tremor_tween.is_running():
+		tremor_tween.kill()
+	tremor_tween = create_tween()
+	tremor_tween.tween_method(
+	func(v): tremor.material.set_shader_parameter("time", v), 0.0, 1.0, 0.25) 
+	tremor_tween.tween_callback(func(): tremor.hide())
+
+func premature_kill_land_tremor() -> void:
+	if is_instance_valid(tremor_tween) and tremor_tween.is_running():
+		tremor_tween.kill()
+	tremor.hide()

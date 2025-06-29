@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://ds3igeg01sjso"]
+[gd_scene load_steps=84 format=3 uid="uid://ds3igeg01sjso"]
 
 [ext_resource type="Script" uid="uid://dnvemqwbwwoih" path="res://PlayerCharacter/player_character.gd" id="1_v4vvu"]
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
@@ -31,6 +31,8 @@
 [ext_resource type="Texture2D" uid="uid://dhxwunkv6uwon" path="res://assets/Themes/gdb-xbox-2.png" id="27_sa684"]
 [ext_resource type="AudioStream" uid="uid://cl0dkolmnrsqd" path="res://sounds/SFX/410559__michellegrobler__old-camera-flash.wav" id="28_6h5in"]
 [ext_resource type="Script" path="res://PlayerCharacter/key_check_controller.gd" id="29_waumh"]
+[ext_resource type="Shader" uid="uid://bfmystvs006hn" path="res://PlayerCharacter/LandTremor.gdshader" id="32_lxy35"]
+[ext_resource type="Texture2D" uid="uid://d06vqytu47on5" path="res://assets/character/JumpFeedback/BlankJumpSquareTex.png" id="33_ctych"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
 size = Vector2(64, 92)
@@ -749,6 +751,16 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2qxx"]
 size = Vector2(64, 92)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8vglq"]
+shader = ExtResource("32_lxy35")
+shader_parameter/time = 0.0
+shader_parameter/ring_color = Vector4(1, 1, 1, 1)
+shader_parameter/start_radius = 0.0
+shader_parameter/end_radius = 1.0
+shader_parameter/thickness = 0.18
+shader_parameter/fade_out = 0.3
+shader_parameter/max_dist = 0.9
+
 [node name="PlayerCharacter" type="CharacterBody2D"]
 z_index = 5
 collision_layer = 7
@@ -945,3 +957,11 @@ unique_name_in_owner = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JumpBox"]
 position = Vector2(6, 0)
 shape = SubResource("RectangleShape2D_h2qxx")
+
+[node name="JumpFeedback" type="Node2D" parent="."]
+position = Vector2(6, 64)
+scale = Vector2(0.56, -0.280001)
+
+[node name="Sprite2D" type="Sprite2D" parent="JumpFeedback"]
+material = SubResource("ShaderMaterial_8vglq")
+texture = ExtResource("33_ctych")
