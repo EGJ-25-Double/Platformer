@@ -34,14 +34,14 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	var direction = 0.0
 	if Input.is_action_pressed("move_left"):
-			direction -= 1.0
-	if Input.is_action_pressed("move_right"):
-			direction += 1.0
+		direction -= 1.0
+	elif Input.is_action_pressed("move_right"):
+		direction += 1.0
 
 	if direction != 0:
 			velocity.x = move_toward(velocity.x, direction * speed, acceleration * delta)
 	else:
-			velocity.x = move_toward(velocity.x, 0, friction * delta)
+			velocity.x = 0
 
 	if not is_on_floor():
 		velocity.y += gravity * (wall_gravity_ratio if is_on_wall() and velocity.y > 0 else 1) * delta
