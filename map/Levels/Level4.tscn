@@ -1,0 +1,712 @@
+[gd_scene load_steps=6 format=4 uid="uid://bhrdw4rjoqr2k"]
+
+[ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_0a07s"]
+[ext_resource type="PackedScene" uid="uid://cv28xrom8uhf1" path="res://Ladder/Ladder.tscn" id="2_6tffa"]
+[ext_resource type="PackedScene" uid="uid://wujrjphnoovi" path="res://InvisibleWall/InvisibleWall.tscn" id="3_3uecj"]
+[ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="3_jure5"]
+[ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="4_3uecj"]
+
+[node name="Level4" type="Node2D"]
+
+[node name="TileMapLayer5" type="TileMapLayer" parent="."]
+texture_filter = 1
+position = Vector2(-800, 200)
+scale = Vector2(0.2, 0.2)
+tile_map_data = PackedByteArray("AAAdAOj/AAAQAAAAAAAdAOf/AAAQAAAAAAAcAOj/AAAQAAAAAAAcAOf/AAAQAAAAAAAbAOj/AAAQAAAAAAAbAOf/AAAQAAAAAAAaAOj/AAAQAAAAAAAaAOf/AAAQAAAAAAAZAOj/AAAQAAAAAAAZAOf/AAAQAAAAAAAYAOj/AAAQAAAAAAAYAOf/AAAQAAAAAAAXAOj/AAAQAAAAAAAXAOf/AAAQAAAAAAAWAOj/AAAQAAAAAAAWAOf/AAAQAAAAAAAVAOj/AAAQAAAAAAAUAOj/AAAQAAAAAAAUAOf/AAAQAAAAAAAUAOb/AAAQAAAAAAAVAOb/AAAQAAAAAAAWAOn/AAAQAAAAAAAVAOn/AAAQAAAAAAAUAOn/AAAQAAAAAAAXAOb/AAAQAAAAAAAXAOn/AAAQAAAAAAAYAOb/AAAQAAAAAAAYAOn/AAAQAAAAAAAZAOb/AAAQAAAAAAAZAOn/AAAQAAAAAAAaAOb/AAAQAAAAAAAaAOn/AAAQAAAAAAAbAOb/AAAQAAAAAAAbAOn/AAAQAAAAAAAcAOb/AAAQAAAAAAAcAOn/AAAQAAAAAAAdAOb/AAAQAAAAAAAdAOn/AAAQAAAAAAATAOj/AAAQAAAAAAATAOf/AAAQAAAAAAASAOj/AAAQAAAAAAASAOf/AAAQAAAAAAARAOj/AAAQAAAAAAARAOf/AAAQAAAAAAAQAOj/AAAQAAAAAAAQAOf/AAAQAAAAAAAPAOj/AAAQAAAAAAAPAOf/AAAQAAAAAAAOAOj/AAAQAAAAAAAOAOf/AAAQAAAAAAANAOj/AAAQAAAAAAANAOf/AAAQAAAAAAAMAOj/AAAQAAAAAAAMAOf/AAAQAAAAAAALAOj/AAAQAAAAAAALAOf/AAAQAAAAAAAKAOj/AAAQAAAAAAAKAOf/AAAQAAAAAAAJAOj/AAAQAAAAAAAJAOf/AAAQAAAAAAAIAOj/AAAQAAAAAAAIAOf/AAAQAAAAAAAHAOj/AAAQAAAAAAAHAOf/AAAQAAAAAAAGAOj/AAAQAAAAAAAGAOf/AAAQAAAAAAAFAOj/AAAQAAAAAAAFAOf/AAAQAAAAAAAEAOj/AAAQAAAAAAAEAOf/AAAQAAAAAAADAOj/AAAQAAAAAAADAOf/AAAQAAAAAAACAOj/AAAKAAAAAAACAOf/AAAKAAAAAAACAOb/AAAMAAAAAAADAOb/AAAFAAAAAAAEAOb/AAAEAAAAAAAEAOn/AAAAAAAAAAADAOn/AAAAAAAAAAACAOn/AAAOAAAAAAAFAOb/AAAFAAAAAAAFAOn/AAAAAAAAAAAGAOb/AAAFAAAAAAAGAOn/AAACAAAAAAAHAOb/AAAFAAAAAAAHAOn/AAACAAAAAAAIAOb/AAAFAAAAAAAIAOn/AAABAAAAAAAJAOb/AAADAAAAAAAJAOn/AAAAAAAAAAAKAOb/AAAJAAAAAAAKAOn/AAAHAAAAAAALAOb/AAAQAAAAAAALAOn/AAAQAAAAAAAMAOb/AAAQAAAAAAAMAOn/AAAQAAAAAAANAOb/AAAQAAAAAAANAOn/AAAQAAAAAAAOAOb/AAAQAAAAAAAOAOn/AAAQAAAAAAAPAOb/AAAQAAAAAAAPAOn/AAAQAAAAAAAQAOb/AAAQAAAAAAAQAOn/AAAQAAAAAAARAOb/AAAQAAAAAAARAOn/AAAQAAAAAAASAOb/AAAQAAAAAAASAOn/AAAQAAAAAAATAOb/AAAQAAAAAAATAOn/AAAQAAAAAAAdAPL/AAAQAAAAAAAdAPH/AAAQAAAAAAAdAPD/AAAQAAAAAAAdAO//AAAQAAAAAAAdAO7/AAAQAAAAAAAdAO3/AAAQAAAAAAAdAOz/AAAQAAAAAAAdAOv/AAAQAAAAAAAdAOr/AAAQAAAAAAAdAOX/AAAQAAAAAAAdAOT/AAAQAAAAAAAcAPL/AAAQAAAAAAAcAPH/AAAQAAAAAAAcAPD/AAAQAAAAAAAcAO//AAAQAAAAAAAcAO7/AAAQAAAAAAAcAO3/AAAQAAAAAAAcAOz/AAAQAAAAAAAcAOv/AAAQAAAAAAAcAOr/AAAQAAAAAAAcAOX/AAAQAAAAAAAcAOT/AAAQAAAAAAAbAPL/AAAQAAAAAAAbAPH/AAAQAAAAAAAbAPD/AAAQAAAAAAAbAO//AAAQAAAAAAAbAO7/AAAQAAAAAAAbAO3/AAAQAAAAAAAbAOz/AAAQAAAAAAAbAOv/AAAQAAAAAAAbAOr/AAAQAAAAAAAbAOX/AAAQAAAAAAAbAOT/AAAQAAAAAAAaAPL/AAAQAAAAAAAaAPH/AAAQAAAAAAAaAPD/AAAQAAAAAAAaAO//AAAQAAAAAAAaAO7/AAAQAAAAAAAaAO3/AAAQAAAAAAAaAOz/AAAQAAAAAAAaAOv/AAAQAAAAAAAaAOr/AAAQAAAAAAAaAOX/AAAQAAAAAAAaAOT/AAAQAAAAAAAZAPL/AAAQAAAAAAAZAPH/AAAQAAAAAAAZAPD/AAAQAAAAAAAZAO//AAAQAAAAAAAZAO7/AAAQAAAAAAAZAO3/AAAQAAAAAAAZAOz/AAAQAAAAAAAZAOv/AAAQAAAAAAAZAOr/AAAQAAAAAAAZAOX/AAAQAAAAAAAZAOT/AAAQAAAAAAAYAPL/AAAQAAAAAAAYAPH/AAAQAAAAAAAYAPD/AAAQAAAAAAAYAO//AAAQAAAAAAAYAO7/AAAQAAAAAAAYAO3/AAAQAAAAAAAYAOz/AAAQAAAAAAAYAOv/AAAQAAAAAAAYAOr/AAAQAAAAAAAYAOX/AAAQAAAAAAAYAOT/AAAQAAAAAAAXAPL/AAAQAAAAAAAXAPH/AAAQAAAAAAAXAPD/AAAQAAAAAAAXAO//AAAQAAAAAAAXAO7/AAAQAAAAAAAXAO3/AAAQAAAAAAAXAOz/AAAQAAAAAAAXAOv/AAAQAAAAAAAXAOr/AAAQAAAAAAAXAOX/AAAQAAAAAAAXAOT/AAAQAAAAAAAWAPL/AAAQAAAAAAAWAPH/AAAQAAAAAAAWAPD/AAAQAAAAAAAWAO//AAAQAAAAAAAWAO7/AAAQAAAAAAAWAO3/AAAQAAAAAAAWAOz/AAAQAAAAAAAWAOv/AAAQAAAAAAAWAOr/AAAQAAAAAAAWAOX/AAAQAAAAAAAWAOT/AAAQAAAAAAAVAPL/AAAQAAAAAAAVAPH/AAAQAAAAAAAVAPD/AAAQAAAAAAAVAO//AAAQAAAAAAAVAO7/AAAQAAAAAAAVAO3/AAAQAAAAAAAVAOz/AAAQAAAAAAAVAOv/AAAQAAAAAAAVAOr/AAAQAAAAAAAVAOX/AAAQAAAAAAAVAOT/AAAQAAAAAAAUAPL/AAAQAAAAAAAUAPH/AAAQAAAAAAAUAPD/AAAQAAAAAAAUAO//AAAQAAAAAAAUAO7/AAAQAAAAAAAUAO3/AAAQAAAAAAAUAOz/AAAQAAAAAAAUAOv/AAAQAAAAAAAUAOr/AAAQAAAAAAAUAOX/AAAQAAAAAAAUAOT/AAAQAAAAAAATAPL/AAAQAAAAAAATAPH/AAAQAAAAAAATAPD/AAAQAAAAAAATAO//AAAQAAAAAAATAO7/AAAQAAAAAAATAO3/AAAQAAAAAAATAOz/AAAQAAAAAAATAOv/AAAQAAAAAAATAOr/AAAQAAAAAAATAOX/AAAQAAAAAAATAOT/AAAQAAAAAAASAPL/AAAQAAAAAAASAPH/AAAQAAAAAAASAPD/AAAQAAAAAAASAO//AAAQAAAAAAASAO7/AAAQAAAAAAASAO3/AAAQAAAAAAASAOz/AAAQAAAAAAASAOv/AAAQAAAAAAASAOr/AAAQAAAAAAASAOX/AAAQAAAAAAASAOT/AAAQAAAAAAARAPL/AAAQAAAAAAARAPH/AAAQAAAAAAARAPD/AAAQAAAAAAARAO//AAAQAAAAAAARAO7/AAAQAAAAAAARAO3/AAAQAAAAAAARAOz/AAAQAAAAAAARAOv/AAAQAAAAAAARAOr/AAAQAAAAAAARAOX/AAAQAAAAAAARAOT/AAAQAAAAAAAQAPL/AAAQAAAAAAAQAPH/AAAQAAAAAAAQAPD/AAAQAAAAAAAQAO//AAAQAAAAAAAQAO7/AAAQAAAAAAAQAO3/AAAQAAAAAAAQAOz/AAAQAAAAAAAQAOv/AAAQAAAAAAAQAOr/AAAQAAAAAAAQAOX/AAAQAAAAAAAQAOT/AAAQAAAAAAAPAPL/AAAQAAAAAAAPAPH/AAAQAAAAAAAPAPD/AAAQAAAAAAAPAO//AAAQAAAAAAAPAO7/AAAQAAAAAAAPAO3/AAAQAAAAAAAPAOz/AAAQAAAAAAAPAOv/AAAQAAAAAAAPAOr/AAAQAAAAAAAPAOX/AAAQAAAAAAAPAOT/AAAQAAAAAAAOAPL/AAAQAAAAAAAOAPH/AAAQAAAAAAAOAPD/AAAQAAAAAAAOAO//AAAQAAAAAAAOAO7/AAAQAAAAAAAOAO3/AAAQAAAAAAAOAOz/AAAQAAAAAAAOAOv/AAAQAAAAAAAOAOr/AAAQAAAAAAAOAOX/AAAQAAAAAAAOAOT/AAAQAAAAAAANAPL/AAAQAAAAAAANAPH/AAAQAAAAAAANAPD/AAAQAAAAAAANAO//AAAQAAAAAAANAO7/AAAQAAAAAAANAO3/AAAQAAAAAAANAOz/AAAQAAAAAAANAOr/AAAQAAAAAAANAOX/AAAQAAAAAAANAOT/AAAQAAAAAAAMAPL/AAAQAAAAAAAMAPH/AAAQAAAAAAAMAPD/AAAQAAAAAAAMAO//AAAQAAAAAAAMAO7/AAAQAAAAAAAMAO3/AAAQAAAAAAAMAOz/AAAQAAAAAAAMAOv/AAAQAAAAAAAMAOr/AAAQAAAAAAAMAOX/AAAQAAAAAAAMAOT/AAAQAAAAAAALAPL/AAAQAAAAAAALAPH/AAAQAAAAAAALAPD/AAAQAAAAAAALAO//AAAQAAAAAAALAO7/AAAQAAAAAAALAO3/AAAQAAAAAAALAOz/AAAQAAAAAAALAOv/AAAQAAAAAAALAOr/AAAQAAAAAAALAOX/AAAQAAAAAAALAOT/AAAQAAAAAAAKAOX/AAAKAAAAAAAKAOT/AAAKAAAAAAAKAOP/AAAMAAAAAAALAOP/AAADAAAAAAAMAOP/AAADAAAAAAAKAOr/AAAKAAAAAAAKAOv/AAAKAAAAAAAKAOz/AAAKAAAAAAAKAO3/AAAKAAAAAAAKAO7/AAAKAAAAAAAKAO//AAAKAAAAAAAKAPD/AAAKAAAAAAAKAPH/AAAKAAAAAAAKAPL/AAAKAAAAAAAMAPP/AAAAAAAAAAALAPP/AAABAAAAAAAKAPP/AAAOAAAAAAANAOP/AAADAAAAAAANAPP/AAACAAAAAAAOAOP/AAAFAAAAAAAOAPP/AAABAAAAAAAPAOP/AAAFAAAAAAAPAPP/AAAAAAAAAAAQAOP/AAAFAAAAAAAQAPP/AAABAAAAAAARAOP/AAADAAAAAAARAPP/AAAAAAAAAAASAOP/AAADAAAAAAASAPP/AAAAAAAAAAATAOP/AAAEAAAAAAATAPP/AAACAAAAAAAUAOP/AAAEAAAAAAAUAPP/AAABAAAAAAAVAOP/AAADAAAAAAAVAPP/AAABAAAAAAAWAOP/AAAFAAAAAAAWAPP/AAAAAAAAAAAXAOP/AAAEAAAAAAAXAPP/AAAAAAAAAAAYAOP/AAAFAAAAAAAYAPP/AAAAAAAAAAAZAOP/AAADAAAAAAAZAPP/AAABAAAAAAAaAOP/AAADAAAAAAAaAPP/AAABAAAAAAAbAOP/AAADAAAAAAAbAPP/AAACAAAAAAAcAOP/AAADAAAAAAAcAPP/AAACAAAAAAAdAOP/AAAEAAAAAAAdAPP/AAACAAAAAAA=")
+tile_set = ExtResource("1_0a07s")
+
+[node name="Ladders" type="Node2D" parent="."]
+visible = false
+position = Vector2(938, -1481)
+
+[node name="Ladder" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(707, 521)
+
+[node name="Ladder2" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(638, 521)
+
+[node name="Ladder3" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(570, 521)
+
+[node name="Ladder4" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(502, 521)
+
+[node name="Ladder5" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(434, 521)
+
+[node name="Ladder6" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(366, 521)
+
+[node name="Ladder7" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(298, 521)
+
+[node name="Ladder8" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(230, 521)
+
+[node name="Ladder9" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(163, 521)
+
+[node name="Ladder10" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(94, 521)
+
+[node name="Ladder11" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(26, 521)
+
+[node name="Ladder12" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-42, 521)
+
+[node name="Ladder13" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-110, 521)
+
+[node name="Ladder14" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-178, 521)
+
+[node name="Ladder15" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-246, 521)
+
+[node name="Ladder16" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-314, 521)
+
+[node name="Ladder17" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-383, 521)
+
+[node name="Ladder18" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-452, 521)
+
+[node name="Ladder19" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-520, 521)
+
+[node name="Ladder20" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-588, 521)
+
+[node name="Ladder21" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-656, 521)
+
+[node name="Ladder22" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-724, 521)
+
+[node name="Ladder23" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-792, 521)
+
+[node name="Ladder24" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(707, 349)
+
+[node name="Ladder25" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(638, 349)
+
+[node name="Ladder26" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(570, 349)
+
+[node name="Ladder27" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(502, 349)
+
+[node name="Ladder28" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(434, 349)
+
+[node name="Ladder29" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(366, 349)
+
+[node name="Ladder30" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(298, 349)
+
+[node name="Ladder31" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(230, 349)
+
+[node name="Ladder32" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(163, 349)
+
+[node name="Ladder33" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(94, 349)
+
+[node name="Ladder34" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(26, 349)
+
+[node name="Ladder35" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-42, 349)
+
+[node name="Ladder36" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-110, 349)
+
+[node name="Ladder37" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-178, 349)
+
+[node name="Ladder38" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-246, 349)
+
+[node name="Ladder39" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-314, 349)
+
+[node name="Ladder40" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-383, 349)
+
+[node name="Ladder41" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-452, 349)
+
+[node name="Ladder42" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-520, 349)
+
+[node name="Ladder43" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-588, 349)
+
+[node name="Ladder44" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-656, 349)
+
+[node name="Ladder45" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-724, 349)
+
+[node name="Ladder46" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-792, 349)
+
+[node name="Ladder47" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(707, 177)
+
+[node name="Ladder48" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(638, 177)
+
+[node name="Ladder49" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(570, 177)
+
+[node name="Ladder50" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(502, 177)
+
+[node name="Ladder51" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(434, 177)
+
+[node name="Ladder52" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(366, 177)
+
+[node name="Ladder53" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(298, 177)
+
+[node name="Ladder54" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(230, 177)
+
+[node name="Ladder55" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(163, 177)
+
+[node name="Ladder56" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(94, 177)
+
+[node name="Ladder57" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(26, 177)
+
+[node name="Ladder58" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-42, 177)
+
+[node name="Ladder59" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-110, 177)
+
+[node name="Ladder60" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-178, 177)
+
+[node name="Ladder61" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-246, 177)
+
+[node name="Ladder62" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-314, 177)
+
+[node name="Ladder63" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-383, 177)
+
+[node name="Ladder64" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-452, 177)
+
+[node name="Ladder65" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-520, 177)
+
+[node name="Ladder66" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-588, 177)
+
+[node name="Ladder67" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-656, 177)
+
+[node name="Ladder68" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-724, 177)
+
+[node name="Ladder69" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-792, 177)
+
+[node name="Ladder70" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(707, 5)
+
+[node name="Ladder71" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(638, 5)
+
+[node name="Ladder72" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(570, 5)
+
+[node name="Ladder73" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(502, 5)
+
+[node name="Ladder74" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(434, 5)
+
+[node name="Ladder75" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(366, 5)
+
+[node name="Ladder76" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(298, 5)
+
+[node name="Ladder77" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(230, 5)
+
+[node name="Ladder78" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(163, 5)
+
+[node name="Ladder79" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(94, 5)
+
+[node name="Ladder80" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(26, 5)
+
+[node name="Ladder81" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-42, 5)
+
+[node name="Ladder82" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-110, 5)
+
+[node name="Ladder83" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-178, 5)
+
+[node name="Ladder84" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-246, 5)
+
+[node name="Ladder85" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-314, 5)
+
+[node name="Ladder86" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-383, 5)
+
+[node name="Ladder87" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-452, 5)
+
+[node name="Ladder88" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-520, 5)
+
+[node name="Ladder89" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-588, 5)
+
+[node name="Ladder90" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-656, 5)
+
+[node name="Ladder91" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-724, 5)
+
+[node name="Ladder92" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-792, 5)
+
+[node name="Ladder93" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(707, -170)
+
+[node name="Ladder94" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(638, -170)
+
+[node name="Ladder95" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(570, -170)
+
+[node name="Ladder96" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(502, -170)
+
+[node name="Ladder97" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(434, -170)
+
+[node name="Ladder98" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(366, -170)
+
+[node name="Ladder99" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(298, -170)
+
+[node name="Ladder100" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(230, -170)
+
+[node name="Ladder101" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(163, -170)
+
+[node name="Ladder102" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(94, -170)
+
+[node name="Ladder103" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(26, -170)
+
+[node name="Ladder104" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-42, -170)
+
+[node name="Ladder105" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-110, -170)
+
+[node name="Ladder106" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-178, -170)
+
+[node name="Ladder107" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-246, -170)
+
+[node name="Ladder108" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-314, -170)
+
+[node name="Ladder109" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-383, -170)
+
+[node name="Ladder110" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-452, -170)
+
+[node name="Ladder111" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-520, -170)
+
+[node name="Ladder112" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-588, -170)
+
+[node name="Ladder113" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-656, -170)
+
+[node name="Ladder114" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-724, -170)
+
+[node name="Ladder115" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-792, -170)
+
+[node name="Ladder116" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(707, -342)
+
+[node name="Ladder117" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(638, -342)
+
+[node name="Ladder118" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(570, -342)
+
+[node name="Ladder119" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(502, -342)
+
+[node name="Ladder120" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(434, -342)
+
+[node name="Ladder121" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(366, -342)
+
+[node name="Ladder122" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(298, -342)
+
+[node name="Ladder123" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(230, -342)
+
+[node name="Ladder124" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(163, -342)
+
+[node name="Ladder125" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(94, -342)
+
+[node name="Ladder126" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(26, -342)
+
+[node name="Ladder127" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-42, -342)
+
+[node name="Ladder128" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-110, -342)
+
+[node name="Ladder129" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-178, -342)
+
+[node name="Ladder130" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-246, -342)
+
+[node name="Ladder131" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-314, -342)
+
+[node name="Ladder132" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-383, -342)
+
+[node name="Ladder133" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-452, -342)
+
+[node name="Ladder134" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-520, -342)
+
+[node name="Ladder135" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-588, -342)
+
+[node name="Ladder136" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-656, -342)
+
+[node name="Ladder137" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-724, -342)
+
+[node name="Ladder138" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-792, -342)
+
+[node name="Ladder139" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(707, -515)
+
+[node name="Ladder140" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(638, -515)
+
+[node name="Ladder141" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(570, -515)
+
+[node name="Ladder142" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(502, -515)
+
+[node name="Ladder143" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(434, -515)
+
+[node name="Ladder144" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(366, -515)
+
+[node name="Ladder145" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(298, -515)
+
+[node name="Ladder146" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(230, -515)
+
+[node name="Ladder147" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(163, -515)
+
+[node name="Ladder148" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(94, -515)
+
+[node name="Ladder149" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(26, -515)
+
+[node name="Ladder150" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-42, -515)
+
+[node name="Ladder151" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-110, -515)
+
+[node name="Ladder152" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-178, -515)
+
+[node name="Ladder153" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-246, -515)
+
+[node name="Ladder154" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-314, -515)
+
+[node name="Ladder155" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-383, -515)
+
+[node name="Ladder156" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-452, -515)
+
+[node name="Ladder157" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-520, -515)
+
+[node name="Ladder158" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-588, -515)
+
+[node name="Ladder159" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-656, -515)
+
+[node name="Ladder160" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-724, -515)
+
+[node name="Ladder161" parent="Ladders" instance=ExtResource("2_6tffa")]
+position = Vector2(-792, -515)
+
+[node name="InvisibleWalls" type="Node2D" parent="."]
+
+[node name="InvisibleWall2" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1531, -964)
+
+[node name="InvisibleWall" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1531, -904)
+
+[node name="InvisibleWall3" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1531, -1084)
+
+[node name="InvisibleWall4" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1531, -1024)
+
+[node name="InvisibleWall5" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1531, -1204)
+
+[node name="InvisibleWall6" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1531, -1144)
+
+[node name="InvisibleWall7" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1531, -1324)
+
+[node name="InvisibleWall8" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1531, -1264)
+
+[node name="InvisibleWall9" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1568, -1688)
+
+[node name="InvisibleWall10" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1568, -1628)
+
+[node name="InvisibleWall11" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1568, -1808)
+
+[node name="InvisibleWall12" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1568, -1748)
+
+[node name="InvisibleWall13" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1568, -1928)
+
+[node name="InvisibleWall14" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1568, -1868)
+
+[node name="InvisibleWall15" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1568, -2048)
+
+[node name="InvisibleWall16" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1568, -1988)
+
+[node name="InvisibleWall17" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1471, -1324)
+
+[node name="InvisibleWall18" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1411, -1324)
+
+[node name="InvisibleWall19" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1351, -1324)
+
+[node name="InvisibleWall20" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1291, -1324)
+
+[node name="InvisibleWall21" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1231, -1324)
+
+[node name="InvisibleWall22" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1171, -1324)
+
+[node name="InvisibleWall23" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1111, -1324)
+
+[node name="InvisibleWall24" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1111, -1144)
+
+[node name="InvisibleWall25" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1111, -1084)
+
+[node name="InvisibleWall26" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1111, -1264)
+
+[node name="InvisibleWall27" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1111, -1204)
+
+[node name="InvisibleWall30" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1111, -1025)
+
+[node name="InvisibleWall29" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(840, -1320)
+
+[node name="InvisibleWall32" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(839, -1140)
+
+[node name="InvisibleWall33" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(839, -1080)
+
+[node name="InvisibleWall34" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(839, -1260)
+
+[node name="InvisibleWall35" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(839, -1200)
+
+[node name="InvisibleWall36" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(839, -901)
+
+[node name="InvisibleWall37" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(839, -1021)
+
+[node name="InvisibleWall38" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(839, -961)
+
+[node name="InvisibleWall39" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(841, -1800)
+
+[node name="InvisibleWall40" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(840, -1620)
+
+[node name="InvisibleWall41" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(840, -1560)
+
+[node name="InvisibleWall42" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(840, -1740)
+
+[node name="InvisibleWall43" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(840, -1680)
+
+[node name="InvisibleWall44" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(840, -1381)
+
+[node name="InvisibleWall45" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(840, -1501)
+
+[node name="InvisibleWall46" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(840, -1441)
+
+[node name="InvisibleWall47" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1508, -1808)
+
+[node name="InvisibleWall48" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1448, -1808)
+
+[node name="InvisibleWall49" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1388, -1808)
+
+[node name="InvisibleWall50" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1328, -1808)
+
+[node name="InvisibleWall51" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1080, -1800)
+
+[node name="InvisibleWall52" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1020, -1800)
+
+[node name="InvisibleWall53" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(960, -1800)
+
+[node name="InvisibleWall54" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(900, -1800)
+
+[node name="InvisibleWall28" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(540, -1980)
+
+[node name="InvisibleWall31" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(540, -1920)
+
+[node name="InvisibleWall63" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(540, -2100)
+
+[node name="InvisibleWall64" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(540, -2040)
+
+[node name="InvisibleWall55" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1328, -1748)
+
+[node name="InvisibleWall56" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1328, -1568)
+
+[node name="InvisibleWall57" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1328, -1688)
+
+[node name="InvisibleWall58" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1328, -1628)
+
+[node name="InvisibleWall59" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1080, -1860)
+
+[node name="InvisibleWall60" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(648, -1684)
+
+[node name="InvisibleWall61" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(588, -1684)
+
+[node name="InvisibleWall62" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(528, -1684)
+
+[node name="InvisibleWall65" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
+position = Vector2(1632, -1544)
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("3_jure5")]
+position = Vector2(1660, -1028)
+
+[node name="VadorPickable" parent="." instance=ExtResource("4_3uecj")]
+visible = false
+position = Vector2(1256, -1728)
+skin_name = "Vador"
+
+[node name="CostumePickable" parent="." instance=ExtResource("4_3uecj")]
+position = Vector2(1640, -912)
+skin_name = "SpiderMan"
