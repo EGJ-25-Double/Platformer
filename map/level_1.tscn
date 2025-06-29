@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://ct0kjnn3kw43j"]
+[gd_scene load_steps=10 format=4 uid="uid://ct0kjnn3kw43j"]
 
 [ext_resource type="Texture2D" uid="uid://bb00kfyvv54fd" path="res://assets/platforms/platform_shortAsset 5.png" id="1_gl75a"]
 [ext_resource type="Texture2D" uid="uid://b4wveyawhaltc" path="res://assets/platforms/platform_longAsset 4.png" id="2_knb2s"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cv28xrom8uhf1" path="res://Ladder/Ladder.tscn" id="5_ux46k"]
 [ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="6_ihn7y"]
 [ext_resource type="PackedScene" uid="uid://bkcflwywxj5dl" path="res://map/CheckPoint/CheckPoint.tscn" id="6_m1olo"]
+[ext_resource type="Texture2D" uid="uid://c08av5smswfuc" path="res://assets/posters/poster_qr.png" id="7_m1olo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2kap"]
 size = Vector2(74, 30.5)
@@ -98,7 +99,7 @@ texture = ExtResource("2_knb2s")
 shape = SubResource("RectangleShape2D_qmjlt")
 
 [node name="CostumePickable" parent="." instance=ExtResource("6_ihn7y")]
-position = Vector2(1187, 2366)
+position = Vector2(-189, 1356)
 skin_name = "SpiderMan"
 
 [node name="Ladders" type="Node2D" parent="."]
@@ -135,3 +136,9 @@ position = Vector2(1974, 774)
 
 [node name="CheckPoint" parent="." instance=ExtResource("6_m1olo")]
 position = Vector2(618, 2397)
+
+[node name="PosterQr" type="Sprite2D" parent="."]
+position = Vector2(-1152, 1025)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("7_m1olo")
+offset = Vector2(2730, 2238)

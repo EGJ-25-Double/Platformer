@@ -106,6 +106,11 @@ position = Vector2(0, -20)
 tile_map_data = PackedByteArray("AACPACsAAAAEAAQAAABeACsAAAAGAAQAAAA1ACoAAAAGAAQAAAB1ACcAAAACAAQAAADpACcAAAACAAQAAACoACYAAAAAAAQAAAA=")
 tile_set = ExtResource("3_5y575")
 
+[node name="PosterQr" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Parallax2D3"]
+position = Vector2(1729, 440)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("25_7myag")
+
 [node name="Poeple" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D3"]
 position = Vector2(0, 41)
 scale = Vector2(0.4, 0.4)
