@@ -1,10 +1,11 @@
-[gd_scene load_steps=30 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=32 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="Texture2D" uid="uid://buk3i837ilsvk" path="res://assets/BG/gradient.png" id="1_5y575"]
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="3_5y575"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="3_gl2p0"]
 [ext_resource type="AudioStream" uid="uid://dxyo1rrulgy4h" path="res://sounds/Musique/EGJ25_Musique_HumanWorldV2.mp3" id="4_5y575"]
 [ext_resource type="TileSet" uid="uid://2qktjpb68id8" path="res://assets/BG/People.tres" id="4_ntqte"]
+[ext_resource type="Texture2D" uid="uid://c08av5smswfuc" path="res://assets/posters/poster_qr.png" id="4_vok5r"]
 [ext_resource type="PackedScene" uid="uid://vf3bjdnko4xf" path="res://map/level_2.tscn" id="5_kawow"]
 [ext_resource type="PackedScene" uid="uid://ct0kjnn3kw43j" path="res://map/level_1.tscn" id="6_gl2p0"]
 [ext_resource type="PackedScene" uid="uid://vpxwi05f1rmo" path="res://map/level_3.tscn" id="7_5y575"]
@@ -17,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://pild07ifitmv" path="res://assets/posters/physics21.png" id="11_p8qqn"]
 [ext_resource type="Script" uid="uid://xn0o4hxvohn1" path="res://map/menu_pause.gd" id="14_ouisi"]
 [ext_resource type="Texture2D" uid="uid://iar0pqptjv1k" path="res://ui/Menus/MainMenu/background1.jpg" id="15_14vpn"]
+[ext_resource type="Texture2D" uid="uid://dsiic4vmttln2" path="res://assets/posters/maytheforce.png" id="15_dsy6r"]
 [ext_resource type="Theme" uid="uid://coiuj78tsqptn" path="res://assets/Themes/label.tres" id="16_7myag"]
 [ext_resource type="Texture2D" uid="uid://bev3cwh8ycy45" path="res://ui/Menus/MainMenu/background2.jpg" id="17_p8qqn"]
 [ext_resource type="Texture2D" uid="uid://cs7383bschcn4" path="res://ui/Menus/MainMenu/backgrond3.jpg" id="18_dsy6r"]
@@ -109,7 +111,7 @@ tile_set = ExtResource("3_5y575")
 [node name="PosterQr" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Parallax2D3"]
 position = Vector2(1729, 440)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("25_7myag")
+texture = ExtResource("4_vok5r")
 
 [node name="Poeple" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D3"]
 position = Vector2(0, 41)
@@ -292,10 +294,21 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(1133.2, -312.141)
-scale = Vector2(0.3323, 0.169667)
+position = Vector2(-2093.27, -436)
+scale = Vector2(0.4059, 0.169667)
 texture = ExtResource("9_ig5i8")
-offset = Vector2(-4979.54, -140.616)
+offset = Vector2(2965.69, 589.396)
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
+
+[node name="Sprite2D36" type="Sprite2D" parent="Outside"]
+show_behind_parent = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8s6nd")
+position = Vector2(-2739.37, -977.401)
+scale = Vector2(0.0883, 0.3205)
+texture = ExtResource("9_ig5i8")
+offset = Vector2(2965.69, 589.396)
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
 
@@ -394,7 +407,7 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(1815.51, -1505)
+position = Vector2(1237, -1276)
 scale = Vector2(0.0175491, 0.169)
 texture = ExtResource("9_ig5i8")
 offset = Vector2(-1666.98, 1974.86)
@@ -735,6 +748,13 @@ scale = Vector2(0.137, 0.0383333)
 texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
+
+[node name="Maytheforce" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(-139, -1984)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("15_dsy6r")
+offset = Vector2(-1350, -340)
 
 [node name="Map" parent="." instance=ExtResource("10_kawow")]
 visible = false
