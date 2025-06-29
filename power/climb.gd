@@ -26,5 +26,6 @@ func deactivate():
 	touching_ladders -= 1
 	if touching_ladders > 0:
 		return
+	touching_ladders = 0
 	player.animState = player.AnimState.DEFAULT
 	climbing = false

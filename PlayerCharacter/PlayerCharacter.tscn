@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://ds3igeg01sjso"]
+[gd_scene load_steps=68 format=3 uid="uid://ds3igeg01sjso"]
 
 [ext_resource type="Script" uid="uid://dnvemqwbwwoih" path="res://PlayerCharacter/player_character.gd" id="1_v4vvu"]
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
@@ -642,6 +642,28 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2qxx"]
+atlas = ExtResource("26_4sspf")
+region = Rect2(112, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa684"]
+atlas = ExtResource("26_4sspf")
+region = Rect2(112, 160, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_waumh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2qxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sa684")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="PlayerCharacter" type="CharacterBody2D"]
 z_index = 5
 collision_layer = 7
@@ -809,7 +831,7 @@ autoplay = "default"
 visible = false
 position = Vector2(78, -78)
 scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_h2qxx")
+sprite_frames = SubResource("SpriteFrames_waumh")
 autoplay = "default"
 
 [node name="FlashCanvas" type="CanvasLayer" parent="."]

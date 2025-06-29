@@ -6,7 +6,7 @@ class_name DoubleJumpPower extends Power
 var current_jump := 0
 
 func _input(event):
-		if event.is_action_pressed("jump") and not player.is_on_floor() and not player.is_on_wall():
+		if event.is_action_pressed("jump") and not player.is_on_floor():
 			if current_jump >= max_jump:
 				return
 
