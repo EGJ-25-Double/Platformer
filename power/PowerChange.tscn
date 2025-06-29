@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://isasdsxpofj8"]
+[gd_scene load_steps=28 format=3 uid="uid://isasdsxpofj8"]
 
 [ext_resource type="Script" uid="uid://o652awmhgxox" path="res://power/power_change.gd" id="1_3aqmx"]
 [ext_resource type="Texture2D" uid="uid://bdhj6b8dnjv6v" path="res://assets/PoufAnim/Miror_0001_Calque-62.png" id="2_kdxt5"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://ctm2ce83kq3pv" path="res://assets/PoufAnim/Miror_0022_Calque-61.png" id="23_isjrc"]
 [ext_resource type="Texture2D" uid="uid://c0gtxron6afc3" path="res://assets/PoufAnim/Miror_0023_Calque-60.png" id="24_1ol3h"]
 [ext_resource type="Texture2D" uid="uid://baxmmp8ymabl5" path="res://assets/PoufAnim/Miror_0024_Calque-59.png" id="25_likbc"]
+[ext_resource type="AudioStream" uid="uid://b637l74feeen3" path="res://sounds/SFX/EGJ25_SFX_CosplayChange_V1.mp3" id="26_kdxt5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fenoc"]
 animations = [{
@@ -103,7 +104,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 23.0
+"speed": 12.0
 }]
 
 [node name="PowerChange" type="Node2D"]
@@ -115,5 +116,9 @@ sprite_frames = SubResource("SpriteFrames_fenoc")
 autoplay = "default"
 frame = 23
 speed_scale = -1.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("26_kdxt5")
+autoplay = true
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

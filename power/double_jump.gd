@@ -11,6 +11,7 @@ func _input(event):
 				return
 
 			current_jump += 1
+			player.audio_jump.play()
 			player.velocity = Vector2(0, -1) * player.jump_impulse * jump_impulse_ratio
 
 func _process(_delta: float) -> void:

@@ -15,6 +15,7 @@ func _input(event):
 				return
 			var direction = -1 if collision.get_normal().x <= 0 else 1
 			current_wall_jump += 1
+			player.audio_jump.play()
 			player.velocity = Vector2(direction * 0.75, -1) * player.jump_impulse * jump_impulse_ratio
 
 func _process(_delta: float) -> void:

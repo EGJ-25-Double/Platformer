@@ -10,6 +10,7 @@ class_name PlayerCharacter extends CharacterBody2D
 var teleport_cooldown = 5.0
 
 @onready var anim_player: AnimationPlayer = %AnimationPlayer
+@onready var audio_jump: AudioStreamPlayer2D = %AudioJump
 
 enum AnimState {
 	DEFAULT,
@@ -24,6 +25,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("jump") and is_on_floor():
+		audio_jump.play()
 		velocity.y = -jump_impulse
 
 
