@@ -22,7 +22,6 @@ shader_parameter/albedo = Color(0, 0, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5y575"]
 size = Vector2(10686.8, 6359.07)
 
-
 [node name="Jeu" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -391,8 +390,8 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(1892.18, -1505)
-scale = Vector2(0.0290493, 0.169)
+position = Vector2(1815.51, -1505)
+scale = Vector2(0.0175491, 0.169)
 texture = ExtResource("9_ig5i8")
 offset = Vector2(-1666.98, 1974.86)
 region_enabled = true
