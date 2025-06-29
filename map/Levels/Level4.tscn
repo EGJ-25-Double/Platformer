@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://bhrdw4rjoqr2k"]
+[gd_scene load_steps=5 format=4 uid="uid://bhrdw4rjoqr2k"]
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_0a07s"]
 [ext_resource type="PackedScene" uid="uid://cv28xrom8uhf1" path="res://Ladder/Ladder.tscn" id="2_6tffa"]
 [ext_resource type="PackedScene" uid="uid://wujrjphnoovi" path="res://InvisibleWall/InvisibleWall.tscn" id="3_3uecj"]
-[ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="3_jure5"]
 [ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="4_3uecj"]
 
 [node name="Level4" type="Node2D"]
@@ -699,14 +698,7 @@ position = Vector2(528, -1684)
 [node name="InvisibleWall65" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
 position = Vector2(1632, -1544)
 
-[node name="PlayerCharacter" parent="." instance=ExtResource("3_jure5")]
-position = Vector2(1660, -1028)
-
 [node name="VadorPickable" parent="." instance=ExtResource("4_3uecj")]
 visible = false
 position = Vector2(1256, -1728)
 skin_name = "Vador"
-
-[node name="CostumePickable" parent="." instance=ExtResource("4_3uecj")]
-position = Vector2(1640, -912)
-skin_name = "SpiderMan"
