@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://duvl3sivucer7" path="res://map/Levels/level5.tscn" id="10_14vpn"]
 [ext_resource type="Texture2D" uid="uid://pild07ifitmv" path="res://assets/posters/physics21.png" id="11_p8qqn"]
 [ext_resource type="PackedScene" uid="uid://b5tko8bdcr62r" path="res://map/Levels/LevelStargate.tscn" id="13_vok5r"]
-[ext_resource type="Material" path="res://assets/BG/Ground/Background.tres" id="14_8b4dd"]
+[ext_resource type="Material" uid="uid://dughalr4yr48t" path="res://assets/BG/Ground/Background.tres" id="14_8b4dd"]
 [ext_resource type="Script" uid="uid://xn0o4hxvohn1" path="res://map/menu_pause.gd" id="14_ouisi"]
 [ext_resource type="Texture2D" uid="uid://dsiic4vmttln2" path="res://assets/posters/maytheforce.png" id="15_dsy6r"]
 [ext_resource type="Texture2D" uid="uid://vjbrtjwm7ly7" path="res://ui/Menus/MainMenu/mainmenu_bg_cartoonAsset 72.png" id="15_vok5r"]
