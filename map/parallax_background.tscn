@@ -1,0 +1,251 @@
+[gd_scene load_steps=5 format=4 uid="uid://b202yu0np10nb"]
+
+[ext_resource type="Texture2D" uid="uid://buk3i837ilsvk" path="res://assets/BG/gradient.png" id="1_vmkry"]
+[ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="2_fmxf8"]
+[ext_resource type="TileSet" uid="uid://2qktjpb68id8" path="res://assets/BG/People.tres" id="3_tmqmo"]
+[ext_resource type="Texture2D" uid="uid://c08av5smswfuc" path="res://assets/posters/poster_qr.png" id="4_2hyf8"]
+
+[node name="BG" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="ParalaxZone1" type="Node2D" parent="ParallaxBackground"]
+position = Vector2(-2682, 1572)
+
+[node name="Parallax2D" type="Parallax2D" parent="ParallaxBackground/ParalaxZone1"]
+scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(2685, -1567)
+
+[node name="Gradient" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Parallax2D"]
+modulate = Color(0, 0, 0.505882, 0.403922)
+z_index = -4
+position = Vector2(941.992, 483.395)
+scale = Vector2(3.2794, 2.44921)
+texture = ExtResource("1_vmkry")
+
+[node name="Gradient3" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Parallax2D"]
+modulate = Color(0.0456938, 0.594252, 0.736161, 0.403922)
+z_index = -6
+position = Vector2(931.994, 488.145)
+scale = Vector2(3.26872, 2.52872)
+texture = ExtResource("1_vmkry")
+
+[node name="Gradient2" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Parallax2D"]
+modulate = Color(0, 0, 0.505882, 0.403922)
+z_index = -2
+position = Vector2(932.521, 470.138)
+rotation = -3.14159
+scale = Vector2(3.24536, 2.52585)
+texture = ExtResource("1_vmkry")
+
+[node name="Parallax2D5" type="Parallax2D" parent="ParallaxBackground/ParalaxZone1"]
+z_index = -7
+scale = Vector2(0.9, 0.9)
+scroll_scale = Vector2(0.575, 1)
+scroll_offset = Vector2(4, 41)
+repeat_size = Vector2(1000, 0)
+repeat_times = 9
+
+[node name="Road" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D5"]
+position = Vector2(381, 356)
+scale = Vector2(0.47, 0.47)
+tile_map_data = PackedByteArray("AAAFATEAAAAGAAUAAADxADEAAAAGAAUAAADdADEAAAAGAAUAAADJADEAAAAGAAUAAAC1ADEAAAAGAAUAAAChADEAAAAGAAUAAACNADEAAAAGAAUAAAAYATEAAAAGAAUAAAAsATEAAAAGAAUAAAA/ATEAAAAGAAUAAAB5ADEAAAAGAAUAAABlADEAAAAGAAUAAABRADEAAAAGAAUAAAA9ADEAAAAGAAUAAAApADEAAAAGAAUAAAAVADEAAAAGAAUAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Stand" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D5"]
+position = Vector2(351, 465)
+scale = Vector2(0.345, 0.345)
+tile_map_data = PackedByteArray("AADpACcAAAACAAQAAACcACcAAAACAAQAABAkACwAAAAEAAQAAAByACwAAAAEAAQAABBJACYAAAAAAAQAAACrACgAAAACAAQAAADPACgAAAAAAAQAABD6ACwAAAAEAAQAAAAPAS0AAAAGAAQAAAC7AC0AAAAGAAQAAACAAC0AAAAGAAQAAACBAC0AAAAGAAQAAABaACwAAAAGAAQAAAAkAS0AAAAGAAQAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Back3" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D5"]
+position = Vector2(1348.89, 582.222)
+scale = Vector2(0.2, 0.2)
+tile_map_data = PackedByteArray("AACuAA8AAAAKAAAAAACGAOT/AAAOAAAAAACGAP//AAAMAAAAAABHAOT/AAAMAAIAAABHAPT/AAAOAAMAAABHAP//AAAOAAMAAACAAcn/AAAOAAAAAAB/Aaj/AAAOAAAAAAB/AYv/AAAMAAAAAADBAMf/AAAMAAIAAADUAMj/AAAMAAIAAADnAMf/AAAMAAIAAAD7AMf/AAAMAAAAAAAPAcf/AAAMAAIAAAAiAcf/AAAMAAIAAAA1AcP/AAAOAAMAAABJAcP/AAAOAAMAAABdAcL/AAAOAAMAAABuAcP/AAAOAAMAAACCAcP/AAAOAAMAAACUAcb/AAAMAAIAAACnAcb/AAAMAAIAAAC6Acb/AAAMAAIAAADQAcb/AAAMAAAAAADiAcX/AAAMAAAAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="People3" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D5"]
+position = Vector2(245, 394)
+scale = Vector2(0.24, 0.24)
+tile_map_data = PackedByteArray("AADhAFUAAAAAAAIAAADMAFUAAAAEAAIAAAD+AFUAAAAGAAIAAABwAVUAAAAGAAIAAABFAVYAAAAAAAIAAACQAVUAAAACAAIAAAC5AFUAAAAAAAIAAACaAFcAAAAGAAIAAAB1AFQAAAAGAAIAAAA=")
+tile_set = ExtResource("3_tmqmo")
+
+[node name="Parallax2D4" type="Parallax2D" parent="ParallaxBackground/ParalaxZone1"]
+z_index = -4
+scroll_scale = Vector2(0.68, 1)
+scroll_offset = Vector2(100, 0)
+repeat_size = Vector2(1500, 0)
+repeat_times = 12
+
+[node name="Road" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D4"]
+position = Vector2(381, 356)
+scale = Vector2(0.47, 0.47)
+tile_map_data = PackedByteArray("AAAFATEAAAAGAAUAAADxADEAAAAGAAUAAADdADEAAAAGAAUAAADJADEAAAAGAAUAAAC1ADEAAAAGAAUAAAChADEAAAAGAAUAAACNADEAAAAGAAUAAAAYATEAAAAGAAUAAAAsATEAAAAGAAUAAAA/ATEAAAAGAAUAAAB5ADEAAAAGAAUAAABlADEAAAAGAAUAAABRADEAAAAGAAUAAAA9ADEAAAAGAAUAAAApADEAAAAGAAUAAAAVADEAAAAGAAUAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Stand" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D4"]
+position = Vector2(351, 465)
+scale = Vector2(0.345, 0.345)
+tile_map_data = PackedByteArray("AADpACcAAAACAAQAAACcACcAAAACAAQAABAkACwAAAAEAAQAAAByACwAAAAEAAQAABBJACYAAAAAAAQAAACrACgAAAACAAQAAADPACgAAAAAAAQAABD6ACwAAAAEAAQAAAAPAS0AAAAGAAQAAAC7AC0AAAAGAAQAAACAAC0AAAAGAAQAAACBAC0AAAAGAAQAAABaACwAAAAGAAQAAAAkAS0AAAAGAAQAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Back" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D4"]
+position = Vector2(1602, 483)
+scale = Vector2(0.3, 0.3)
+tile_map_data = PackedByteArray("AADSABYAAAAKAAAAAACeAO//AAAGAAAAAAD9AAsAAAAMAAAAAACjAB0AAAAMAAIAAACiAAwAAAAOAAMAAACiAPb/AAAOAAAAAAChAOD/AAAOAAMAAAChANX/AAAMAAUAAAChAMD/AAAOAAAAAAB3AN7/AAAMAAYAAABwAAEAAAAOAAMAAABNANP/AAAOAAAAAABNAOT/AAAMAAIAAABNAPz/AAAOAAAAAABNABQAAAAMAAAAAADpAOv/AAAOAAAAAAAXAdP/AAAOAAAAAAAaAf//AAAMAAIAAAD8ANf/AAAOAAMAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="People3" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D4"]
+position = Vector2(245, 394)
+scale = Vector2(0.24, 0.24)
+tile_map_data = PackedByteArray("AADhAFUAAAAAAAIAAADMAFUAAAAEAAIAAAD+AFUAAAAGAAIAAABwAVUAAAAGAAIAAABFAVYAAAAAAAIAAACQAVUAAAACAAIAAAC5AFUAAAAAAAIAAACaAFcAAAAGAAIAAAB1AFQAAAAGAAIAAAA=")
+tile_set = ExtResource("3_tmqmo")
+
+[node name="Parallax2D3" type="Parallax2D" parent="ParallaxBackground/ParalaxZone1"]
+z_index = -3
+scroll_scale = Vector2(0.85, 1)
+repeat_size = Vector2(1500, 0)
+repeat_times = 7
+
+[node name="Road" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D3"]
+z_index = -2
+position = Vector2(172, 313)
+scale = Vector2(0.56, 0.56)
+tile_map_data = PackedByteArray("AAAFATEAAAAGAAUAAADxADEAAAAGAAUAAADdADEAAAAGAAUAAADJADEAAAAGAAUAAAC1ADEAAAAGAAUAAAChADEAAAAGAAUAAACNADEAAAAGAAUAAAAYATEAAAAGAAUAAAAsATEAAAAGAAUAAAA/ATEAAAAGAAUAAAB5ADEAAAAGAAUAAABlADEAAAAGAAUAAABRADEAAAAGAAUAAAA9ADEAAAAGAAUAAAApADEAAAAGAAUAAAAVADEAAAAGAAUAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Back2" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D3"]
+position = Vector2(202, 483)
+scale = Vector2(0.4, 0.4)
+tile_map_data = PackedByteArray("AACuAA8AAAAKAAAAAACGAOT/AAAOAAAAAACGAP//AAAMAAAAAABHAOT/AAAMAAIAAABHAPT/AAAOAAMAAABHAP//AAAOAAMAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Stand" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D3"]
+z_index = -1
+position = Vector2(366, 466)
+scale = Vector2(0.4, 0.4)
+tile_map_data = PackedByteArray("AACPACsAAAAEAAQAAABeACsAAAAGAAQAAAA1ACoAAAAGAAQAAABuACsAAAAEAAQAAACgACsAAAAGAAQAAACwACwAAAAGAAQAAADPACsAAAAGAAQAAADfACwAAAAEAAQAAADvACsAAAAEAAQAABAMASwAAAAEAAQAAAAcASwAAAAEAAQAABAvASsAAAAGAAQAAABLASsAAAAGAAQAAABjASsAAAAGAAQAAAB1ASsAAAAEAAQAAACUASwAAAAEAAQAAACnASwAAAAEAAQAAAC3ASwAAAAEAAQAABA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="PosterQr" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Parallax2D3"]
+position = Vector2(1729, 440)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_2hyf8")
+
+[node name="Poeple2" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D3"]
+position = Vector2(269, 502)
+scale = Vector2(0.185, 0.185)
+tile_map_data = PackedByteArray("AABSAGQAAAABAAAAAADUAFYAAAABAAEAAADcAFYAAAACAAEAAADnAFgAAAACAAEAABDsAFUAAAACAAEAABACAVYAAAAEAAEAAAAUAVcAAAAIAAEAAAAbAVgAAAAAAAEAAAAkAVQAAAAAAAAAAAA2AVcAAAABAAAAAAApAVcAAAAEAAAAAACpAFYAAAAAAAEAAACvAFgAAAAAAAAAAAC1AFQAAAABAAAAAAC7AFkAAAACAAAAABC/AFoAAAACAAAAABBcAFgAAAAGAAAAABBkAFkAAAAFAAAAABBHAVYAAAADAAAAAACQAVYAAAAGAAAAAAB8AVcAAAACAAAAAABaAlcAAAAIAAEAAABKAlYAAAAEAAEAAABmAlcAAAAAAAEAAAA4AlgAAAABAAAAAAAsAlYAAAAAAAAAABAmAlkAAAABAAAAABAeAlkAAAACAAAAAAALAlYAAAADAAAAAADyAVYAAAAFAAAAAAD4AVcAAAAGAAAAAADsAVcAAAAGAAAAABA=")
+tile_set = ExtResource("3_tmqmo")
+
+[node name="Parallax2D2" type="Parallax2D" parent="ParallaxBackground/ParalaxZone1"]
+scroll_scale = Vector2(0.92, 1)
+repeat_size = Vector2(2000, 0)
+repeat_times = 7
+
+[node name="Road" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D2"]
+z_index = -2
+position = Vector2(-16, 332)
+scale = Vector2(0.6, 0.6)
+tile_map_data = PackedByteArray("AAAFATEAAAAGAAUAAADxADEAAAAGAAUAAADdADEAAAAGAAUAAADJADEAAAAGAAUAAAC1ADEAAAAGAAUAAAChADEAAAAGAAUAAACNADEAAAAGAAUAAAAYATEAAAAGAAUAAAAsATEAAAAGAAUAAAA/ATEAAAAGAAUAAAB5ADEAAAAGAAUAAABlADEAAAAGAAUAAABRADEAAAAGAAUAAAA9ADEAAAAGAAUAAAApADEAAAAGAAUAAAAVADEAAAAGAAUAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Poeple" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D2"]
+position = Vector2(121, 401)
+scale = Vector2(0.25, 0.25)
+tile_map_data = PackedByteArray("AADHAWIAAAAHAAEAAADUAV4AAAAIAAEAAAAAAl8AAAAEAAEAAADnAV0AAAACAAEAAAATAmIAAAACAAAAAACYAWIAAAACAAAAAACJAWAAAAAGAAAAAAAuAWEAAAADAAAAAAAXAWIAAAABAAAAAAAMAWIAAAAHAAEAAADMAGAAAAAGAAEAAACZAGAAAAAIAAEAAACgAGEAAAACAAEAAACJAGEAAAAEAAEAAABSAGQAAAABAAAAAABoAGEAAAACAAAAAABvAGEAAAAEAAAAAAD0AGAAAAAFAAAAAABxAWAAAAADAAAAAABcAFgAAAAGAAAAABBkAFkAAAAFAAAAABA=")
+tile_set = ExtResource("3_tmqmo")
+
+[node name="Stand" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/Parallax2D2"]
+z_index = -1
+position = Vector2(345, 481)
+scale = Vector2(0.4, 0.4)
+tile_map_data = PackedByteArray("AAArAB8AAAAAAAAAAABNACkAAAAEAAIAAACmACkAAAAHAAIAAADCACoAAAAEAAIAAAD9AB8AAAAAAAAAAAAfASkAAAAEAAIAABA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="ParalaxZone2" type="Node2D" parent="ParallaxBackground"]
+visible = false
+
+[node name="Gradient" type="Sprite2D" parent="ParallaxBackground/ParalaxZone2"]
+modulate = Color(0, 0, 0.505882, 0.403922)
+z_index = -2
+position = Vector2(1874.5, -20.4998)
+scale = Vector2(15.7781, 5.33438)
+texture = ExtResource("1_vmkry")
+
+[node name="Gradient2" type="Sprite2D" parent="ParallaxBackground/ParalaxZone2"]
+modulate = Color(0, 0, 0.505882, 0.403922)
+z_index = -2
+position = Vector2(1874.5, -19.0849)
+rotation = 3.14159
+scale = Vector2(15.7781, 5.32553)
+texture = ExtResource("1_vmkry")
+
+[node name="Parallax2D4" type="Parallax2D" parent="ParallaxBackground/ParalaxZone2"]
+z_index = -3
+scroll_scale = Vector2(0.78, 1)
+
+[node name="Road" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone2/Parallax2D4"]
+position = Vector2(0, -140)
+tile_map_data = PackedByteArray("AAAFATEAAAAGAAUAAADxADEAAAAGAAUAAADdADEAAAAGAAUAAADJADEAAAAGAAUAAAC1ADEAAAAGAAUAAAChADEAAAAGAAUAAACNADEAAAAGAAUAAAAYATEAAAAGAAUAAAAsATEAAAAGAAUAAAA/ATEAAAAGAAUAAAB5ADEAAAAGAAUAAABlADEAAAAGAAUAAABRADEAAAAGAAUAAAA9ADEAAAAGAAUAAAApADEAAAAGAAUAAAAVADEAAAAGAAUAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Stand" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone2/Parallax2D4"]
+position = Vector2(0, 219)
+scale = Vector2(0.6, 0.6)
+tile_map_data = PackedByteArray("AADpACcAAAACAAQAAACcACcAAAACAAQAABAkACwAAAAEAAQAAAByACwAAAAEAAQAABBJACYAAAAAAAQAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Back" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone2/Parallax2D4"]
+position = Vector2(0, -175)
+tile_map_data = PackedByteArray("AADSABYAAAAKAAAAAACeAO//AAAGAAAAAAD9AAsAAAAMAAAAAACjAB0AAAAMAAIAAACUAB8AAAAIAAAAAACxAB8AAAAIAAAAAADLAB8AAAAIAAAAAADlAB8AAAAIAAAAAAD9AB8AAAAIAAAAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="People3" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone2/Parallax2D4"]
+position = Vector2(20, 232)
+scale = Vector2(0.3, 0.3)
+tile_map_data = PackedByteArray("AAD8AVEAAAAJAAQAAADzAVEAAAAJAAQAAACxAF8AAAAAAAEAABADAVMAAAAAAAIAAADQAFIAAAAAAAIAABDdAFIAAAACAAIAAABpAVUAAAAEAAIAAACRAVQAAAAGAAIAAACyAVEAAAAKAAIAAAAZAVYAAAACAAIAAAAzAVMAAAAGAAIAAACsAFIAAAAAAAIAAAA=")
+tile_set = ExtResource("3_tmqmo")
+
+[node name="Parallax2D3" type="Parallax2D" parent="ParallaxBackground/ParalaxZone2"]
+z_index = -3
+scroll_scale = Vector2(0.85, 1)
+
+[node name="Road" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone2/Parallax2D3"]
+position = Vector2(0, -67)
+tile_map_data = PackedByteArray("AAAFATEAAAAGAAUAAADxADEAAAAGAAUAAADdADEAAAAGAAUAAADJADEAAAAGAAUAAAC1ADEAAAAGAAUAAAChADEAAAAGAAUAAACNADEAAAAGAAUAAAAYATEAAAAGAAUAAAAsATEAAAAGAAUAAAA/ATEAAAAGAAUAAAB5ADEAAAAGAAUAAABlADEAAAAGAAUAAABRADEAAAAGAAUAAAA9ADEAAAAGAAUAAAApADEAAAAGAAUAAAAVADEAAAAGAAUAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Stand" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone2/Parallax2D3"]
+position = Vector2(0, -20)
+tile_map_data = PackedByteArray("AACPACsAAAAEAAQAAABeACsAAAAGAAQAAAA1ACoAAAAGAAQAAAB1ACcAAAACAAQAAADpACcAAAACAAQAAACoACYAAAAAAAQAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Poeple" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone2/Parallax2D3"]
+position = Vector2(0, 41)
+scale = Vector2(0.4, 0.4)
+tile_map_data = PackedByteArray("AABPAWcAAAAGAAIAAADTAGgAAAAEAAIAAACcAGgAAAACAAIAAAB1AGgAAAAAAAIAAAD+AGUAAAAEAAIAAAA=")
+tile_set = ExtResource("3_tmqmo")
+
+[node name="Parallax2D2" type="Parallax2D" parent="ParallaxBackground/ParalaxZone2"]
+scroll_scale = Vector2(0.92, 1)
+
+[node name="Road" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone2/Parallax2D2"]
+position = Vector2(0, 5)
+tile_map_data = PackedByteArray("AAAFATEAAAAGAAUAAADxADEAAAAGAAUAAADdADEAAAAGAAUAAADJADEAAAAGAAUAAAC1ADEAAAAGAAUAAAChADEAAAAGAAUAAACNADEAAAAGAAUAAAAYATEAAAAGAAUAAAAsATEAAAAGAAUAAAA/ATEAAAAGAAUAAAB5ADEAAAAGAAUAAABlADEAAAAGAAUAAABRADEAAAAGAAUAAAA9ADEAAAAGAAUAAAApADEAAAAGAAUAAAAVADEAAAAGAAUAAAA=")
+tile_set = ExtResource("2_fmxf8")
+
+[node name="Poeple" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone2/Parallax2D2"]
+position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AADHAWIAAAAHAAEAAADUAV4AAAAIAAEAAAAAAl8AAAAEAAEAAADnAV0AAAACAAEAAAATAmIAAAACAAAAAACYAWIAAAACAAAAAACJAWAAAAAGAAAAAAAuAWEAAAADAAAAAAAXAWIAAAABAAAAAAAMAWIAAAAHAAEAAADMAGAAAAAGAAEAAACZAGAAAAAIAAEAAACgAGEAAAACAAEAAACJAGEAAAAEAAEAAABSAGQAAAABAAAAAABoAGEAAAACAAAAAABvAGEAAAAEAAAAAAA=")
+tile_set = ExtResource("3_tmqmo")
+
+[node name="Parallax2D1" type="Parallax2D" parent="ParallaxBackground/ParalaxZone2"]
+scroll_scale = Vector2(0.95, 1)
+
+[node name="Stand" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone2/Parallax2D1"]
+tile_map_data = PackedByteArray("AACwACIAAAAAAAAAAADTACwAAAAEAAIAAAD4ACwAAAAHAAIAAAA=")
+tile_set = ExtResource("2_fmxf8")
