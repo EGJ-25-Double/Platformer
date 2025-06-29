@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://jcbqq4eqib8p" path="res://map/background_invisible.gd" id="6_xj6xn"]
 [ext_resource type="Texture2D" uid="uid://bo8tv8mbmm1hs" path="res://assets/clue/arrow_lvl2.png" id="7_lqe4j"]
 [ext_resource type="PackedScene" uid="uid://bkcflwywxj5dl" path="res://map/CheckPoint/CheckPoint.tscn" id="8_xj6xn"]
+[ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="8_xj6xn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmjlt"]
 size = Vector2(150, 34)
@@ -248,7 +249,7 @@ show_behind_parent = true
 z_index = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_2pvy4")
-position = Vector2(1836, -219)
+position = Vector2(1692, -742)
 scale = Vector2(0.1194, 0.103317)
 texture = ExtResource("5_lqe4j")
 offset = Vector2(-934.313, 507.876)
@@ -259,7 +260,7 @@ script = ExtResource("6_xj6xn")
 [node name="Area2D" type="Area2D" parent="to_make_invisible"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="to_make_invisible/Area2D"]
-position = Vector2(-921.266, 471.849)
+position = Vector2(-938.025, 416.195)
 shape = SubResource("RectangleShape2D_ncyyv")
 
 [node name="arrow" type="Sprite2D" parent="."]
@@ -270,6 +271,9 @@ texture = ExtResource("7_lqe4j")
 
 [node name="CheckPoint" parent="." instance=ExtResource("8_xj6xn")]
 position = Vector2(2314, 828)
+[node name="CostumePickable" parent="." instance=ExtResource("8_xj6xn")]
+position = Vector2(1599, -18)
+skin_name = "Mario"
 
 [connection signal="body_entered" from="to_make_invisible/Area2D" to="to_make_invisible" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="to_make_invisible/Area2D" to="to_make_invisible" method="_on_area_2d_body_exited"]

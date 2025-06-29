@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cm1w3uhtb8rvw"]
+[gd_scene load_steps=22 format=3 uid="uid://cm1w3uhtb8rvw"]
 
 [ext_resource type="Script" uid="uid://hrmdlkuy34x5" path="res://data/skins_set.gd" id="1_8avya"]
 [ext_resource type="Script" uid="uid://ulincx2500mc" path="res://data/skin_data.gd" id="2_m6tei"]
@@ -8,10 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://vjpmc61lwrsx" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0003_Spouderman.png" id="5_p6r75"]
 [ext_resource type="Script" uid="uid://dv0ct56qpv81v" path="res://power/climb.gd" id="6_euo2t"]
 [ext_resource type="Texture2D" uid="uid://bynbuckxp1djg" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0000_Dv.png" id="7_sqlw0"]
-[ext_resource type="Script" uid="uid://1ydgjnmi2nw0" path="res://power/scene_teleport.gd" id="8_cnujl"]
+[ext_resource type="Script" path="res://power/scene_teleport.gd" id="8_cnujl"]
 [ext_resource type="Texture2D" uid="uid://dnfh7l0bg0x1p" path="res://assets/character/Skins/Alien_masques_0004_Sailor.png" id="8_p6r75"]
 [ext_resource type="Script" uid="uid://bfieuqqmw1qfl" path="res://power/double_jump.gd" id="8_p7v80"]
 [ext_resource type="Texture2D" uid="uid://bintc73usa4mt" path="res://assets/character/Skins/Alien_masques_0001_Link.png" id="10_sqlw0"]
+[ext_resource type="Texture2D" uid="uid://b8wbhqnjcdxxm" path="res://assets/character/Skins/Mario.png" id="13_h7khe"]
 
 [sub_resource type="Resource" id="Resource_m6tei"]
 script = ExtResource("2_m6tei")
@@ -59,7 +60,14 @@ power = ExtResource("4_6pg5i")
 pickable_texture = ExtResource("3_euo2t")
 metadata/_custom_type_script = "uid://ulincx2500mc"
 
+[sub_resource type="Resource" id="Resource_wlbbi"]
+script = ExtResource("2_m6tei")
+skin_name = "Mario"
+power = ExtResource("8_p7v80")
+pickable_texture = ExtResource("13_h7khe")
+metadata/_custom_type_script = "uid://ulincx2500mc"
+
 [node name="Skins" type="Node"]
 script = ExtResource("1_8avya")
-skins = Array[ExtResource("2_m6tei")]([SubResource("Resource_m6tei"), SubResource("Resource_pymlq"), SubResource("Resource_6pg5i"), SubResource("Resource_sk570"), SubResource("Resource_22p4a"), SubResource("Resource_cnujl"), SubResource("Resource_h7khe")])
+skins = Array[ExtResource("2_m6tei")]([SubResource("Resource_m6tei"), SubResource("Resource_pymlq"), SubResource("Resource_6pg5i"), SubResource("Resource_sk570"), SubResource("Resource_22p4a"), SubResource("Resource_cnujl"), SubResource("Resource_h7khe"), SubResource("Resource_wlbbi")])
 metadata/_custom_type_script = "uid://hrmdlkuy34x5"

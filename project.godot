@@ -19,6 +19,10 @@ config/icon="uid://hn4ittqq4cqi"
 
 GameState="*res://global/game_state.gd"
 
+[display]
+
+window/size/mode=3
+
 [input]
 
 move_left={
