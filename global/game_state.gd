@@ -20,7 +20,7 @@ func get_skin_by_name(skin_name: String):
 
 func add_skin(added_skin_name: String):
 	var new_skin = get_skin_by_name(added_skin_name)
-	if new_skin:
+	if new_skin and not skins_owned.has(new_skin):
 		skins_owned.append(new_skin)
 
 func has_controller_connected() -> bool:
