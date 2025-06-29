@@ -1,5 +1,11 @@
 extends CanvasLayer
 
+@onready var game_music: AudioStreamPlayer = $"../Levels/GameMusic"
+@onready var menu_music: AudioStreamPlayer = $MenuMusic
+@onready var button_clic: AudioStreamPlayer = $"../ButtonClic"
+@onready var button_hover: AudioStreamPlayer = $"../ButtonHover"
+@onready var start_game: AudioStreamPlayer = $"../StartGame"
+
 
 func _ready():
 	$VBoxContainer/PlayBtn.grab_focus()
@@ -13,21 +19,28 @@ func _input(event):
 
 func _on_play_btn_pressed() -> void:
 	visible = false
+	menu_music.stop()
+	start_game.play()
+	game_music.play()
 
 func _on_options_btn_pressed() -> void:
+	button_clic.play()
 	$OptionsUI.visible = true
 	$OptionsUI/OptionsBackBtn.grab_focus()
 
 func _on_help_btn_pressed() -> void:
+	button_clic.play()
 	$HelpUI.visible = true
 	$HelpUI/HelpBackBtn.grab_focus()
 	
 	
 func _on_help_link_button_pressed() -> void:
+	button_clic.play()
 	OS.shell_open("https://google.com/")
 
 
 func _on_credits_btn_pressed() -> void:
+	button_clic.play()
 	$CreditsUI.visible = true
 	$CreditsUI/CreditsBackBtn.grab_focus()
 
@@ -37,16 +50,19 @@ func _on_quit_btn_pressed() -> void:
 
 
 func _on_help_back_btn_pressed() -> void:
+	button_clic.play()
 	$HelpUI.visible = false
 	$VBoxContainer/PlayBtn.grab_focus()
 
 
 func _on_credits_back_btn_pressed() -> void:
+	button_clic.play()
 	$CreditsUI.visible = false
 	$VBoxContainer/PlayBtn.grab_focus()
 
 
 func _on_options_back_btn_pressed() -> void:
+	button_clic.play()
 	$OptionsUI.visible = false
 	$VBoxContainer/PlayBtn.grab_focus()
 
