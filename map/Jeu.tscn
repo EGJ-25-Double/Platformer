@@ -14,8 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://b5tko8bdcr62r" path="res://map/Levels/LevelStargate.tscn" id="13_vok5r"]
 [ext_resource type="Material" path="res://assets/BG/Ground/Background.tres" id="14_8b4dd"]
 [ext_resource type="Script" uid="uid://xn0o4hxvohn1" path="res://map/menu_pause.gd" id="14_ouisi"]
-[ext_resource type="Texture2D" uid="uid://iar0pqptjv1k" path="res://ui/Menus/MainMenu/background1.jpg" id="15_14vpn"]
 [ext_resource type="Texture2D" uid="uid://dsiic4vmttln2" path="res://assets/posters/maytheforce.png" id="15_dsy6r"]
+[ext_resource type="Texture2D" uid="uid://vjbrtjwm7ly7" path="res://ui/Menus/MainMenu/mainmenu_bg_cartoonAsset 72.png" id="15_vok5r"]
 [ext_resource type="Theme" uid="uid://coiuj78tsqptn" path="res://assets/Themes/label.tres" id="16_7myag"]
 [ext_resource type="Texture2D" uid="uid://bev3cwh8ycy45" path="res://ui/Menus/MainMenu/background2.jpg" id="17_p8qqn"]
 [ext_resource type="Texture2D" uid="uid://cs7383bschcn4" path="res://ui/Menus/MainMenu/backgrond3.jpg" id="18_dsy6r"]
@@ -106,7 +106,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("15_14vpn")
+texture = ExtResource("15_vok5r")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MenuPause"]
