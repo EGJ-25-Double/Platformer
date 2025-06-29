@@ -512,7 +512,6 @@ position = Vector2(-724, -515)
 position = Vector2(-792, -515)
 
 [node name="InvisibleWalls" type="Node2D" parent="."]
-visible = false
 
 [node name="InvisibleWall2" parent="InvisibleWalls" instance=ExtResource("3_3uecj")]
 position = Vector2(1531, -964)
@@ -738,7 +737,7 @@ debug_color = Color(0.960478, 6.73831e-07, 0.515802, 0.42)
 position = Vector2(1631, -909)
 
 [node name="Mium4" type="Sprite2D" parent="."]
-position = Vector2(557, -1401)
+position = Vector2(282, -1084)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_0tp7s")
 
