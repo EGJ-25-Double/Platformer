@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dughalr4yr48t"]
+
+[ext_resource type="Shader" uid="uid://b682goxc1s5ob" path="res://assets/BG/Ground/GroundFill.gdshader" id="1_dsb6w"]
+[ext_resource type="Texture2D" uid="uid://wuyfial0i7pl" path="res://assets/BG/Ground/BlackFill.png" id="2_nup31"]
+
+[resource]
+shader = ExtResource("1_dsb6w")
+shader_parameter/albedo_texture = ExtResource("2_nup31")
+shader_parameter/albedo = Color(0, 0, 0, 1)
