@@ -11,6 +11,9 @@ func _input(event):
 
 func set_current_skin():
 	create_anim()
+	player.can_move = false
+	await get_tree().create_timer(0.5).timeout
+	player.can_move = true
 	for child in get_children():
 		remove_child(child)
 		child.queue_free()

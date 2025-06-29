@@ -17,6 +17,8 @@ var teleport_cooldown = 5.0
 @onready var flash_node = %Flash
 var current_skin: SkinData
 
+var can_move := true
+
 
 
 enum AnimState {
@@ -50,6 +52,9 @@ func _physics_process(delta: float) -> void:
 		direction -= 1.0
 	elif Input.is_action_pressed("move_right"):
 		direction += 1.0
+	
+	if not can_move:
+		direction = 0.0
 
 	if direction != 0:
 			velocity.x = move_toward(velocity.x, direction * speed, acceleration * delta)

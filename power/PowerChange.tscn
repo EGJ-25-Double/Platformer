@@ -111,6 +111,7 @@ animations = [{
 script = ExtResource("1_3aqmx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 6
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_fenoc")
 autoplay = "default"
