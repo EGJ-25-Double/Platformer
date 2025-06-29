@@ -191,6 +191,8 @@ texture = ExtResource("12_u1cwg")
 
 [connection signal="body_entered" from="to_make_invisible/Area2D" to="to_make_invisible" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="to_make_invisible/Area2D" to="to_make_invisible" method="_on_area_2d_body_exited"]
+[connection signal="area_entered" from="SpawnOnStayInside/Area2D" to="SpawnOnStayInside" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="SpawnOnStayInside/Area2D" to="SpawnOnStayInside" method="_on_area_2d_area_exited"]
 
 [editable path="Curtains"]
 [editable path="SpawnOnStayInside"]
