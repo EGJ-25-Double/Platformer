@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://ds3igeg01sjso"]
+[gd_scene load_steps=63 format=3 uid="uid://ds3igeg01sjso"]
 
 [ext_resource type="Script" uid="uid://dnvemqwbwwoih" path="res://PlayerCharacter/player_character.gd" id="1_v4vvu"]
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
@@ -26,6 +26,7 @@
 [ext_resource type="AudioStream" uid="uid://b11dy2242ii4w" path="res://sounds/SFX/EGJ25_SFX_AlienStep3_V1.mp3" id="22_d5bsx"]
 [ext_resource type="AudioStream" uid="uid://dlm57lo5o41l1" path="res://sounds/SFX/EGJ25_SFX_AlienClimb_V1.mp3" id="25_87y2k"]
 [ext_resource type="Texture2D" uid="uid://dltmxg3wlvlm" path="res://assets/Themes/Keyboard.png" id="26_4sspf"]
+[ext_resource type="Script" uid="uid://cojdry6dce78p" path="res://PlayerCharacter/flash.gd" id="27_6h5in"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
 size = Vector2(64, 92)
@@ -617,22 +618,22 @@ stream_0/stream = ExtResource("20_u4e74")
 stream_1/stream = ExtResource("21_4d3id")
 stream_2/stream = ExtResource("22_d5bsx")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sspf"]
+atlas = ExtResource("26_4sspf")
+region = Rect2(64, 32, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_2qud1"]
 atlas = ExtResource("26_4sspf")
-region = Rect2(112, 64, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6h5in"]
-atlas = ExtResource("26_4sspf")
-region = Rect2(112, 160, 16, 16)
+region = Rect2(64, 128, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h2qxx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2qud1")
+"texture": SubResource("AtlasTexture_4sspf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6h5in")
+"texture": SubResource("AtlasTexture_2qud1")
 }],
 "loop": true,
 "name": &"default",
@@ -791,9 +792,29 @@ stream = SubResource("AudioStreamRandomizer_d5bsx")
 [node name="AudioClimb" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("25_87y2k")
 
-[node name="KeyPower" type="AnimatedSprite2D" parent="."]
+[node name="KeyCheckPoint" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(77, -78)
+position = Vector2(78, -78)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_h2qxx")
 autoplay = "default"
+
+[node name="KeyPower" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(78, -78)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_h2qxx")
+autoplay = "default"
+
+[node name="FlashCanvas" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="Flash" type="ColorRect" parent="FlashCanvas"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("27_6h5in")

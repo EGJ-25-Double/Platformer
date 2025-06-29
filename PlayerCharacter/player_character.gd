@@ -12,6 +12,8 @@ var teleport_cooldown = 5.0
 @onready var anim_player: AnimationPlayer = %AnimationPlayer
 @onready var audio_jump: AudioStreamPlayer2D = %AudioJump
 @onready var key_power = $KeyPower
+@onready var key_checkpoint = $KeyCheckPoint
+@onready var flash_node = %Flash
 
 
 
@@ -33,6 +35,8 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("jump") and is_on_floor():
 		audio_jump.play()
 		velocity.y = -jump_impulse
+	elif event.is_action_pressed("reset") and GameState.current_checkpoint != null:
+		tp_checkpoint()
 
 
 func _process(delta: float) -> void:
@@ -63,3 +67,16 @@ func show_key_power():
 	if not key_power:
 		return
 	key_power.visible = true
+
+func show_key_checkpoint():
+	if not key_checkpoint:
+		return
+	key_checkpoint.visible = true
+
+func tp_checkpoint():
+	flash_node.flash()
+	if key_checkpoint:
+		key_checkpoint.queue_free()
+		key_checkpoint = null
+
+	global_position = GameState.current_checkpoint.global_position
