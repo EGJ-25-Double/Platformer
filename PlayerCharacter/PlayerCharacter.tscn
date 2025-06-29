@@ -807,7 +807,6 @@ sprite_frames = SubResource("SpriteFrames_h2qxx")
 autoplay = "default"
 
 [node name="FlashCanvas" type="CanvasLayer" parent="."]
-layer = 100
 
 [node name="Flash" type="ColorRect" parent="FlashCanvas"]
 unique_name_in_owner = true
