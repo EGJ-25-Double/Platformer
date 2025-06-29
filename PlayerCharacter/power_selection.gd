@@ -15,16 +15,17 @@ func set_current_skin():
 		remove_child(child)
 		child.queue_free()
 	var current = GameState.skins_owned[current_skin]
-	print(current.skin_name)
 	if current and current.power:
 		var node: Power = current.power.new()
 		node.set_player(player)
 		add_child(node)
+		player.current_skin = current
 	
 	for child in player.skin_node.get_children():
 		(child as Node2D).visible = false
 
 	var skin = player.skin_node.get_node(current.skin_name)
+	
 	
 	if skin:
 		skin.visible = true

@@ -14,6 +14,7 @@ var teleport_cooldown = 5.0
 @onready var key_power = $KeyPower
 @onready var key_checkpoint = $KeyCheckPoint
 @onready var flash_node = %Flash
+var current_skin: SkinData
 
 
 

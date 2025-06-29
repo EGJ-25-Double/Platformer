@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg3iwlvof32n6"]
+
+[ext_resource type="Script" uid="uid://c6do3fs08tv5w" path="res://StargateKey/stargate_key.gd" id="1_alnwu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pb8ss"]
+size = Vector2(40, 80)
+
+[node name="StargateKey" type="Area2D"]
+script = ExtResource("1_alnwu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pb8ss")
+
+[node name="SelectedSkinSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -133)
+scale = Vector2(0.2, 0.2)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

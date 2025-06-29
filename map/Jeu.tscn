@@ -223,9 +223,9 @@ autoplay = true
 
 [node name="Levels" type="Node2D" parent="."]
 
-[node name="Level2" parent="Levels" instance=ExtResource("5_kawow")]
-
 [node name="Level1" parent="Levels" instance=ExtResource("6_gl2p0")]
+
+[node name="Level2" parent="Levels" instance=ExtResource("5_kawow")]
 
 [node name="Level3" parent="Levels" instance=ExtResource("7_5y575")]
 
