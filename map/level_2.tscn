@@ -249,7 +249,7 @@ show_behind_parent = true
 z_index = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_2pvy4")
-position = Vector2(1770, -165)
+position = Vector2(1838, -171)
 scale = Vector2(0.1194, 0.103317)
 texture = ExtResource("5_lqe4j")
 offset = Vector2(-934.313, 507.876)
@@ -260,7 +260,7 @@ script = ExtResource("6_xj6xn")
 [node name="Area2D" type="Area2D" parent="to_make_invisible"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="to_make_invisible/Area2D"]
-position = Vector2(-938.025, 416.195)
+position = Vector2(-904.523, 532.343)
 shape = SubResource("RectangleShape2D_ncyyv")
 
 [node name="arrow" type="Sprite2D" parent="."]
