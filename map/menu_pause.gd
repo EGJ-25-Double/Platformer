@@ -9,7 +9,6 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		visible = true
 
-
 func _on_play_btn_pressed() -> void:
 	visible = false
 
@@ -65,3 +64,6 @@ func _on_slider_3_value_changed(value: float) -> void:
 func check_if_code_is_correct():
 	if $OptionsUI/value1.text == "1.0" and $OptionsUI/value2.text == "3.0"  and $OptionsUI/value3.text == "1.0":
 		$"../Levels/Level2/arrow".visible = true
+
+func _on_visibility_changed() -> void:
+	get_tree().paused = visible

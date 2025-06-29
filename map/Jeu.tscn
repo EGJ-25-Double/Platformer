@@ -218,6 +218,7 @@ tile_set = ExtResource("3_5y575")
 position = Vector2(2218, 749)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("4_5y575")
 autoplay = true
 
@@ -838,6 +839,7 @@ offset_bottom = 428.333
 theme_override_font_sizes/font_size = 40
 text = "0.0"
 
+[connection signal="visibility_changed" from="MenuPause" to="MenuPause" method="_on_visibility_changed"]
 [connection signal="pressed" from="MenuPause/VBoxContainer/PlayBtn" to="MenuPause" method="_on_play_btn_pressed"]
 [connection signal="pressed" from="MenuPause/VBoxContainer/HelpBtn" to="MenuPause" method="_on_help_btn_pressed"]
 [connection signal="pressed" from="MenuPause/VBoxContainer/OptionsBtn" to="MenuPause" method="_on_options_btn_pressed"]
