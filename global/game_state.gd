@@ -3,6 +3,8 @@ extends Node
 var has_color := false
 var has_sound := false
 
+var player: PlayerCharacter
+
 @onready var skins_list = preload("res://data/Skins.tscn").instantiate() as SkinsSet
 var skins_owned: Array[SkinData]
 

@@ -23,4 +23,5 @@ func _input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("interact"):
 		GameState.add_skin(costume.skin_name)
+		GameState.player.show_key_power()
 		queue_free()

@@ -11,6 +11,9 @@ var teleport_cooldown = 5.0
 
 @onready var anim_player: AnimationPlayer = %AnimationPlayer
 @onready var audio_jump: AudioStreamPlayer2D = %AudioJump
+@onready var key_power = $KeyPower
+
+
 
 enum AnimState {
 	DEFAULT,
@@ -22,6 +25,9 @@ var animState := AnimState.DEFAULT
 @onready var sprite: Node2D = %Sprite
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+func _ready():
+	GameState.player = self
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("jump") and is_on_floor():
@@ -52,3 +58,8 @@ func _physics_process(delta: float) -> void:
 		sprite.scale.x = -abs(sprite.scale.x)
 	elif velocity.x < 0:
 		sprite.scale.x = abs(sprite.scale.x)
+
+func show_key_power():
+	if not key_power:
+		return
+	key_power.visible = true
