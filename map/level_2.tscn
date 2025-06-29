@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://vf3bjdnko4xf"]
+[gd_scene load_steps=15 format=4 uid="uid://vf3bjdnko4xf"]
 
 [ext_resource type="Texture2D" uid="uid://b4wveyawhaltc" path="res://assets/platforms/platform_longAsset 4.png" id="1_360mr"]
 [ext_resource type="Texture2D" uid="uid://bb00kfyvv54fd" path="res://assets/platforms/platform_shortAsset 5.png" id="2_kevu2"]
@@ -6,9 +6,10 @@
 [ext_resource type="Shader" uid="uid://b682goxc1s5ob" path="res://assets/BG/Ground/GroundFill.gdshader" id="4_7hfnw"]
 [ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="4_xj6xn"]
 [ext_resource type="Texture2D" uid="uid://wuyfial0i7pl" path="res://assets/BG/Ground/BlackFill.png" id="5_lqe4j"]
-[ext_resource type="Script" uid="uid://jcbqq4eqib8p" path="res://map/background_invisible.gd" id="6_xj6xn"]
+[ext_resource type="Script" path="res://map/background_invisible.gd" id="6_xj6xn"]
 [ext_resource type="Texture2D" uid="uid://bo8tv8mbmm1hs" path="res://assets/clue/arrow_lvl2.png" id="7_lqe4j"]
 [ext_resource type="PackedScene" uid="uid://bkcflwywxj5dl" path="res://map/CheckPoint/CheckPoint.tscn" id="8_xj6xn"]
+[ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="10_ncyyv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmjlt"]
 size = Vector2(150, 34)
@@ -275,6 +276,13 @@ position = Vector2(2314, 828)
 [node name="CostumePickable" parent="." instance=ExtResource("4_xj6xn")]
 position = Vector2(1599, -18)
 skin_name = "Mario"
+
+[node name="HiddenRoomProps" type="TileMapLayer" parent="."]
+z_index = -1
+position = Vector2(-1526, 485)
+scale = Vector2(0.4, 0.4)
+tile_map_data = PackedByteArray("AADGAZj/AAAHAAEAAADQAZj/AAAHAAEAAAAeApf/AAAHAAEAAAAoApf/AAAHAAEAAAAUApf/AAAHAAEAAADQAaL/AAAHAAEAAADGAaL/AAAHAAEAAAA=")
+tile_set = ExtResource("10_ncyyv")
 
 [connection signal="body_entered" from="to_make_invisible/Area2D" to="to_make_invisible" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="to_make_invisible/Area2D" to="to_make_invisible" method="_on_area_2d_body_exited"]
