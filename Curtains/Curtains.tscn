@@ -1,18 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://c401n4ovod8nj"]
+[gd_scene load_steps=3 format=3 uid="uid://b6np8jpwrv11e"]
 
-[ext_resource type="Texture2D" uid="uid://dsdvusbwd8qf5" path="res://Curtains/Curtains.png" id="1_4y0hs"]
+[ext_resource type="Texture2D" uid="uid://rn5asxqpjdfa" path="res://PowerLinkedObjects/curtain.png" id="1_0h45l"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4jy3"]
-size = Vector2(50, 50)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbybk"]
+size = Vector2(188, 891.5)
 
 [node name="Curtains" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-9.53674e-07, -1.90735e-06)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_4y0hs")
+scale = Vector2(0.377806, 0.377806)
+texture = ExtResource("1_0h45l")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_y4jy3")
+shape = SubResource("RectangleShape2D_jbybk")
