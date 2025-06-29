@@ -3,6 +3,7 @@ extends CanvasLayer
 
 func _ready():
 	$VBoxContainer/PlayBtn.grab_focus()
+	get_tree().paused = true
 
 
 func _input(event):
