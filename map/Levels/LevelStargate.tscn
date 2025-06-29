@@ -1,10 +1,8 @@
-[gd_scene load_steps=11 format=4 uid="uid://b5tko8bdcr62r"]
+[gd_scene load_steps=9 format=4 uid="uid://b5tko8bdcr62r"]
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_4pv0d"]
 [ext_resource type="PackedScene" uid="uid://dg3iwlvof32n6" path="res://StargateKey/StargateKey.tscn" id="1_sn2vb"]
-[ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="3_yamic"]
 [ext_resource type="Script" uid="uid://cwqc1gvimwogh" path="res://map/Levels/stargate.gd" id="4_860xh"]
-[ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="4_yamic"]
 [ext_resource type="Script" uid="uid://c1g0asrslhota" path="res://StargateKey/Stargate.gd" id="5_860xh"]
 [ext_resource type="Texture2D" uid="uid://cgro8b6vadmyv" path="res://assets/Stargate_ON.png" id="6_860xh"]
 [ext_resource type="Texture2D" uid="uid://dvw6xlpyn43jp" path="res://assets/Stargate_OFF.png" id="7_cl1ts"]
@@ -22,12 +20,6 @@ texture_filter = 1
 scale = Vector2(0.2, 0.2)
 tile_map_data = PackedByteArray("AAD7/wEAAAAAAAAAAAD8/wEAAAABAAAAAAD9/wEAAAACAAAAAAD+/wEAAAAAAAAAAAD//wEAAAABAAAAAAAAAAEAAAACAAAAAAABAAEAAAAAAAAAAAACAAEAAAABAAAAAAADAAEAAAACAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAABAAAAAAAGAAEAAAACAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAABAAAAAAAJAAEAAAACAAAAAAD4/wEAAAAAAAAAAAD5/wEAAAABAAAAAAD6/wEAAAACAAAAAAD1/wEAAAAAAAAAAAD2/wEAAAABAAAAAAD3/wEAAAACAAAAAAD0/wEAAAAOAAAAAAAKAAEAAAAPAAAAAAD0/wAAAAAKAAAAAAD0////AAAKAAAAAAD0//7/AAAKAAAAAAD0//3/AAAKAAAAAAD0//z/AAAKAAAAAAD0//v/AAAKAAAAAAD0//r/AAAKAAAAAAD0//n/AAAKAAAAAAD0//j/AAAKAAAAAAAKAAAAAAALAAAAAAAKAP//AAALAAAAAAAKAP7/AAALAAAAAAAKAP3/AAALAAAAAAAKAPz/AAALAAAAAAAKAPv/AAALAAAAAAAKAPr/AAALAAAAAAAKAPn/AAALAAAAAAAKAPj/AAALAAAAAAD1//f/AAAFAAAAAAD2//f/AAAFAAAAAAD3//f/AAAEAAAAAAD4//f/AAAEAAAAAAD5//f/AAAEAAAAAAD6//f/AAAFAAAAAAD7//f/AAAFAAAAAAD8//f/AAADAAAAAAD9//f/AAAFAAAAAAD+//f/AAAEAAAAAAD///f/AAADAAAAAAAAAPf/AAAEAAAAAAABAPf/AAAFAAAAAAACAPf/AAAEAAAAAAADAPf/AAADAAAAAAAEAPf/AAADAAAAAAAFAPf/AAADAAAAAAAGAPf/AAAFAAAAAAAHAPf/AAAFAAAAAAAIAPf/AAADAAAAAAAJAPf/AAAFAAAAAAD0//f/AAAMAAAAAAAKAPf/AAANAAAAAAA=")
 tile_set = ExtResource("1_4pv0d")
-
-[node name="PlayerCharacter" parent="." instance=ExtResource("3_yamic")]
-
-[node name="CostumePickable" parent="." instance=ExtResource("4_yamic")]
-position = Vector2(-171, 47)
-skin_name = "Mickey"
 
 [node name="Stargate" type="Node" parent="."]
 script = ExtResource("4_860xh")

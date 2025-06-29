@@ -22,6 +22,6 @@ func _input(event: InputEvent) -> void:
 		selected_skin = GameState.player.current_skin
 		$SelectedSkinSprite.texture = selected_skin.pickable_texture
 		$LeverSprite.flip_h = true
-		if correct_skin == selected_skin.skin_name:
-			is_correct = true
-			$"../..".verify()
+		is_correct = correct_skin == selected_skin.skin_name
+		$"../..".verify()
+		
