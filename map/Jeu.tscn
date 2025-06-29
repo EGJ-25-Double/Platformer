@@ -1039,12 +1039,15 @@ texture = ExtResource("25_7myag")
 
 [node name="ButtonClic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("30_0hub7")
+bus = &"SFX"
 
 [node name="ButtonHover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("31_lhch6")
+bus = &"SFX"
 
 [node name="StartGame" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_lhch6")
+bus = &"SFX"
 
 [connection signal="visibility_changed" from="MenuPause" to="MenuPause" method="_on_visibility_changed"]
 [connection signal="pressed" from="MenuPause/VBoxContainer/PlayBtn" to="MenuPause" method="_on_play_btn_pressed"]
