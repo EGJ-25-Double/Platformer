@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://vpxwi05f1rmo"]
+[gd_scene load_steps=16 format=4 uid="uid://vpxwi05f1rmo"]
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_pp57b"]
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="2_66l38"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6bddk4wlfymg" path="res://area/SpawnOnStayInside.tscn" id="8_5kq3p"]
 [ext_resource type="PackedScene" uid="uid://bkcflwywxj5dl" path="res://map/CheckPoint/CheckPoint.tscn" id="9_k8hsi"]
 [ext_resource type="Texture2D" uid="uid://n1dxlwi5hap5" path="res://assets/posters/physics2.png" id="10_o4gdf"]
+[ext_resource type="AudioStream" uid="uid://8t1a2us3iff4" path="res://sounds/SFX/EGJ25_SFX_TeleportationSailorMoon_V.mp3" id="11_kg0l6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k8hsi"]
 shader = ExtResource("4_ne8k7")
@@ -149,11 +150,16 @@ position = Vector2(3141, -1548)
 [node name="Area2D" parent="SpawnOnStayInside" index="0"]
 time = 10.0
 
-[node name="CollisionShape2D" parent="SpawnOnStayInside/Area2D" index="0"]
+[node name="SailorMoonTeleportSong" type="AudioStreamPlayer2D" parent="SpawnOnStayInside/Area2D" index="0"]
+position = Vector2(-3141, 1548)
+stream = ExtResource("11_kg0l6")
+volume_db = 20.0
+
+[node name="CollisionShape2D" parent="SpawnOnStayInside/Area2D" index="1"]
 position = Vector2(13.5, -6)
 
 [node name="CostumePickable" parent="SpawnOnStayInside" index="2"]
-skin_name = "Mickey"
+skin_name = "Sailor"
 
 [node name="CheckPoint" parent="." instance=ExtResource("9_k8hsi")]
 position = Vector2(3910, -908)
