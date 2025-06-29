@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=14 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="Texture2D" uid="uid://buk3i837ilsvk" path="res://assets/BG/gradient.png" id="1_5y575"]
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="3_5y575"]
@@ -11,16 +11,12 @@
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="7_xpr5j"]
 [ext_resource type="Shader" uid="uid://b682goxc1s5ob" path="res://assets/BG/Ground/GroundFill.gdshader" id="8_isquk"]
 [ext_resource type="Texture2D" uid="uid://wuyfial0i7pl" path="res://assets/BG/Ground/BlackFill.png" id="9_ig5i8"]
-[ext_resource type="Script" path="res://map/background_invisible.gd" id="10_gl2p0"]
 [ext_resource type="PackedScene" uid="uid://dc8pes0fpyysg" path="res://map/full_map.tscn" id="10_kawow"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8s6nd"]
 shader = ExtResource("8_isquk")
 shader_parameter/albedo_texture = ExtResource("9_ig5i8")
 shader_parameter/albedo = Color(0, 0, 0, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y575"]
-size = Vector2(10686.8, 6359.07)
 
 [node name="Jeu" type="Node2D"]
 
@@ -220,7 +216,7 @@ color = Color(0.43712, 0.43712, 0.43712, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_gl2p0")]
-position = Vector2(3126, -1695)
+position = Vector2(2269, -1050)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_5y575")
@@ -582,25 +578,4 @@ texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
 
-[node name="to_make_invisible" type="Sprite2D" parent="Outside"]
-show_behind_parent = true
-texture_repeat = 2
-material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(1840, -223)
-scale = Vector2(0.1194, 0.103317)
-texture = ExtResource("9_ig5i8")
-offset = Vector2(-934.313, 507.876)
-region_enabled = true
-region_rect = Rect2(0, 0, 10000, 6000)
-script = ExtResource("10_gl2p0")
-
-[node name="Area2D" type="Area2D" parent="Outside/to_make_invisible"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Outside/to_make_invisible/Area2D"]
-position = Vector2(-1264.65, 633.971)
-shape = SubResource("RectangleShape2D_5y575")
-
 [node name="Map" parent="." instance=ExtResource("10_kawow")]
-
-[connection signal="body_entered" from="Outside/to_make_invisible/Area2D" to="Outside/to_make_invisible" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Outside/to_make_invisible/Area2D" to="Outside/to_make_invisible" method="_on_area_2d_body_exited"]
