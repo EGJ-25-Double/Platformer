@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="4_knb2s"]
 [ext_resource type="PackedScene" uid="uid://cv28xrom8uhf1" path="res://Ladder/Ladder.tscn" id="5_ux46k"]
 [ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="6_ihn7y"]
-
+[ext_resource type="Texture2D" path="res://Ladder/stairs.png" id="3_ux46k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2kap"]
 size = Vector2(74, 30.5)

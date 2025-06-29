@@ -14,6 +14,15 @@
 [ext_resource type="Script" path="res://map/background_invisible.gd" id="10_gl2p0"]
 [ext_resource type="PackedScene" uid="uid://dc8pes0fpyysg" path="res://map/full_map.tscn" id="10_kawow"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8s6nd"]
+shader = ExtResource("8_isquk")
+shader_parameter/albedo_texture = ExtResource("9_ig5i8")
+shader_parameter/albedo = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y575"]
+size = Vector2(10686.8, 6359.07)
+
+
 [node name="Jeu" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -230,7 +239,6 @@ scale = Vector2(0.08, 0.08)
 
 [node name="Level1" parent="Levels" instance=ExtResource("6_gl2p0")]
 
-<<<<<<< HEAD
 [node name="Level3" parent="Levels" instance=ExtResource("7_5y575")]
 
 [node name="Outside" type="TileMapLayer" parent="."]
@@ -594,3 +602,6 @@ position = Vector2(-1264.65, 633.971)
 shape = SubResource("RectangleShape2D_5y575")
 
 [node name="Map" parent="." instance=ExtResource("10_kawow")]
+
+[connection signal="body_entered" from="Outside/to_make_invisible/Area2D" to="Outside/to_make_invisible" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Outside/to_make_invisible/Area2D" to="Outside/to_make_invisible" method="_on_area_2d_body_exited"]
