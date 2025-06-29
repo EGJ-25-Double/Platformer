@@ -12,7 +12,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is not PlayerCharacter:
 		return
 	active = true
-	
+
 func _on_body_exited(body: Node2D) -> void:
 	if body is not PlayerCharacter:
 		return
@@ -22,6 +22,8 @@ func _input(event: InputEvent) -> void:
 	if not active:
 		return
 	if event.is_action_pressed("interact"):
+		$AudioStreamPlayer2D.play()
+		await get_tree().create_timer(0.5).timeout
 		GameState.add_skin(costume.skin_name)
 		GameState.player.show_key_power()
 		queue_free()

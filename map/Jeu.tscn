@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=20 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="Texture2D" uid="uid://buk3i837ilsvk" path="res://assets/BG/gradient.png" id="1_5y575"]
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="3_5y575"]
@@ -14,35 +14,15 @@
 [ext_resource type="Texture2D" uid="uid://wuyfial0i7pl" path="res://assets/BG/Ground/BlackFill.png" id="9_ig5i8"]
 [ext_resource type="PackedScene" uid="uid://bhrdw4rjoqr2k" path="res://map/Levels/Level4.tscn" id="9_t6k6y"]
 [ext_resource type="PackedScene" uid="uid://duvl3sivucer7" path="res://map/Levels/level5.tscn" id="10_14vpn"]
-[ext_resource type="Texture2D" uid="uid://pild07ifitmv" path="res://assets/posters/physics21.png" id="11_p8qqn"]
 [ext_resource type="PackedScene" uid="uid://b5tko8bdcr62r" path="res://map/Levels/LevelStargate.tscn" id="13_vok5r"]
-[ext_resource type="Script" uid="uid://xn0o4hxvohn1" path="res://map/menu_pause.gd" id="14_ouisi"]
-[ext_resource type="Texture2D" uid="uid://iar0pqptjv1k" path="res://ui/Menus/MainMenu/background1.jpg" id="15_14vpn"]
 [ext_resource type="Texture2D" uid="uid://dsiic4vmttln2" path="res://assets/posters/maytheforce.png" id="15_dsy6r"]
-[ext_resource type="Theme" uid="uid://coiuj78tsqptn" path="res://assets/Themes/label.tres" id="16_7myag"]
-[ext_resource type="Texture2D" uid="uid://bev3cwh8ycy45" path="res://ui/Menus/MainMenu/background2.jpg" id="17_p8qqn"]
-[ext_resource type="Texture2D" uid="uid://cs7383bschcn4" path="res://ui/Menus/MainMenu/backgrond3.jpg" id="18_dsy6r"]
-[ext_resource type="Texture2D" uid="uid://bu7iogreo2020" path="res://ui/Menus/MainMenu/backgrond4.jpg" id="19_vok5r"]
-[ext_resource type="Texture2D" uid="uid://do3hgpekdac8h" path="res://ui/Menus/MainMenu/button.png" id="20_ffm4h"]
-[ext_resource type="Texture2D" uid="uid://dof7er8kr1dot" path="res://ui/Menus/MainMenu/1.png" id="21_eserf"]
-[ext_resource type="Texture2D" uid="uid://cxhwe6q2k62gu" path="res://ui/Menus/MainMenu/2.png" id="22_0hub7"]
-[ext_resource type="Texture2D" uid="uid://cyi3u8rqvwl28" path="res://ui/Menus/MainMenu/3.png" id="23_lhch6"]
+[ext_resource type="PackedScene" uid="uid://b8853x6x6xtqg" path="res://menu_pause.tscn" id="17_cemdi"]
 [ext_resource type="Texture2D" uid="uid://c6tmdqpoyh3au" path="res://assets/posters/chien1.png" id="25_7myag"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8s6nd"]
 shader = ExtResource("8_isquk")
 shader_parameter/albedo_texture = ExtResource("9_ig5i8")
 shader_parameter/albedo = Color(0, 0, 0, 1)
-
-[sub_resource type="GDScript" id="GDScript_w62k0"]
-script/source = "extends TextureRect
-"
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_y5k0b"]
-color = Color(0.497057, 0.000175437, 0.497053, 1)
-grow_begin = 0.0
-grow_end = 0.0
-thickness = 10
 
 [node name="Jeu" type="Node2D"]
 
@@ -217,16 +197,16 @@ visible = false
 [node name="Gradient" type="Sprite2D" parent="ParallaxBackground/ParalaxZone2"]
 modulate = Color(0, 0, 0.505882, 0.403922)
 z_index = -2
-position = Vector2(1874.5, -20.4998)
-scale = Vector2(15.7781, 5.33438)
+position = Vector2(1724.5, -20.4998)
+scale = Vector2(16.7156, 5.33438)
 texture = ExtResource("1_5y575")
 
 [node name="Gradient2" type="Sprite2D" parent="ParallaxBackground/ParalaxZone2"]
 modulate = Color(0, 0, 0.505882, 0.403922)
 z_index = -2
-position = Vector2(1874.5, -19.0849)
+position = Vector2(1724.38, -19.0845)
 rotation = 3.14159
-scale = Vector2(15.7781, 5.32553)
+scale = Vector2(16.7163, 5.32553)
 texture = ExtResource("1_5y575")
 
 [node name="Parallax2D4" type="Parallax2D" parent="ParallaxBackground/ParalaxZone2"]
@@ -317,7 +297,6 @@ autoplay = true
 [node name="Level5" parent="Levels" instance=ExtResource("10_14vpn")]
 
 [node name="LevelStargate" parent="Levels" instance=ExtResource("13_vok5r")]
-position = Vector2(-3898, -3490)
 
 [node name="Outside" type="TileMapLayer" parent="."]
 z_index = 1
@@ -367,8 +346,8 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-2093.27, -436)
-scale = Vector2(0.4059, 0.169667)
+position = Vector2(943.257, -438.991)
+scale = Vector2(0.0483, 0.1705)
 texture = ExtResource("9_ig5i8")
 offset = Vector2(2965.69, 589.396)
 region_enabled = true
@@ -378,8 +357,8 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-2739.37, -977.401)
-scale = Vector2(0.0883, 0.3205)
+position = Vector2(-2513.97, -977.401)
+scale = Vector2(0.1991, 0.3205)
 texture = ExtResource("9_ig5i8")
 offset = Vector2(2965.69, 589.396)
 region_enabled = true
@@ -480,8 +459,8 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(1237, -1276)
-scale = Vector2(0.0175491, 0.169)
+position = Vector2(1237, -694.564)
+scale = Vector2(0.0175491, 0.0521252)
 texture = ExtResource("9_ig5i8")
 offset = Vector2(-1666.98, 1974.86)
 region_enabled = true
@@ -491,8 +470,18 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-275.709, -1133)
-scale = Vector2(0.0692583, 0.1776)
+position = Vector2(-275.709, -1173.9)
+scale = Vector2(0.0692583, 0.163967)
+texture = ExtResource("9_ig5i8")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
+
+[node name="Sprite2D39" type="Sprite2D" parent="Outside"]
+show_behind_parent = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8s6nd")
+position = Vector2(436, -767)
+scale = Vector2(0.0909, 0.0285)
 texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
@@ -501,8 +490,8 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(-1336.35, -1503.5)
-scale = Vector2(0.152129, 0.228167)
+position = Vector2(-1336.35, -1433.5)
+scale = Vector2(0.152129, 0.2515)
 texture = ExtResource("9_ig5i8")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
@@ -680,12 +669,23 @@ offset = Vector2(-1666.98, 1974.86)
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 6000)
 
+[node name="Sprite2D40" type="Sprite2D" parent="Outside"]
+show_behind_parent = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8s6nd")
+position = Vector2(1631, 71)
+scale = Vector2(0.0468, 0.0202104)
+texture = ExtResource("9_ig5i8")
+offset = Vector2(-1666.98, 1974.86)
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
+
 [node name="Sprite2D13" type="Sprite2D" parent="Outside"]
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(1874.54, 297.591)
-scale = Vector2(0.406786, 0.0756838)
+position = Vector2(1874.54, 317.038)
+scale = Vector2(0.406786, 0.0678333)
 texture = ExtResource("9_ig5i8")
 offset = Vector2(-4979.54, -140.616)
 region_enabled = true
@@ -706,8 +706,8 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(2325.56, -524.522)
-scale = Vector2(0.1194, 0.103317)
+position = Vector2(2324.98, -524.522)
+scale = Vector2(0.1477, 0.103317)
 texture = ExtResource("9_ig5i8")
 offset = Vector2(-4979.54, -140.616)
 region_enabled = true
@@ -1074,26 +1074,7 @@ text = "0.0"
 [node name="Clue" type="Node2D" parent="."]
 z_index = -2
 
-[node name="Physics21" type="Sprite2D" parent="Clue"]
-position = Vector2(6102, -534)
-scale = Vector2(0.16, 0.16)
-texture = ExtResource("11_p8qqn")
-
 [node name="Chien1" type="Sprite2D" parent="Clue"]
 position = Vector2(2512, -260)
 scale = Vector2(0.14, 0.14)
 texture = ExtResource("25_7myag")
-
-[connection signal="visibility_changed" from="MenuPause" to="MenuPause" method="_on_visibility_changed"]
-[connection signal="pressed" from="MenuPause/VBoxContainer/PlayBtn" to="MenuPause" method="_on_play_btn_pressed"]
-[connection signal="pressed" from="MenuPause/VBoxContainer/HelpBtn" to="MenuPause" method="_on_help_btn_pressed"]
-[connection signal="pressed" from="MenuPause/VBoxContainer/OptionsBtn" to="MenuPause" method="_on_options_btn_pressed"]
-[connection signal="pressed" from="MenuPause/VBoxContainer/CreditsBtn" to="MenuPause" method="_on_credits_btn_pressed"]
-[connection signal="pressed" from="MenuPause/VBoxContainer/QuitBtn" to="MenuPause" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="MenuPause/HelpUI/Button" to="MenuPause" method="_on_help_link_button_pressed"]
-[connection signal="pressed" from="MenuPause/HelpUI/HelpBackBtn" to="MenuPause" method="_on_help_back_btn_pressed"]
-[connection signal="pressed" from="MenuPause/CreditsUI/CreditsBackBtn" to="MenuPause" method="_on_credits_back_btn_pressed"]
-[connection signal="pressed" from="MenuPause/OptionsUI/OptionsBackBtn" to="MenuPause" method="_on_options_back_btn_pressed"]
-[connection signal="value_changed" from="MenuPause/OptionsUI/Control/slider1" to="MenuPause" method="_on_slider_1_value_changed"]
-[connection signal="value_changed" from="MenuPause/OptionsUI/Control/slider2" to="MenuPause" method="_on_slider_2_value_changed"]
-[connection signal="value_changed" from="MenuPause/OptionsUI/Control/slider3" to="MenuPause" method="_on_slider_3_value_changed"]
