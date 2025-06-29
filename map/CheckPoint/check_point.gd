@@ -9,6 +9,7 @@ func _on_area_2d_body_entered(body):
 	activate()
 
 func activate():
+	$AudioStreamPlayer2D.play(0.04)
 	for other in get_tree().get_nodes_in_group("checkpoints"):
 		if other == self:
 			continue
