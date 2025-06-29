@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=31 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="Texture2D" uid="uid://buk3i837ilsvk" path="res://assets/BG/gradient.png" id="1_5y575"]
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="3_5y575"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://wuyfial0i7pl" path="res://assets/BG/Ground/BlackFill.png" id="9_ig5i8"]
 [ext_resource type="PackedScene" uid="uid://bhrdw4rjoqr2k" path="res://map/Levels/Level4.tscn" id="9_t6k6y"]
 [ext_resource type="PackedScene" uid="uid://duvl3sivucer7" path="res://map/Levels/level5.tscn" id="10_14vpn"]
-[ext_resource type="Texture2D" uid="uid://pild07ifitmv" path="res://assets/posters/physics21.png" id="11_p8qqn"]
 [ext_resource type="PackedScene" uid="uid://b5tko8bdcr62r" path="res://map/Levels/LevelStargate.tscn" id="13_vok5r"]
 [ext_resource type="Script" uid="uid://xn0o4hxvohn1" path="res://map/menu_pause.gd" id="14_ouisi"]
 [ext_resource type="Texture2D" uid="uid://iar0pqptjv1k" path="res://ui/Menus/MainMenu/background1.jpg" id="15_14vpn"]
@@ -301,8 +300,8 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(902.571, -438.991)
-scale = Vector2(0.0283, 0.1705)
+position = Vector2(943.257, -438.991)
+scale = Vector2(0.0483, 0.1705)
 texture = ExtResource("9_ig5i8")
 offset = Vector2(2965.69, 589.396)
 region_enabled = true
@@ -414,8 +413,8 @@ region_rect = Rect2(0, 0, 10000, 6000)
 show_behind_parent = true
 texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
-position = Vector2(1237, -1276)
-scale = Vector2(0.0175491, 0.169)
+position = Vector2(1237, -694.564)
+scale = Vector2(0.0175491, 0.0521252)
 texture = ExtResource("9_ig5i8")
 offset = Vector2(-1666.98, 1974.86)
 region_enabled = true
@@ -619,6 +618,17 @@ texture_repeat = 2
 material = SubResource("ShaderMaterial_8s6nd")
 position = Vector2(2169.01, 73.2629)
 scale = Vector2(0.0468, 0.0899999)
+texture = ExtResource("9_ig5i8")
+offset = Vector2(-1666.98, 1974.86)
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 6000)
+
+[node name="Sprite2D40" type="Sprite2D" parent="Outside"]
+show_behind_parent = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8s6nd")
+position = Vector2(1631, 71)
+scale = Vector2(0.0468, 0.0202104)
 texture = ExtResource("9_ig5i8")
 offset = Vector2(-1666.98, 1974.86)
 region_enabled = true
@@ -1017,11 +1027,6 @@ text = "0.0"
 
 [node name="Clue" type="Node2D" parent="."]
 z_index = -2
-
-[node name="Physics21" type="Sprite2D" parent="Clue"]
-position = Vector2(6102, -534)
-scale = Vector2(0.16, 0.16)
-texture = ExtResource("11_p8qqn")
 
 [node name="Chien1" type="Sprite2D" parent="Clue"]
 position = Vector2(2512, -260)

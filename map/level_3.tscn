@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="2_66l38"]
 [ext_resource type="Shader" uid="uid://b682goxc1s5ob" path="res://assets/BG/Ground/GroundFill.gdshader" id="4_ne8k7"]
 [ext_resource type="Texture2D" uid="uid://wuyfial0i7pl" path="res://assets/BG/Ground/BlackFill.png" id="5_s207b"]
-[ext_resource type="Script" uid="uid://jcbqq4eqib8p" path="res://map/background_invisible.gd" id="6_5kq3p"]
+[ext_resource type="Script" path="res://map/background_invisible.gd" id="6_5kq3p"]
 [ext_resource type="PackedScene" uid="uid://c401n4ovod8nj" path="res://Curtains/Curtains.tscn" id="6_k8hsi"]
 [ext_resource type="Texture2D" uid="uid://cfrywqd8bkbye" path="res://assets/platforms/platform_starwars.png" id="7_s207b"]
 [ext_resource type="PackedScene" uid="uid://6bddk4wlfymg" path="res://area/SpawnOnStayInside.tscn" id="8_5kq3p"]
@@ -34,7 +34,7 @@ show_behind_parent = true
 z_index = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_k8hsi")
-position = Vector2(5273, -848)
+position = Vector2(5285, -888)
 rotation = -3.14159
 scale = Vector2(0.215865, 0.248633)
 texture = ExtResource("5_s207b")
