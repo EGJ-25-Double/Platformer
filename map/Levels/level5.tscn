@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://dslmmgsn1wwnb"]
+[gd_scene load_steps=4 format=4 uid="uid://duvl3sivucer7"]
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_ci241"]
-[ext_resource type="PackedScene" uid="uid://b6np8jpwrv11e" path="res://Curtains/Curtains.tscn" id="3_2xl71"]
+[ext_resource type="PackedScene" uid="uid://c401n4ovod8nj" path="res://Curtains/Curtains.tscn" id="3_2xl71"]
 [ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="4_e7mcs"]
 
 [node name="Level5" type="Node2D"]

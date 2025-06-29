@@ -7,6 +7,11 @@ var current_wall_jump := 0
 
 func _input(event):
 		if event.is_action_pressed("jump") and not player.is_on_floor() and player.is_on_wall():
+
+			var areas = player.jump_box.get_overlapping_areas()
+			if not areas.any(func (area: Area2D): return area.is_in_group("jump_zone")):
+				return
+
 			if current_wall_jump >= max_wall_jump:
 				return
 

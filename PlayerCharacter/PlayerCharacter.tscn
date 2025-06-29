@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://ds3igeg01sjso"]
+[gd_scene load_steps=69 format=3 uid="uid://ds3igeg01sjso"]
 
 [ext_resource type="Script" uid="uid://dnvemqwbwwoih" path="res://PlayerCharacter/player_character.gd" id="1_v4vvu"]
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
@@ -664,6 +664,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2qxx"]
+size = Vector2(64, 92)
+
 [node name="PlayerCharacter" type="CharacterBody2D"]
 z_index = 5
 collision_layer = 7
@@ -800,6 +803,7 @@ anim_player = NodePath("../AnimationPlayer")
 script = ExtResource("10_nbdcw")
 
 [node name="PowerDefault" type="Node" parent="."]
+process_mode = 4
 
 [node name="DoubleJump" type="Node" parent="PowerDefault"]
 script = ExtResource("12_6mx01")
@@ -848,3 +852,10 @@ script = ExtResource("27_6h5in")
 
 [node name="FlashSound" type="AudioStreamPlayer" parent="FlashCanvas"]
 stream = ExtResource("28_6h5in")
+
+[node name="JumpBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpBox"]
+position = Vector2(6, 0)
+shape = SubResource("RectangleShape2D_h2qxx")

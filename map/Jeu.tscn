@@ -12,8 +12,7 @@
 [ext_resource type="Shader" uid="uid://b682goxc1s5ob" path="res://assets/BG/Ground/GroundFill.gdshader" id="8_isquk"]
 [ext_resource type="Texture2D" uid="uid://wuyfial0i7pl" path="res://assets/BG/Ground/BlackFill.png" id="9_ig5i8"]
 [ext_resource type="PackedScene" uid="uid://bhrdw4rjoqr2k" path="res://map/Levels/Level4.tscn" id="9_t6k6y"]
-[ext_resource type="PackedScene" uid="uid://b5tko8bdcr62r" path="res://map/Levels/LevelStargate.tscn" id="10_14vpn"]
-[ext_resource type="PackedScene" uid="uid://dslmmgsn1wwnb" path="res://map/Levels/level5.tscn" id="10_14vpn"]
+[ext_resource type="PackedScene" uid="uid://duvl3sivucer7" path="res://map/Levels/level5.tscn" id="10_14vpn"]
 [ext_resource type="PackedScene" uid="uid://dc8pes0fpyysg" path="res://map/full_map.tscn" id="10_kawow"]
 [ext_resource type="Texture2D" uid="uid://pild07ifitmv" path="res://assets/posters/physics21.png" id="11_p8qqn"]
 [ext_resource type="Script" uid="uid://xn0o4hxvohn1" path="res://map/menu_pause.gd" id="14_ouisi"]
@@ -238,6 +237,7 @@ autoplay = true
 
 [node name="LevelStargate" parent="Levels" instance=ExtResource("10_14vpn")]
 position = Vector2(9719, 4642)
+
 [node name="Level5" parent="Levels" instance=ExtResource("10_14vpn")]
 
 [node name="Outside" type="TileMapLayer" parent="."]
