@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://y8g27b3mhb27" path="res://assets/character/Skins/Alien_masques_0003_Spouderman.png" id="2_yv0mo"]
 [ext_resource type="Texture2D" uid="uid://dhxwunkv6uwon" path="res://assets/Themes/gdb-xbox-2.png" id="3_j8r1q"]
 [ext_resource type="Texture2D" uid="uid://dltmxg3wlvlm" path="res://assets/Themes/Keyboard.png" id="3_lvkye"]
-[ext_resource type="Script" uid="uid://c6dcvt25a4nqm" path="res://PlayerCharacter/key_check_controller.gd" id="5_uuohu"]
+[ext_resource type="Script" path="res://PlayerCharacter/key_check_controller.gd" id="5_uuohu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jlnc"]
 size = Vector2(60, 60)
