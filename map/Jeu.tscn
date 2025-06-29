@@ -126,9 +126,9 @@ texture = ExtResource("1_5y575")
 [node name="Gradient2" type="Sprite2D" parent="ParallaxBackground/ParalaxZone2"]
 modulate = Color(0, 0, 0.505882, 0.403922)
 z_index = -2
-position = Vector2(1874.5, -663.75)
+position = Vector2(1874.5, -19.0849)
 rotation = 3.14159
-scale = Vector2(15.7781, 9.35469)
+scale = Vector2(15.7781, 5.32553)
 texture = ExtResource("1_5y575")
 
 [node name="Parallax2D4" type="Parallax2D" parent="ParallaxBackground/ParalaxZone2"]
@@ -198,40 +198,12 @@ scroll_scale = Vector2(0.95, 1)
 tile_map_data = PackedByteArray("AACwACIAAAAAAAAAAADTACwAAAAEAAIAAAD4ACwAAAAHAAIAAAA=")
 tile_set = ExtResource("3_5y575")
 
-[node name="MiddleFront" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(-614, -148)
-motion_scale = Vector2(0.1, 0)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -4
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-visible = false
-z_index = -1
-anchors_preset = -1
-anchor_right = 1.08854
-anchor_bottom = 1.25617
-offset_left = -1.0
-offset_top = -1.0
-offset_right = -1.0
-offset_bottom = -1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.43712, 0.43712, 0.43712, 1)
-metadata/_edit_use_anchors_ = true
-
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_gl2p0")]
 position = Vector2(2269, -1050)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_5y575")
 autoplay = true
-
-[node name="Poster3" type="Sprite2D" parent="."]
-position = Vector2(3753, 388)
-scale = Vector2(0.08, 0.08)
-
-[node name="Node" type="Node" parent="."]
 
 [node name="Levels" type="Node2D" parent="."]
 

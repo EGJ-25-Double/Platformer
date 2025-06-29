@@ -27,7 +27,7 @@
 [ext_resource type="AudioStream" uid="uid://dlm57lo5o41l1" path="res://sounds/SFX/EGJ25_SFX_AlienClimb_V1.mp3" id="25_87y2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
-size = Vector2(78, 92)
+size = Vector2(64, 92)
 
 [sub_resource type="Animation" id="Animation_ofxpx"]
 resource_name = "climb"
@@ -720,7 +720,7 @@ texture = ExtResource("9_dyuu2")
 offset = Vector2(166, 88)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(6, 0)
 shape = SubResource("RectangleShape2D_pe5a2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
