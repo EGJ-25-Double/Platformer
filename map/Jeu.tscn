@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=32 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="Texture2D" uid="uid://buk3i837ilsvk" path="res://assets/BG/gradient.png" id="1_5y575"]
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="3_5y575"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bhrdw4rjoqr2k" path="res://map/Levels/Level4.tscn" id="9_t6k6y"]
 [ext_resource type="PackedScene" uid="uid://duvl3sivucer7" path="res://map/Levels/level5.tscn" id="10_14vpn"]
 [ext_resource type="Texture2D" uid="uid://pild07ifitmv" path="res://assets/posters/physics21.png" id="11_p8qqn"]
+[ext_resource type="PackedScene" uid="uid://b5tko8bdcr62r" path="res://map/Levels/LevelStargate.tscn" id="13_vok5r"]
 [ext_resource type="Script" uid="uid://xn0o4hxvohn1" path="res://map/menu_pause.gd" id="14_ouisi"]
 [ext_resource type="Texture2D" uid="uid://iar0pqptjv1k" path="res://ui/Menus/MainMenu/background1.jpg" id="15_14vpn"]
 [ext_resource type="Texture2D" uid="uid://dsiic4vmttln2" path="res://assets/posters/maytheforce.png" id="15_dsy6r"]
@@ -250,9 +251,11 @@ autoplay = true
 
 [node name="Level5" parent="Levels" instance=ExtResource("10_14vpn")]
 
-[node name="LevelStargate" parent="Levels" instance=ExtResource("10_14vpn")]
+[node name="LevelStargate" parent="Levels" instance=ExtResource("13_vok5r")]
+position = Vector2(-3898, -3490)
 
 [node name="Outside" type="TileMapLayer" parent="."]
+visible = false
 z_index = 1
 tile_set = ExtResource("7_xpr5j")
 
@@ -686,6 +689,7 @@ offset = Vector2(-1350, -340)
 
 [node name="MenuPause" type="CanvasLayer" parent="."]
 process_mode = 3
+visible = false
 script = ExtResource("14_ouisi")
 
 [node name="Background" type="TextureRect" parent="MenuPause"]
