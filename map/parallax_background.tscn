@@ -688,13 +688,13 @@ tile_set = SubResource("TileSet_k8ofl")
 scroll_scale = Vector2(0.4, 1)
 scroll_offset = Vector2(-282, -558)
 repeat_size = Vector2(128, 128)
-repeat_times = 44
+repeat_times = 56
 
 [node name="Ceiling" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/5StarWarsCurtains/Ceiling2"]
 show_behind_parent = true
 z_index = -545
 texture_repeat = 2
-position = Vector2(405, -369)
+position = Vector2(-38.9999, -2333)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_fln7g")
 region_enabled = true
