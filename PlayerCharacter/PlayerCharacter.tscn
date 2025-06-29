@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://ds3igeg01sjso"]
+[gd_scene load_steps=81 format=3 uid="uid://ds3igeg01sjso"]
 
 [ext_resource type="Script" uid="uid://dnvemqwbwwoih" path="res://PlayerCharacter/player_character.gd" id="1_v4vvu"]
 [ext_resource type="Texture2D" uid="uid://bmcox375u24cw" path="res://assets/character_l.png" id="2_5vfnn"]
@@ -28,7 +28,9 @@
 [ext_resource type="AudioStream" uid="uid://dlm57lo5o41l1" path="res://sounds/SFX/EGJ25_SFX_AlienClimb_V1.mp3" id="25_87y2k"]
 [ext_resource type="Texture2D" uid="uid://dltmxg3wlvlm" path="res://assets/Themes/Keyboard.png" id="26_4sspf"]
 [ext_resource type="Script" uid="uid://cojdry6dce78p" path="res://PlayerCharacter/flash.gd" id="27_6h5in"]
+[ext_resource type="Texture2D" uid="uid://dhxwunkv6uwon" path="res://assets/Themes/gdb-xbox-2.png" id="27_sa684"]
 [ext_resource type="AudioStream" uid="uid://cl0dkolmnrsqd" path="res://sounds/SFX/410559__michellegrobler__old-camera-flash.wav" id="28_6h5in"]
+[ext_resource type="Script" uid="uid://c6dcvt25a4nqm" path="res://PlayerCharacter/key_check_controller.gd" id="29_waumh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5a2"]
 size = Vector2(64, 92)
@@ -620,6 +622,26 @@ stream_0/stream = ExtResource("20_u4e74")
 stream_1/stream = ExtResource("21_4d3id")
 stream_2/stream = ExtResource("22_d5bsx")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_waumh"]
+atlas = ExtResource("27_sa684")
+region = Rect2(16, 224, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vby3f"]
+atlas = ExtResource("27_sa684")
+region = Rect2(32, 224, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxy35"]
+atlas = ExtResource("27_sa684")
+region = Rect2(48, 224, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctych"]
+atlas = ExtResource("27_sa684")
+region = Rect2(64, 224, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vglq"]
+atlas = ExtResource("27_sa684")
+region = Rect2(80, 224, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_4sspf"]
 atlas = ExtResource("26_4sspf")
 region = Rect2(64, 32, 16, 16)
@@ -632,6 +654,26 @@ region = Rect2(64, 128, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_waumh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vby3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxy35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctych")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vglq")
+}],
+"loop": true,
+"name": &"controller",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_4sspf")
 }, {
 "duration": 1.0,
@@ -641,6 +683,26 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6b1vl"]
+atlas = ExtResource("27_sa684")
+region = Rect2(16, 208, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6tyu"]
+atlas = ExtResource("27_sa684")
+region = Rect2(32, 208, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7c5m"]
+atlas = ExtResource("27_sa684")
+region = Rect2(48, 208, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et3bv"]
+atlas = ExtResource("27_sa684")
+region = Rect2(64, 208, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oaswr"]
+atlas = ExtResource("27_sa684")
+region = Rect2(80, 208, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2qxx"]
 atlas = ExtResource("26_4sspf")
@@ -652,6 +714,26 @@ region = Rect2(112, 160, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_waumh"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6b1vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6tyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7c5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et3bv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oaswr")
+}],
+"loop": true,
+"name": &"controller",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h2qxx")
@@ -829,14 +911,18 @@ visible = false
 position = Vector2(78, -78)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_h2qxx")
+animation = &"controller"
 autoplay = "default"
+script = ExtResource("29_waumh")
 
 [node name="KeyPower" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(78, -78)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_waumh")
+animation = &"controller"
 autoplay = "default"
+script = ExtResource("29_waumh")
 
 [node name="FlashCanvas" type="CanvasLayer" parent="."]
 

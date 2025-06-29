@@ -20,3 +20,9 @@ func add_skin(added_skin_name: String):
 	var new_skin = get_skin_by_name(added_skin_name)
 	if new_skin:
 		skins_owned.append(new_skin)
+
+func has_controller_connected() -> bool:
+	for device_id in Input.get_connected_joypads():
+		if Input.is_joy_known(device_id):
+			return true
+	return false

@@ -241,7 +241,6 @@ autoplay = true
 [node name="Level4" parent="Levels" instance=ExtResource("9_t6k6y")]
 
 [node name="LevelStargate" parent="Levels" instance=ExtResource("10_14vpn")]
-position = Vector2(9719, 4642)
 
 [node name="Level5" parent="Levels" instance=ExtResource("10_14vpn")]
 
