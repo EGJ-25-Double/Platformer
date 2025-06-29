@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=30 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="PackedScene" uid="uid://b202yu0np10nb" path="res://map/parallax_background.tscn" id="2_7myag"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="3_gl2p0"]
@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://cxhwe6q2k62gu" path="res://ui/Menus/MainMenu/2.png" id="22_0hub7"]
 [ext_resource type="Texture2D" uid="uid://cyi3u8rqvwl28" path="res://ui/Menus/MainMenu/3.png" id="23_lhch6"]
 [ext_resource type="Texture2D" uid="uid://c6tmdqpoyh3au" path="res://assets/posters/chien1.png" id="25_7myag"]
+[ext_resource type="Texture2D" uid="uid://bw4tq017twrt" path="res://assets/clue2-double.png" id="26_p8qqn"]
+[ext_resource type="Texture2D" uid="uid://d2xhtdml43jdx" path="res://assets/clue4.png" id="27_dsy6r"]
 
 [sub_resource type="GDScript" id="GDScript_w62k0"]
 script/source = "extends TextureRect
@@ -426,6 +428,16 @@ texture = ExtResource("11_p8qqn")
 position = Vector2(2982, -434)
 scale = Vector2(0.14, 0.14)
 texture = ExtResource("25_7myag")
+
+[node name="Clue2-double" type="Sprite2D" parent="."]
+position = Vector2(3721, -1259)
+scale = Vector2(1.48734, 1.48734)
+texture = ExtResource("26_p8qqn")
+
+[node name="Clue4" type="Sprite2D" parent="."]
+position = Vector2(-5122, -1983)
+scale = Vector2(2.87026, 2.87026)
+texture = ExtResource("27_dsy6r")
 
 [connection signal="visibility_changed" from="MenuPause" to="MenuPause" method="_on_visibility_changed"]
 [connection signal="pressed" from="MenuPause/VBoxContainer/PlayBtn" to="MenuPause" method="_on_play_btn_pressed"]
