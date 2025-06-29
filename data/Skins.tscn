@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://ulincx2500mc" path="res://data/skin_data.gd" id="2_m6tei"]
 [ext_resource type="Texture2D" uid="uid://culxonl61yttx" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0002_Mickey.png" id="3_22p4a"]
 [ext_resource type="Texture2D" uid="uid://duch0k1tm8s4y" path="res://assets/character/Skins/Alien_masques_0002_Mickey.png" id="3_euo2t"]
-[ext_resource type="Script" uid="uid://bapg6kecuicq5" path="res://power/pass_through_curtains.gd" id="4_6pg5i"]
+[ext_resource type="Script" path="res://power/pass_through_curtains.gd" id="4_6pg5i"]
 [ext_resource type="Texture2D" uid="uid://vjpmc61lwrsx" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0003_Spouderman.png" id="5_p6r75"]
 [ext_resource type="Script" uid="uid://dv0ct56qpv81v" path="res://power/climb.gd" id="6_euo2t"]
 [ext_resource type="Texture2D" uid="uid://bynbuckxp1djg" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0000_Dv.png" id="7_sqlw0"]
