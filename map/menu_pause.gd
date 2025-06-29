@@ -13,6 +13,8 @@ func _input(event):
 
 func _on_play_btn_pressed() -> void:
 	visible = false
+	if get_tree().root.get_child(1) == self:
+		get_tree().change_scene_to_file("res://map/Jeu.tscn")
 
 func _on_options_btn_pressed() -> void:
 	$OptionsUI.visible = true
@@ -52,20 +54,22 @@ func _on_options_back_btn_pressed() -> void:
 
 ## CHANGE VALUE OF OPTIONS 
 func _on_slider_1_value_changed(value: float) -> void:
-	$OptionsUI/value1.text = str(value)
+	$OptionsUI/Control/value1.text = str(value)
 	check_if_code_is_correct()
 
 func _on_slider_2_value_changed(value: float) -> void:
-	$OptionsUI/value2.text = str(value)
+	$OptionsUI/Control/value2.text = str(value)
 	check_if_code_is_correct()
 
 func _on_slider_3_value_changed(value: float) -> void:
-	$OptionsUI/value3.text = str(value)
+	$OptionsUI/Control/value3.text = str(value)
 	check_if_code_is_correct()
 	
 func check_if_code_is_correct():
-	if $OptionsUI/value1.text == "1.0" and $OptionsUI/value2.text == "3.0"  and $OptionsUI/value3.text == "1.0":
-		$"../Levels/Level2/arrow".visible = true
+	if $OptionsUI/Control/value1.text == "1.0" and $OptionsUI/Control/value2.text == "3.0"  and $OptionsUI/Control/value3.text == "1.0":
+		var node = $"../Levels/Level2/arrow"
+		if node:
+			node.visible = true
 
 func _on_visibility_changed() -> void:
 	get_tree().paused = visible

@@ -1,0 +1,356 @@
+[gd_scene load_steps=13 format=3 uid="uid://b8853x6x6xtqg"]
+
+[ext_resource type="Script" uid="uid://xn0o4hxvohn1" path="res://map/menu_pause.gd" id="1_gmm2m"]
+[ext_resource type="Texture2D" uid="uid://iar0pqptjv1k" path="res://ui/Menus/MainMenu/background1.jpg" id="2_u23tk"]
+[ext_resource type="Theme" uid="uid://coiuj78tsqptn" path="res://assets/Themes/label.tres" id="3_svlqd"]
+[ext_resource type="Texture2D" uid="uid://bev3cwh8ycy45" path="res://ui/Menus/MainMenu/background2.jpg" id="4_3arbt"]
+[ext_resource type="Texture2D" uid="uid://cs7383bschcn4" path="res://ui/Menus/MainMenu/backgrond3.jpg" id="5_d2e60"]
+[ext_resource type="Texture2D" uid="uid://bu7iogreo2020" path="res://ui/Menus/MainMenu/backgrond4.jpg" id="6_fwg0x"]
+[ext_resource type="Texture2D" uid="uid://do3hgpekdac8h" path="res://ui/Menus/MainMenu/button.png" id="7_yug4b"]
+[ext_resource type="Texture2D" uid="uid://dof7er8kr1dot" path="res://ui/Menus/MainMenu/1.png" id="8_si83v"]
+[ext_resource type="Texture2D" uid="uid://cxhwe6q2k62gu" path="res://ui/Menus/MainMenu/2.png" id="9_tv8mh"]
+[ext_resource type="Texture2D" uid="uid://cyi3u8rqvwl28" path="res://ui/Menus/MainMenu/3.png" id="10_sltrg"]
+
+[sub_resource type="GDScript" id="GDScript_w62k0"]
+script/source = "extends TextureRect
+"
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_y5k0b"]
+color = Color(0.497057, 0.000175437, 0.497053, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 10
+
+[node name="MenuPause" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_gmm2m")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_u23tk")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -115.0
+offset_top = -238.0
+offset_right = 111.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PlayBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_svlqd")
+text = "Play"
+
+[node name="HelpBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_svlqd")
+text = "Help"
+
+[node name="OptionsBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_svlqd")
+text = "Options"
+
+[node name="CreditsBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_svlqd")
+text = "Credits"
+
+[node name="QuitBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_svlqd")
+text = "Quit"
+
+[node name="HelpUI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HelpUI" type="TextureRect" parent="HelpUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3arbt")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="HelpUI"]
+layout_mode = 2
+offset_left = 402.222
+offset_top = 294.444
+offset_right = 841.222
+offset_bottom = 351.444
+theme_override_font_sizes/font_size = 35
+text = "Go to the helping website
+"
+
+[node name="HelpBackBtn" type="Button" parent="HelpUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -58.0
+offset_right = 52.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_svlqd")
+text = "Back"
+
+[node name="CreditsUI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditsUI" type="TextureRect" parent="CreditsUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_d2e60")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="CreditsUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = -312.0
+offset_right = 448.0
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_svlqd")
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Made with <3 by
+
+Mattia Torsello \"MattDirty\" - Developer & Liar
+Matthieu Conti \"Mconti\" - Developer & Genius
+Pascal Benoit \"pascal-nil\" - Developer & Dumb
+Aurélie Stephan \"histidiine\" - Scientist & Lost
+
+Hugo Lefebvre \"Lumirevery\" - Game Designer
+Julien Di Natale \"Avoltance\" - Game Designer & Developer
+Louise \"ashisia\" - Developer
+Miggeroo - Art
+Piroporopi - Art
+Shashamisen - Sound Design & Music
+Thomas Rogulski \"Totoro\" - Game Designer & Developer
+
+
+Credits to
+
+Kenney - Font assets"
+
+[node name="CreditsBackBtn" type="Button" parent="CreditsUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -38.0
+offset_top = -55.0
+offset_right = 38.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_svlqd")
+text = "Back"
+
+[node name="OptionsUI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsUI" type="TextureRect" parent="OptionsUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_fwg0x")
+expand_mode = 1
+stretch_mode = 6
+script = SubResource("GDScript_w62k0")
+
+[node name="Label" type="Label" parent="OptionsUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -66.0
+offset_top = 20.0
+offset_right = 66.0
+offset_bottom = 107.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "OPTIONS
+"
+
+[node name="OptionsBackBtn" type="Button" parent="OptionsUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -38.0
+offset_top = -55.0
+offset_right = 38.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_svlqd")
+text = "Back"
+
+[node name="Control" type="Control" parent="OptionsUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+
+[node name="slider1" type="HSlider" parent="OptionsUI/Control"]
+layout_mode = 0
+offset_left = -31.556
+offset_top = -136.222
+offset_right = 554.44
+offset_bottom = -116.222
+theme_override_icons/grabber = ExtResource("7_yug4b")
+theme_override_icons/grabber_highlight = ExtResource("7_yug4b")
+theme_override_styles/slider = SubResource("StyleBoxLine_y5k0b")
+max_value = 10.0
+
+[node name="slider2" type="HSlider" parent="OptionsUI/Control"]
+layout_mode = 0
+offset_left = -33.778
+offset_top = -24.0
+offset_right = 552.22
+offset_bottom = -4.0
+theme_override_icons/grabber = ExtResource("7_yug4b")
+theme_override_icons/grabber_highlight = ExtResource("7_yug4b")
+theme_override_styles/slider = SubResource("StyleBoxLine_y5k0b")
+max_value = 10.0
+
+[node name="slider3" type="HSlider" parent="OptionsUI/Control"]
+layout_mode = 0
+offset_left = -33.778
+offset_top = 93.778
+offset_right = 552.22
+offset_bottom = 113.778
+theme_override_icons/grabber = ExtResource("7_yug4b")
+theme_override_icons/grabber_highlight = ExtResource("7_yug4b")
+theme_override_styles/slider = SubResource("StyleBoxLine_y5k0b")
+max_value = 10.0
+
+[node name="text1" type="TextureRect" parent="OptionsUI/Control"]
+layout_mode = 0
+offset_left = -488.222
+offset_top = -174.0
+offset_right = 11.778
+offset_bottom = -74.0
+texture = ExtResource("8_si83v")
+
+[node name="text2" type="TextureRect" parent="OptionsUI/Control"]
+layout_mode = 0
+offset_left = -490.444
+offset_top = -60.667
+offset_right = 9.55603
+offset_bottom = 39.333
+texture = ExtResource("9_tv8mh")
+
+[node name="text3" type="TextureRect" parent="OptionsUI/Control"]
+layout_mode = 0
+offset_left = -491.555
+offset_top = 58.222
+offset_right = 8.44397
+offset_bottom = 158.222
+texture = ExtResource("10_sltrg")
+
+[node name="value1" type="Label" parent="OptionsUI/Control"]
+layout_mode = 0
+offset_left = 578.44
+offset_top = -150.667
+offset_right = 635.44
+offset_bottom = -95.667
+theme_override_font_sizes/font_size = 40
+text = "0.0"
+
+[node name="value2" type="Label" parent="OptionsUI/Control"]
+layout_mode = 0
+offset_left = 576.22
+offset_top = -42.889
+offset_right = 633.22
+offset_bottom = 12.111
+theme_override_font_sizes/font_size = 40
+text = "0.0"
+
+[node name="value3" type="Label" parent="OptionsUI/Control"]
+layout_mode = 0
+offset_left = 575.11
+offset_top = 69.333
+offset_right = 632.11
+offset_bottom = 124.333
+theme_override_font_sizes/font_size = 40
+text = "0.0"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="VBoxContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/HelpBtn" to="." method="_on_help_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsBtn" to="." method="_on_options_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsBtn" to="." method="_on_credits_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="HelpUI/Button" to="." method="_on_help_link_button_pressed"]
+[connection signal="pressed" from="HelpUI/HelpBackBtn" to="." method="_on_help_back_btn_pressed"]
+[connection signal="pressed" from="CreditsUI/CreditsBackBtn" to="." method="_on_credits_back_btn_pressed"]
+[connection signal="pressed" from="OptionsUI/OptionsBackBtn" to="." method="_on_options_back_btn_pressed"]
+[connection signal="value_changed" from="OptionsUI/Control/slider1" to="." method="_on_slider_1_value_changed"]
+[connection signal="value_changed" from="OptionsUI/Control/slider2" to="." method="_on_slider_2_value_changed"]
+[connection signal="value_changed" from="OptionsUI/Control/slider3" to="." method="_on_slider_3_value_changed"]
