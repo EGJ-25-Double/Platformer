@@ -63,7 +63,5 @@ func _on_slider_3_value_changed(value: float) -> void:
 	check_if_code_is_correct()
 	
 func check_if_code_is_correct():
-	print('ENTRER')
 	if $OptionsUI/value1.text == "1.0" and $OptionsUI/value2.text == "3.0"  and $OptionsUI/value3.text == "1.0":
-		print('YES')
 		get_node('Level2/arrow').visible = true
