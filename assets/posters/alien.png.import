@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bn88q4siirv1t"
+=======
+uid="uid://bufahgshql15j"
+>>>>>>> 1c0901f (oeil ferme)
 path="res://.godot/imported/alien.png-c8df11d32e2f69243c00c7cce93d0f52.ctex"
 metadata={
 "vram_texture": false
