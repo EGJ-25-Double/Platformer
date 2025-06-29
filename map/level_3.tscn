@@ -106,7 +106,7 @@ texture = ExtResource("7_s207b")
 shape = SubResource("RectangleShape2D_5kq3p")
 
 [node name="Long_h4" type="StaticBody2D" parent="Platforms"]
-position = Vector2(3536, -1697)
+position = Vector2(3686, -1587)
 
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/Long_h4"]
 scale = Vector2(0.12, 0.12)
