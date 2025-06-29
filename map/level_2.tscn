@@ -20,7 +20,7 @@ shader_parameter/albedo_texture = ExtResource("5_lqe4j")
 shader_parameter/albedo = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncyyv"]
-size = Vector2(10686.8, 6359.07)
+size = Vector2(10033.5, 6005.79)
 
 [node name="Level2" type="Node2D"]
 
@@ -244,9 +244,10 @@ tile_set = ExtResource("3_kevu2")
 
 [node name="to_make_invisible" type="Sprite2D" parent="."]
 show_behind_parent = true
+z_index = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_2pvy4")
-position = Vector2(1840, -223)
+position = Vector2(1836, -219)
 scale = Vector2(0.1194, 0.103317)
 texture = ExtResource("5_lqe4j")
 offset = Vector2(-934.313, 507.876)
@@ -257,10 +258,12 @@ script = ExtResource("6_xj6xn")
 [node name="Area2D" type="Area2D" parent="to_make_invisible"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="to_make_invisible/Area2D"]
-position = Vector2(-1264.65, 633.971)
+position = Vector2(-921.266, 471.849)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ncyyv")
 
 [node name="arrow" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2457, -145)
 scale = Vector2(0.367713, 0.367713)
 texture = ExtResource("7_lqe4j")

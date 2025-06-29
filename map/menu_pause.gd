@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 
 func _ready():
@@ -7,11 +7,11 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit()
+		visible = true
 
 
 func _on_play_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://map/Jeu.tscn")
+	visible = false
 
 func _on_options_btn_pressed() -> void:
 	$OptionsUI.visible = true
@@ -63,7 +63,5 @@ func _on_slider_3_value_changed(value: float) -> void:
 	check_if_code_is_correct()
 	
 func check_if_code_is_correct():
-	print('ENTRER')
 	if $OptionsUI/value1.text == "1.0" and $OptionsUI/value2.text == "3.0"  and $OptionsUI/value3.text == "1.0":
-		print('YES')
-		get_node('Level2/arrow').visible = true
+		$"../Levels/Level2/arrow".visible = true

@@ -58,11 +58,6 @@ layout_mode = 2
 theme = ExtResource("3_7f67a")
 text = "Play"
 
-[node name="OptionsBtn" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("3_7f67a")
-text = "OPTIONS"
-
 [node name="HelpBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_7f67a")
@@ -295,7 +290,6 @@ theme_override_font_sizes/font_size = 40
 text = "0.0"
 
 [connection signal="pressed" from="VBoxContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
-[connection signal="pressed" from="VBoxContainer/OptionsBtn" to="." method="_on_options_btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/HelpBtn" to="." method="_on_help_btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/CreditsBtn" to="." method="_on_credits_btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitBtn" to="." method="_on_quit_btn_pressed"]
