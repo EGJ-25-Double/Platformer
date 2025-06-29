@@ -18,12 +18,20 @@ tile_set = ExtResource("1_ci241")
 position = Vector2(-2311, -1897)
 skin_name = "Link"
 
+[node name="CostumePickable2" parent="." instance=ExtResource("4_e7mcs")]
+position = Vector2(-2458, -1892)
+skin_name = "Mario"
+
 [node name="Curtains" parent="." instance=ExtResource("3_2xl71")]
-position = Vector2(-5908, -1159)
+position = Vector2(-5771, -1079)
+scale = Vector2(0.6, 0.6)
+
+[node name="Curtains9" parent="." instance=ExtResource("3_2xl71")]
+position = Vector2(-6270, -1312)
 scale = Vector2(0.6, 0.6)
 
 [node name="Curtains6" parent="." instance=ExtResource("3_2xl71")]
-position = Vector2(-4228, -559)
+position = Vector2(-4228, -547)
 scale = Vector2(0.6, 0.6)
 
 [node name="Curtains7" parent="." instance=ExtResource("3_2xl71")]
@@ -35,19 +43,19 @@ position = Vector2(-4601, -1303)
 scale = Vector2(0.6, 0.6)
 
 [node name="Curtains8" parent="." instance=ExtResource("3_2xl71")]
-position = Vector2(-4601, -1303)
+position = Vector2(-4601, -1291)
 scale = Vector2(0.6, 0.6)
 
 [node name="Curtains3" parent="." instance=ExtResource("3_2xl71")]
-position = Vector2(-4226, -1096)
+position = Vector2(-4226, -1084)
 scale = Vector2(0.6, 0.6)
 
 [node name="Curtains4" parent="." instance=ExtResource("3_2xl71")]
-position = Vector2(-4604, -777)
+position = Vector2(-4604, -765)
 scale = Vector2(0.6, 0.6)
 
 [node name="Curtains5" parent="." instance=ExtResource("3_2xl71")]
-position = Vector2(-4225, -1626)
+position = Vector2(-4225, -1614)
 scale = Vector2(0.6, 0.6)
 
 [node name="SceneArrival" type="Node2D" parent="."]
