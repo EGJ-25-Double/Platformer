@@ -24,7 +24,7 @@ func _on_help_btn_pressed() -> void:
 	
 	
 func _on_help_link_button_pressed() -> void:
-	OS.shell_open("https://google.com/")
+	OS.shell_open("https://mconti.itch.io/trouble")
 
 
 func _on_credits_btn_pressed() -> void:
