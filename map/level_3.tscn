@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=4 uid="uid://vpxwi05f1rmo"]
+[gd_scene load_steps=14 format=4 uid="uid://vpxwi05f1rmo"]
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_pp57b"]
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="2_66l38"]
 [ext_resource type="Texture2D" uid="uid://rn5asxqpjdfa" path="res://PowerLinkedObjects/curtain.png" id="3_2j24m"]
 [ext_resource type="Shader" uid="uid://b682goxc1s5ob" path="res://assets/BG/Ground/GroundFill.gdshader" id="4_ne8k7"]
 [ext_resource type="Texture2D" uid="uid://wuyfial0i7pl" path="res://assets/BG/Ground/BlackFill.png" id="5_s207b"]
-[ext_resource type="Script" path="res://map/background_invisible.gd" id="6_5kq3p"]
+[ext_resource type="Script" uid="uid://jcbqq4eqib8p" path="res://map/background_invisible.gd" id="6_5kq3p"]
 [ext_resource type="Texture2D" uid="uid://cfrywqd8bkbye" path="res://assets/platforms/platform_starwars.png" id="7_s207b"]
+[ext_resource type="PackedScene" uid="uid://6bddk4wlfymg" path="res://area/SpawnOnStayInside.tscn" id="8_5kq3p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k8hsi"]
 shader = ExtResource("4_ne8k7")
@@ -175,5 +176,20 @@ texture = ExtResource("7_s207b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Long_v4"]
 shape = SubResource("RectangleShape2D_5kq3p")
 
+[node name="SpawnOnStayInside" parent="." instance=ExtResource("8_5kq3p")]
+position = Vector2(6331, -416)
+
+[node name="Area2D" parent="SpawnOnStayInside" index="0"]
+time = 10.0
+
+[node name="CollisionShape2D" parent="SpawnOnStayInside/Area2D" index="0"]
+position = Vector2(-251, -6)
+
+[node name="CostumePickable" parent="SpawnOnStayInside" index="2"]
+skin_name = "Mickey"
+
 [connection signal="body_entered" from="to_make_invisible/Area2D" to="to_make_invisible" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="to_make_invisible/Area2D" to="to_make_invisible" method="_on_area_2d_body_exited"]
+
+[editable path="SpawnOnStayInside"]
+[editable path="SpawnOnStayInside/Area2D"]

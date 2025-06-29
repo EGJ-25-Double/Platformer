@@ -1,0 +1,129 @@
+[gd_scene load_steps=29 format=3 uid="uid://6bddk4wlfymg"]
+
+[ext_resource type="Script" uid="uid://drxjfv5nwkxsp" path="res://area/spawn_on_stay_inside.gd" id="1_ijxww"]
+[ext_resource type="PackedScene" uid="uid://vg2aclpel2hb" path="res://area/StayInside.tscn" id="2_ul5fk"]
+[ext_resource type="Texture2D" uid="uid://bdhj6b8dnjv6v" path="res://assets/PoufAnim/Miror_0001_Calque-62.png" id="3_4tp87"]
+[ext_resource type="Texture2D" uid="uid://xlt7jbepooou" path="res://assets/PoufAnim/Miror_0003_Calque-62.png" id="4_aqqge"]
+[ext_resource type="Texture2D" uid="uid://c2g2njeyshuhx" path="res://assets/PoufAnim/Miror_0005_Calque-62.png" id="5_vb2hl"]
+[ext_resource type="Texture2D" uid="uid://d08gfyh3k5syn" path="res://assets/PoufAnim/Miror_0007_Calque-61.png" id="6_i04xn"]
+[ext_resource type="Texture2D" uid="uid://cnuociaj0th6h" path="res://assets/PoufAnim/Miror_0009_Calque-60.png" id="7_it8kg"]
+[ext_resource type="Texture2D" uid="uid://p0djku5jklek" path="res://assets/PoufAnim/Miror_0011_Calque-59.png" id="8_drx2l"]
+[ext_resource type="Texture2D" uid="uid://bgk2jwqoim6rw" path="res://assets/PoufAnim/Miror_0002_Calque-63.png" id="9_w8tsp"]
+[ext_resource type="Texture2D" uid="uid://butdbu1o6eylu" path="res://assets/PoufAnim/Miror_0004_Calque-63.png" id="10_wnrhq"]
+[ext_resource type="Texture2D" uid="uid://csmtqmbycrlju" path="res://assets/PoufAnim/Miror_0006_Calque-63.png" id="11_7dxot"]
+[ext_resource type="Texture2D" uid="uid://blewre8puwmg4" path="res://assets/PoufAnim/Miror_0008_Calque-63.png" id="12_agxxw"]
+[ext_resource type="Texture2D" uid="uid://cip5oqk1140is" path="res://assets/PoufAnim/Miror_0010_Calque-63.png" id="13_38i1f"]
+[ext_resource type="Texture2D" uid="uid://dkukc6yb3opu0" path="res://assets/PoufAnim/Miror_0012_Calque-63.png" id="14_tnubq"]
+[ext_resource type="Texture2D" uid="uid://bfu6lus05yd18" path="res://assets/PoufAnim/Miror_0013_Calque-59.png" id="15_wt8ha"]
+[ext_resource type="Texture2D" uid="uid://03rb2geuxpv5" path="res://assets/PoufAnim/Miror_0014_Calque-59.png" id="16_d5b3n"]
+[ext_resource type="Texture2D" uid="uid://c2amubqdxewyk" path="res://assets/PoufAnim/Miror_0015_Calque-69.png" id="17_dw2vy"]
+[ext_resource type="Texture2D" uid="uid://c415bqpbooi4f" path="res://assets/PoufAnim/Miror_0016_Calque-70.png" id="18_pjh3x"]
+[ext_resource type="Texture2D" uid="uid://jbmh8fsgqxew" path="res://assets/PoufAnim/Miror_0017_Calque-62.png" id="19_7xlho"]
+[ext_resource type="Texture2D" uid="uid://c66jvisnfmlu6" path="res://assets/PoufAnim/Miror_0018_Calque-62.png" id="20_jgkq6"]
+[ext_resource type="Texture2D" uid="uid://dyfkcnvnjxn3i" path="res://assets/PoufAnim/Miror_0019_Calque-62.png" id="21_fi5yi"]
+[ext_resource type="Texture2D" uid="uid://ccg27ncanilx2" path="res://assets/PoufAnim/Miror_0020_Calque-62.png" id="22_iwxps"]
+[ext_resource type="Texture2D" uid="uid://cgg2f2r7lvxxj" path="res://assets/PoufAnim/Miror_0021_Calque-62.png" id="23_scwkr"]
+[ext_resource type="Texture2D" uid="uid://ctm2ce83kq3pv" path="res://assets/PoufAnim/Miror_0022_Calque-61.png" id="24_lc3c0"]
+[ext_resource type="Texture2D" uid="uid://c0gtxron6afc3" path="res://assets/PoufAnim/Miror_0023_Calque-60.png" id="25_wvf3i"]
+[ext_resource type="Texture2D" uid="uid://baxmmp8ymabl5" path="res://assets/PoufAnim/Miror_0024_Calque-59.png" id="26_svpvf"]
+[ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="27_ul5fk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bata8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4tp87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_aqqge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vb2hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i04xn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_it8kg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_drx2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w8tsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wnrhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7dxot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_agxxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_38i1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tnubq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wt8ha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_d5b3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_dw2vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_pjh3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7xlho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jgkq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fi5yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_iwxps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_scwkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lc3c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_wvf3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_svpvf")
+}],
+"loop": false,
+"name": &"default",
+"speed": 23.0
+}]
+
+[node name="SpawnOnStayInside" type="Node2D"]
+script = ExtResource("1_ijxww")
+
+[node name="Area2D" parent="." instance=ExtResource("2_ul5fk")]
+
+[node name="Boom" type="AnimatedSprite2D" parent="."]
+visible = false
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_bata8")
+frame = 23
+speed_scale = -1.0
+
+[node name="CostumePickable" parent="." instance=ExtResource("27_ul5fk")]
+process_mode = 4
+visible = false
+
+[connection signal="trigger" from="Area2D" to="." method="_on_area_2d_trigger"]
+[connection signal="animation_finished" from="Boom" to="." method="_on_animated_sprite_2d_2_animation_finished"]
+[connection signal="tree_exited" from="CostumePickable" to="." method="_on_costume_pickable_tree_exited"]

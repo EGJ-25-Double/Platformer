@@ -1,15 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://cm1w3uhtb8rvw"]
+[gd_scene load_steps=19 format=3 uid="uid://cm1w3uhtb8rvw"]
 
 [ext_resource type="Script" uid="uid://hrmdlkuy34x5" path="res://data/skins_set.gd" id="1_8avya"]
 [ext_resource type="Script" uid="uid://ulincx2500mc" path="res://data/skin_data.gd" id="2_m6tei"]
 [ext_resource type="Texture2D" uid="uid://culxonl61yttx" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0002_Mickey.png" id="3_22p4a"]
-[ext_resource type="Script" uid="uid://bapg6kecuicq5" path="res://power/pass_through_curtains.gd" id="4_6pg5i"]
+[ext_resource type="Texture2D" uid="uid://duch0k1tm8s4y" path="res://assets/character/Skins/Alien_masques_0002_Mickey.png" id="3_euo2t"]
+[ext_resource type="Script" path="res://power/pass_through_curtains.gd" id="4_6pg5i"]
 [ext_resource type="Texture2D" uid="uid://vjpmc61lwrsx" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0003_Spouderman.png" id="5_p6r75"]
 [ext_resource type="Script" uid="uid://dv0ct56qpv81v" path="res://power/climb.gd" id="6_euo2t"]
 [ext_resource type="Texture2D" uid="uid://bynbuckxp1djg" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0000_Dv.png" id="7_sqlw0"]
-[ext_resource type="Texture2D" uid="uid://djemou46efcf3" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0001_Link.png" id="8_cnujl"]
-[ext_resource type="Texture2D" uid="uid://c6cfki2mkc7lr" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0004_Sailor.png" id="9_h7khe"]
-[ext_resource type="Texture2D" uid="uid://c2u4x6nkmvl4" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0005_Al.png" id="10_p6r75"]
+[ext_resource type="Texture2D" uid="uid://dnfh7l0bg0x1p" path="res://assets/character/Skins/Alien_masques_0004_Sailor.png" id="8_p6r75"]
+[ext_resource type="Script" uid="uid://bfieuqqmw1qfl" path="res://power/double_jump.gd" id="8_p7v80"]
+[ext_resource type="Texture2D" uid="uid://bintc73usa4mt" path="res://assets/character/Skins/Alien_masques_0001_Link.png" id="10_sqlw0"]
 
 [sub_resource type="Resource" id="Resource_m6tei"]
 script = ExtResource("2_m6tei")
@@ -36,25 +37,27 @@ skin_name = "Vador"
 pickable_texture = ExtResource("7_sqlw0")
 metadata/_custom_type_script = "uid://ulincx2500mc"
 
-[sub_resource type="Resource" id="Resource_wlbbi"]
-script = ExtResource("2_m6tei")
-skin_name = "Link"
-pickable_texture = ExtResource("8_cnujl")
-metadata/_custom_type_script = "uid://ulincx2500mc"
-
-[sub_resource type="Resource" id="Resource_kp4ou"]
+[sub_resource type="Resource" id="Resource_22p4a"]
 script = ExtResource("2_m6tei")
 skin_name = "Sailor"
-pickable_texture = ExtResource("9_h7khe")
+power = ExtResource("8_p7v80")
+pickable_texture = ExtResource("8_p6r75")
 metadata/_custom_type_script = "uid://ulincx2500mc"
 
-[sub_resource type="Resource" id="Resource_sqlw0"]
+[sub_resource type="Resource" id="Resource_cnujl"]
 script = ExtResource("2_m6tei")
-skin_name = "AI"
-pickable_texture = ExtResource("10_p6r75")
+skin_name = "Link"
+pickable_texture = ExtResource("10_sqlw0")
+metadata/_custom_type_script = "uid://ulincx2500mc"
+
+[sub_resource type="Resource" id="Resource_h7khe"]
+script = ExtResource("2_m6tei")
+skin_name = "Mickey"
+power = ExtResource("4_6pg5i")
+pickable_texture = ExtResource("3_euo2t")
 metadata/_custom_type_script = "uid://ulincx2500mc"
 
 [node name="Skins" type="Node"]
 script = ExtResource("1_8avya")
-skins = Array[ExtResource("2_m6tei")]([SubResource("Resource_m6tei"), SubResource("Resource_pymlq"), SubResource("Resource_6pg5i"), SubResource("Resource_sk570"), SubResource("Resource_wlbbi"), SubResource("Resource_kp4ou"), SubResource("Resource_sqlw0")])
+skins = Array[ExtResource("2_m6tei")]([SubResource("Resource_m6tei"), SubResource("Resource_pymlq"), SubResource("Resource_6pg5i"), SubResource("Resource_sk570"), SubResource("Resource_22p4a"), SubResource("Resource_cnujl"), SubResource("Resource_h7khe")])
 metadata/_custom_type_script = "uid://hrmdlkuy34x5"
