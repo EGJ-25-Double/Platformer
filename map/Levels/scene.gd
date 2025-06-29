@@ -17,4 +17,4 @@ func _input(event: InputEvent) -> void:
 	if not player_ready_to_tp:
 		return
 	if event.is_action_pressed("jump"):
-		print('tp') #TODO: Teleport to next level
+		GameState.player.global_position = GameState.scene_target.global_position

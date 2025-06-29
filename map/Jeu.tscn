@@ -248,9 +248,9 @@ autoplay = true
 
 [node name="Level4" parent="Levels" instance=ExtResource("9_t6k6y")]
 
-[node name="LevelStargate" parent="Levels" instance=ExtResource("10_14vpn")]
-
 [node name="Level5" parent="Levels" instance=ExtResource("10_14vpn")]
+
+[node name="LevelStargate" parent="Levels" instance=ExtResource("10_14vpn")]
 
 [node name="Outside" type="TileMapLayer" parent="."]
 z_index = 1
