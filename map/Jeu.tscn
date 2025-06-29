@@ -215,7 +215,7 @@ tile_map_data = PackedByteArray("AACwACIAAAAAAAAAAADTACwAAAAEAAIAAAD4ACwAAAAHAAI
 tile_set = ExtResource("3_5y575")
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_gl2p0")]
-position = Vector2(2218, 749)
+position = Vector2(2762, -66)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 process_mode = 3
