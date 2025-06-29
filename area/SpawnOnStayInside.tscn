@@ -115,9 +115,9 @@ script = ExtResource("1_ijxww")
 
 [node name="Boom" type="AnimatedSprite2D" parent="."]
 visible = false
+modulate = Color(0.780392, 0.545098, 0.180392, 1)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_bata8")
-frame = 23
 speed_scale = -1.0
 
 [node name="CostumePickable" parent="." instance=ExtResource("27_ul5fk")]
