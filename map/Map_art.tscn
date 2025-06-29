@@ -49,7 +49,7 @@ shader = ExtResource("16_j81ec")
 shader_parameter/albedo_texture = ExtResource("17_hv34f")
 shader_parameter/albedo = Color(0, 0, 0, 1)
 
-[node name="Map" type="Node2D"]
+[node name="Map2" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 layer = -128
