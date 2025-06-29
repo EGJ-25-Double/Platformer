@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=31 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="Texture2D" uid="uid://buk3i837ilsvk" path="res://assets/BG/gradient.png" id="1_5y575"]
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="3_5y575"]
@@ -253,7 +253,6 @@ autoplay = true
 [node name="Level5" parent="Levels" instance=ExtResource("10_14vpn")]
 
 [node name="Outside" type="TileMapLayer" parent="."]
-visible = false
 z_index = 1
 tile_set = ExtResource("7_xpr5j")
 
