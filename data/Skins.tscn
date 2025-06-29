@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cm1w3uhtb8rvw"]
+[gd_scene load_steps=21 format=3 uid="uid://cm1w3uhtb8rvw"]
 
 [ext_resource type="Script" uid="uid://hrmdlkuy34x5" path="res://data/skins_set.gd" id="1_8avya"]
 [ext_resource type="Script" uid="uid://ulincx2500mc" path="res://data/skin_data.gd" id="2_m6tei"]
@@ -7,11 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://vjpmc61lwrsx" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0003_Spouderman.png" id="5_p6r75"]
 [ext_resource type="Script" uid="uid://dv0ct56qpv81v" path="res://power/climb.gd" id="6_euo2t"]
 [ext_resource type="Texture2D" uid="uid://bynbuckxp1djg" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0000_Dv.png" id="7_sqlw0"]
-[ext_resource type="Script" uid="uid://1ydgjnmi2nw0" path="res://power/scene_teleport.gd" id="8_cnujl"]
+[ext_resource type="Script" path="res://power/scene_teleport.gd" id="8_cnujl"]
 [ext_resource type="Script" uid="uid://bfieuqqmw1qfl" path="res://power/double_jump.gd" id="8_p7v80"]
 [ext_resource type="Texture2D" uid="uid://c6cfki2mkc7lr" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0004_Sailor.png" id="9_cnujl"]
 [ext_resource type="Texture2D" uid="uid://djemou46efcf3" path="res://assets/character/Skins/Pickables/Alien_masques_solo_0001_Link.png" id="11_cnujl"]
 [ext_resource type="Texture2D" uid="uid://cg4l8fshave5x" path="res://assets/character/Skins/Pickables/MarioPickable.png" id="12_h7khe"]
+[ext_resource type="Script" uid="uid://cn4bi4yt4c28e" path="res://power/wall_jump.gd" id="12_wlbbi"]
 
 [sub_resource type="Resource" id="Resource_m6tei"]
 script = ExtResource("2_m6tei")
@@ -49,6 +50,7 @@ metadata/_custom_type_script = "uid://ulincx2500mc"
 [sub_resource type="Resource" id="Resource_cnujl"]
 script = ExtResource("2_m6tei")
 skin_name = "Link"
+power = ExtResource("12_wlbbi")
 pickable_texture = ExtResource("11_cnujl")
 metadata/_custom_type_script = "uid://ulincx2500mc"
 

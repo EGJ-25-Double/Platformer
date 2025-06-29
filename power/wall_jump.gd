@@ -1,6 +1,6 @@
 class_name WallJumpPower extends Power
 
-@export var max_wall_jump := 2
+@export var max_wall_jump := 50
 @export var jump_impulse_ratio := 1.4
 
 var current_wall_jump := 0

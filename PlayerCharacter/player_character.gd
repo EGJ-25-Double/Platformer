@@ -33,7 +33,7 @@ func _ready():
 	GameState.player = self
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("jump") and is_on_floor():
+	if event.is_action_pressed("jump") and (animState == AnimState.CLIMBING or is_on_floor()):
 		audio_jump.play()
 		velocity.y = -jump_impulse
 	elif event.is_action_pressed("reset") and GameState.current_checkpoint != null:
