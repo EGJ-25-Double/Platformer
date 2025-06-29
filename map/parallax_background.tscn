@@ -63,6 +63,7 @@ scroll_offset = Vector2(2685, -1567)
 [node name="Gradient" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Gradients"]
 modulate = Color(0, 0, 0.505882, 0.403922)
 z_index = -4
+position = Vector2(941.704, 604.595)
 scale = Vector2(3.2794, 2.44921)
 texture = ExtResource("1_vmkry")
 
@@ -76,12 +77,14 @@ texture = ExtResource("1_vmkry")
 [node name="Gradient3" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Gradients"]
 modulate = Color(0.0456938, 0.594252, 0.736161, 0.403922)
 z_index = -6
+position = Vector2(941.704, 604.595)
 scale = Vector2(3.26872, 2.52872)
 texture = ExtResource("1_vmkry")
 
 [node name="Gradient2" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Gradients"]
 modulate = Color(0, 0, 0.505882, 0.403922)
 z_index = -2
+position = Vector2(941.704, 604.595)
 scale = Vector2(3.24536, 2.52585)
 texture = ExtResource("1_vmkry")
 flip_v = true
