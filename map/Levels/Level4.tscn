@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cv28xrom8uhf1" path="res://Ladder/Ladder.tscn" id="2_6tffa"]
 [ext_resource type="PackedScene" uid="uid://wujrjphnoovi" path="res://InvisibleWall/InvisibleWall.tscn" id="3_3uecj"]
 [ext_resource type="PackedScene" uid="uid://ci0x410xflff5" path="res://CostumePickable/CostumePickable.tscn" id="4_3uecj"]
-[ext_resource type="Texture2D" uid="uid://b3kq1rdrm2srj" path="res://assets/scene.png" id="5_3uecj"]
+[ext_resource type="Texture2D" uid="uid://b1bfxgfommsjv" path="res://assets/Scene_0001_Vibrance-1.png" id="6_0tp7s"]
 [ext_resource type="Script" uid="uid://wiun1ls2lqap" path="res://map/Levels/scene.gd" id="6_hihk3"]
 [ext_resource type="PackedScene" uid="uid://bkcflwywxj5dl" path="res://map/CheckPoint/CheckPoint.tscn" id="7_hihk3"]
 
@@ -717,7 +717,9 @@ position = Vector2(-132, -1772)
 script = ExtResource("6_hihk3")
 
 [node name="Sprite2D" type="Sprite2D" parent="Scene"]
-texture = ExtResource("5_3uecj")
+position = Vector2(7.62939e-06, 1.99998)
+scale = Vector2(0.325726, 0.325726)
+texture = ExtResource("6_0tp7s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene"]
 position = Vector2(0, 57)
@@ -728,7 +730,7 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/Area2D"]
-position = Vector2(0.5, -26)
+position = Vector2(0, -23)
 shape = SubResource("RectangleShape2D_n2wcb")
 debug_color = Color(0.960478, 6.73831e-07, 0.515802, 0.42)
 
