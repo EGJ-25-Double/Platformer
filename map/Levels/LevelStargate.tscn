@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://b5tko8bdcr62r"]
+[gd_scene load_steps=8 format=4 uid="uid://b5tko8bdcr62r"]
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_4pv0d"]
 [ext_resource type="PackedScene" uid="uid://dg3iwlvof32n6" path="res://StargateKey/StargateKey.tscn" id="1_sn2vb"]
 [ext_resource type="Script" uid="uid://cwqc1gvimwogh" path="res://map/Levels/stargate.gd" id="4_860xh"]
 [ext_resource type="Script" uid="uid://c1g0asrslhota" path="res://StargateKey/Stargate.gd" id="5_860xh"]
-[ext_resource type="Texture2D" uid="uid://cgro8b6vadmyv" path="res://assets/Stargate_ON.png" id="6_860xh"]
 [ext_resource type="Texture2D" uid="uid://dvw6xlpyn43jp" path="res://assets/Stargate_OFF.png" id="7_cl1ts"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wprx6"]
@@ -29,8 +28,7 @@ position = Vector2(563, 8)
 script = ExtResource("5_860xh")
 
 [node name="OnSprite" type="Sprite2D" parent="Stargate/Stargate"]
-visible = false
-texture = ExtResource("6_860xh")
+position = Vector2(1, 0)
 
 [node name="OffSprite" type="Sprite2D" parent="Stargate/Stargate"]
 texture = ExtResource("7_cl1ts")
@@ -47,6 +45,15 @@ collision_mask = 8
 position = Vector2(0.5, -26)
 shape = SubResource("RectangleShape2D_ksyxr")
 debug_color = Color(0.960478, 6.73831e-07, 0.515802, 0.42)
+
+[node name="Label" type="Label" parent="Stargate/Stargate"]
+offset_left = -53.0
+offset_top = -209.0
+offset_right = 44.0
+offset_bottom = -140.0
+theme_override_font_sizes/font_size = 50
+text = "DBL"
+horizontal_alignment = 1
 
 [node name="Keys" type="Node2D" parent="Stargate"]
 
