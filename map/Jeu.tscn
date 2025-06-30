@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=39 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="PackedScene" uid="uid://b202yu0np10nb" path="res://map/parallax_background.tscn" id="2_7myag"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="3_gl2p0"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://cxt54yhtnihov" path="res://Portal/Portal.tscn" id="28_vok5r"]
 [ext_resource type="Texture2D" uid="uid://j37ew7noojmj" path="res://assets/posters/color_poster.png" id="29_w62k0"]
 [ext_resource type="Texture2D" uid="uid://dkuvlsu0mh6ra" path="res://assets/posters/pouet_spotlight.png" id="30_y5k0b"]
+[ext_resource type="FontFile" uid="uid://dv1khn3rcrcp6" path="res://assets/Fonts/Kenney Future Narrow.ttf" id="32_slip4"]
 
 [sub_resource type="GDScript" id="GDScript_w62k0"]
 script/source = "extends TextureRect
@@ -460,13 +461,95 @@ position = Vector2(-1942, 3717)
 scale = Vector2(0.471995, 0.471995)
 texture = ExtResource("30_y5k0b")
 
+[node name="numberZones" type="Node2D" parent="Clue"]
+
+[node name="area1" type="Label" parent="Clue/numberZones"]
+offset_left = 2320.0
+offset_top = -35.0
+offset_right = 5851.0
+offset_bottom = 1090.0
+theme_override_colors/font_color = Color(0.827451, 0.266667, 0, 0.607843)
+theme_override_fonts/font = ExtResource("32_slip4")
+theme_override_font_sizes/font_size = 222
+text = "Area 1"
+
+[node name="area2" type="Label" parent="Clue/numberZones"]
+offset_left = 2706.0
+offset_top = -1739.0
+offset_right = 6237.0
+offset_bottom = -614.0
+theme_override_colors/font_color = Color(0.827451, 0.266667, 0, 0.607843)
+theme_override_fonts/font = ExtResource("32_slip4")
+theme_override_font_sizes/font_size = 222
+text = "Area 2"
+
+[node name="area3" type="Label" parent="Clue/numberZones"]
+offset_left = 2189.0
+offset_top = -1320.0
+offset_right = 5720.0
+offset_bottom = -195.0
+theme_override_colors/font_color = Color(0.827451, 0.266667, 0, 0.607843)
+theme_override_fonts/font = ExtResource("32_slip4")
+theme_override_font_sizes/font_size = 222
+text = "Area 3"
+
+[node name="area4" type="Label" parent="Clue/numberZones"]
+offset_left = 563.0
+offset_top = -1228.0
+offset_right = 4094.0
+offset_bottom = -103.0
+theme_override_colors/font_color = Color(0.827451, 0.266667, 0, 0.607843)
+theme_override_fonts/font = ExtResource("32_slip4")
+theme_override_font_sizes/font_size = 222
+text = "Area 4"
+
+[node name="area5" type="Label" parent="Clue/numberZones"]
+offset_left = -2937.0
+offset_top = -2290.0
+offset_right = 594.0
+offset_bottom = -1165.0
+theme_override_colors/font_color = Color(0.827451, 0.266667, 0, 0.607843)
+theme_override_fonts/font = ExtResource("32_slip4")
+theme_override_font_sizes/font_size = 222
+text = "Area 5"
+
+[node name="area6" type="Label" parent="Clue/numberZones"]
+offset_left = -5572.0
+offset_top = -651.0
+offset_right = -2041.0
+offset_bottom = 474.0
+theme_override_colors/font_color = Color(0.827451, 0.266667, 0, 0.607843)
+theme_override_fonts/font = ExtResource("32_slip4")
+theme_override_font_sizes/font_size = 222
+text = "Area 6"
+
+[node name="area7" type="Label" parent="Clue/numberZones"]
+offset_left = -5257.0
+offset_top = -1988.0
+offset_right = -1726.0
+offset_bottom = -863.0
+theme_override_colors/font_color = Color(0.827451, 0.266667, 0, 0.607843)
+theme_override_fonts/font = ExtResource("32_slip4")
+theme_override_font_sizes/font_size = 222
+text = "Area 7"
+
+[node name="area8" type="Label" parent="Clue/numberZones"]
+offset_left = -2942.0
+offset_top = 3498.0
+offset_right = 589.0
+offset_bottom = 4623.0
+theme_override_colors/font_color = Color(0.827451, 0.266667, 0, 0.607843)
+theme_override_fonts/font = ExtResource("32_slip4")
+theme_override_font_sizes/font_size = 222
+text = "Area 8"
+
 [node name="Clue2-double" type="Sprite2D" parent="."]
 position = Vector2(3721, -1259)
 scale = Vector2(1.48734, 1.48734)
 texture = ExtResource("26_p8qqn")
 
 [node name="Clue4" type="Sprite2D" parent="."]
-position = Vector2(-5122, -1983)
+position = Vector2(-5382, -1525)
 scale = Vector2(2.87026, 2.87026)
 texture = ExtResource("27_dsy6r")
 
@@ -479,7 +562,7 @@ scale = Vector2(2.195, 2.195)
 connected_portal = NodePath("../Portal2")
 
 [node name="Portal2" parent="." node_paths=PackedStringArray("connected_portal") instance=ExtResource("28_vok5r")]
-position = Vector2(-2920, 4089)
+position = Vector2(-2301, 3892)
 scale = Vector2(2.195, 2.195)
 connected_portal = NodePath("../Portal")
 
