@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0su8mmilqwnb"]
+[gd_scene load_steps=4 format=3 uid="uid://c0su8mmilqwnb"]
 
 [ext_resource type="Texture2D" uid="uid://bxvghiu74hqhp" path="res://assets/victory.png" id="1_yqk5q"]
 [ext_resource type="FontFile" uid="uid://bgiby34uuktnn" path="res://assets/Fonts/StandardGalacticAlphabet-Regular.ttf" id="2_jkr2r"]
+[ext_resource type="AudioStream" uid="uid://41edoenoqf4c" path="res://sounds/Musique/EGJ25_Musique_AlienWorldV1.mp3" id="3_v0lf2"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -37,4 +38,5 @@ mais bisous"
 horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_v0lf2")
 autoplay = true

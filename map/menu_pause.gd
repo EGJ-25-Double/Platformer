@@ -67,6 +67,7 @@ func check_if_code_is_correct():
 	if $OptionsUI/Control/value1.text == "1.0" and $OptionsUI/Control/value2.text == "3.0"  and $OptionsUI/Control/value3.text == "1.0":
 		$"../Levels/Level2/arrow".visible = true
 		$"../Levels/Level3/arrow".visible = true
+		$"./OptionsUI/LabelCheat".visible = true
 
 func _on_visibility_changed() -> void:
 	get_tree().paused = visible

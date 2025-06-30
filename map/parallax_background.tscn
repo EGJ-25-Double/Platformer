@@ -501,7 +501,7 @@ tile_set = ExtResource("2_fmxf8")
 [node name="Stand3" type="TileMapLayer" parent="ParallaxBackground/ParalaxZone1/3Stage/Level1"]
 z_index = -1
 position = Vector2(-2599, 1506)
-tile_map_data = PackedByteArray("AAD7AJ7/AAAHAAAAAAACAZ//AAAGAAAAAAD2AKD/AAAGAAEAAAA=")
+tile_map_data = PackedByteArray("AADzAJ//AAAGAAAAAADsAJ3/AAAHAAAAAADnAJ//AAAGAAEAAAA=")
 tile_set = ExtResource("2_fmxf8")
 
 [node name="Parallax2D6" type="Parallax2D" parent="ParallaxBackground/ParalaxZone1/3Stage"]

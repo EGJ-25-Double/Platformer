@@ -22,7 +22,7 @@ func set_current_skin():
 		var node: Power = current.power.new()
 		node.set_player(player)
 		add_child(node)
-		player.current_skin = current
+	player.current_skin = current
 	
 	for child in player.skin_node.get_children():
 		(child as Node2D).visible = false

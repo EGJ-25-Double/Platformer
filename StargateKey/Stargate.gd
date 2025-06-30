@@ -22,5 +22,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func _input(event: InputEvent) -> void:
 	if not player_ready_to_tp and not open:
 		return
+	if not GameState.player.current_skin or GameState.player.current_skin.skin_name != "None":
+		return
 	if event.is_action_pressed("jump"):
 		get_tree().change_scene_to_file("res://Ending.tscn")

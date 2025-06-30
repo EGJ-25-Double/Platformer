@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_4pv0d"]
 [ext_resource type="PackedScene" uid="uid://dg3iwlvof32n6" path="res://StargateKey/StargateKey.tscn" id="1_sn2vb"]
-[ext_resource type="Script" path="res://map/Levels/stargate.gd" id="4_860xh"]
+[ext_resource type="Script" uid="uid://cwqc1gvimwogh" path="res://map/Levels/stargate.gd" id="4_860xh"]
 [ext_resource type="Texture2D" uid="uid://l6pac4dh3145" path="res://assets/Stargate_activated.png" id="4_bph7f"]
 [ext_resource type="Texture2D" uid="uid://dkq7133vq2xij" path="res://assets/Stargate_deactivated.png" id="5_4aeou"]
 [ext_resource type="Script" uid="uid://c1g0asrslhota" path="res://StargateKey/Stargate.gd" id="5_860xh"]
