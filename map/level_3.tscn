@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bkcflwywxj5dl" path="res://map/CheckPoint/CheckPoint.tscn" id="9_k8hsi"]
 [ext_resource type="Texture2D" uid="uid://n1dxlwi5hap5" path="res://assets/posters/physics2.png" id="10_o4gdf"]
 [ext_resource type="AudioStream" uid="uid://8t1a2us3iff4" path="res://sounds/SFX/EGJ25_SFX_TeleportationSailorMoon_V.mp3" id="11_kg0l6"]
+[ext_resource type="Texture2D" uid="uid://bo8tv8mbmm1hs" path="res://assets/clue/arrow_lvl2.png" id="12_u1cwg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k8hsi"]
 shader = ExtResource("4_ne8k7")
@@ -180,6 +181,13 @@ position = Vector2(2829, -14)
 scale = Vector2(0.4, 0.4)
 tile_map_data = PackedByteArray("AADGAZj/AAAHAAEAAADQAZj/AAAHAAEAAAAeApf/AAAHAAEAAAAoApf/AAAHAAEAAAAUApf/AAAHAAEAAADQAaL/AAAHAAEAAADGAaL/AAAHAAEAAADNAX7/AAAHAAEAAADDAX7/AAAHAAEAAACZAWP/AAAHAAEAAACPAWP/AAAHAAEAAAByAUr/AAAHAAEAAABoAUr/AAAHAAEAAAAzAUr/AAAHAAEAAAA9AUr/AAAHAAEAAAApAUr/AAAHAAEAAAAfAUr/AAAHAAEAAAAVAUr/AAAHAAEAAAA=")
 tile_set = ExtResource("2_66l38")
+
+[node name="arrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(4211, -1051)
+rotation = 3.14159
+scale = Vector2(0.367713, 0.367713)
+texture = ExtResource("12_u1cwg")
 
 [connection signal="body_entered" from="to_make_invisible/Area2D" to="to_make_invisible" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="to_make_invisible/Area2D" to="to_make_invisible" method="_on_area_2d_body_exited"]
