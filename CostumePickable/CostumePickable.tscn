@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://b3c6f5v46c86l" path="res://sounds/SFX/761460__jmd4252010__magic-item-being-grabbed.mp3" id="6_uuohu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jlnc"]
-size = Vector2(60, 60)
+size = Vector2(152, 126)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_saaxf"]
 atlas = ExtResource("3_j8r1q")
@@ -84,6 +84,7 @@ scale = Vector2(0.186335, 0.160428)
 texture = ExtResource("2_yv0mo")
 
 [node name="Key" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(51, -70)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_yv0mo")
@@ -95,4 +96,6 @@ volume_db = 6.0
 bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="." to="Key" method="_on_costume_pickable_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="body_exited" from="." to="Key" method="_on_costume_pickable_body_exited"]

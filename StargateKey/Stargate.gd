@@ -23,4 +23,4 @@ func _input(event: InputEvent) -> void:
 	if not player_ready_to_tp and not open:
 		return
 	if event.is_action_pressed("jump"):
-		$TextureRect.visible = true
+		get_tree().change_scene_to_file("res://Ending.tscn")

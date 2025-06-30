@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0su8mmilqwnb"]
+
+[ext_resource type="Texture2D" uid="uid://bxvghiu74hqhp" path="res://assets/victory.png" id="1_yqk5q"]
+[ext_resource type="FontFile" uid="uid://bgiby34uuktnn" path="res://assets/Fonts/StandardGalacticAlphabet-Regular.ttf" id="2_jkr2r"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yqk5q")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -501.0
+offset_top = -148.0
+offset_right = 501.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_jkr2r")
+theme_override_font_sizes/font_size = 68
+text = "Merci d'avoir joue
+apres je peux ecrir
+ce que je veux
+personne
+ne va comprendre
+mais bisous"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true

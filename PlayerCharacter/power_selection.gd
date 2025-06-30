@@ -34,8 +34,7 @@ func set_current_skin():
 		skin.visible = true
 
 	if player.key_power:
-		player.key_power.queue_free()
-		player.key_power = null
+		player.key_power.visible = false
 
 func get_next_skin():
 	var new_skin = (current_skin + 1) % len(GameState.skins_owned)
