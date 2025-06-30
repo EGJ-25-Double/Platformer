@@ -61,7 +61,7 @@ tile_set = ExtResource("7_xpr5j")
 [node name="BG" parent="BG" instance=ExtResource("2_7myag")]
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_gl2p0")]
-position = Vector2(-1672, 2233)
+position = Vector2(-2578, 3884)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 process_mode = 3
@@ -582,13 +582,13 @@ scale = Vector2(2.195, 2.195)
 connected_portal = NodePath("../Portal2")
 
 [node name="Portal2" parent="." node_paths=PackedStringArray("connected_portal") instance=ExtResource("28_vok5r")]
-position = Vector2(-875, 3239)
+position = Vector2(-2892, 4077)
 scale = Vector2(2.195, 2.195)
 connected_portal = NodePath("../Portal")
 
 [connection signal="visibility_changed" from="MenuPause" to="MenuPause" method="_on_visibility_changed"]
-[connection signal="pressed" from="MenuPause/VBoxContainer/PlayBtn" to="MenuPause" method="_on_play_btn_pressed_once" flags=6]
 [connection signal="pressed" from="MenuPause/VBoxContainer/PlayBtn" to="MenuPause" method="_on_play_btn_pressed"]
+[connection signal="pressed" from="MenuPause/VBoxContainer/PlayBtn" to="MenuPause" method="_on_play_btn_pressed_once" flags=6]
 [connection signal="pressed" from="MenuPause/VBoxContainer/HelpBtn" to="MenuPause" method="_on_help_btn_pressed"]
 [connection signal="pressed" from="MenuPause/VBoxContainer/OptionsBtn" to="MenuPause" method="_on_options_btn_pressed"]
 [connection signal="pressed" from="MenuPause/VBoxContainer/CreditsBtn" to="MenuPause" method="_on_credits_btn_pressed"]

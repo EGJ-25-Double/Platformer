@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjvlqkit80jml"]
+
+[ext_resource type="Script" uid="uid://dolurulrwckhr" path="res://character_body_2d.gd" id="1_ia1lp"]
+[ext_resource type="Texture2D" uid="uid://tra2v4red8fb" path="res://assets/characterAsset 34.png" id="1_uhqqe"]
+[ext_resource type="Script" uid="uid://capvm6dpju3tf" path="res://area_2d.gd" id="3_sasra"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ia1lp"]
+size = Vector2(6800, 5582)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sasra"]
+size = Vector2(40.96, 84.08)
+
+[node name="TestScene" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_ia1lp")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_uhqqe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-23, -127)
+shape = SubResource("RectangleShape2D_ia1lp")
+
+[node name="DialogTrigger" type="Area2D" parent="."]
+position = Vector2(-10177, -26)
+script = ExtResource("3_sasra")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogTrigger"]
+position = Vector2(1494, 123)
+scale = Vector2(100, 100)
+shape = SubResource("RectangleShape2D_sasra")
+debug_color = Color(0.932038, 2.57018e-05, 0.650358, 0.42)
+
+[connection signal="body_entered" from="DialogTrigger" to="DialogTrigger" method="_on_body_entered"]
