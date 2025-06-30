@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=31 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="PackedScene" uid="uid://b202yu0np10nb" path="res://map/parallax_background.tscn" id="2_7myag"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="3_gl2p0"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://c6tmdqpoyh3au" path="res://assets/posters/chien1.png" id="25_7myag"]
 [ext_resource type="Texture2D" uid="uid://bw4tq017twrt" path="res://assets/clue2-double.png" id="26_p8qqn"]
 [ext_resource type="Texture2D" uid="uid://d2xhtdml43jdx" path="res://assets/clue4.png" id="27_dsy6r"]
+[ext_resource type="PackedScene" uid="uid://cxt54yhtnihov" path="res://Portal/Portal.tscn" id="28_vok5r"]
 
 [sub_resource type="GDScript" id="GDScript_w62k0"]
 script/source = "extends TextureRect
@@ -71,18 +72,15 @@ autoplay = true
 
 [node name="Level5" parent="Levels" instance=ExtResource("10_14vpn")]
 
-[node name="LevelStargate" parent="Levels" instance=ExtResource("13_vok5r")]
-position = Vector2(-3898, -3490)
-
 [node name="Outside" type="TileMapLayer" parent="."]
 z_index = 1
 tile_set = ExtResource("7_xpr5j")
 
 [node name="Polygon2D2" type="Polygon2D" parent="Outside"]
 material = ExtResource("14_8b4dd")
-position = Vector2(-13361, -1239)
+position = Vector2(-13446, -1292)
 texture = ExtResource("9_ig5i8")
-polygon = PackedVector2Array(4776, 1149, 4775, -1052, 6595, -1053, 6596, -1136, 10428, -1138, 10428, -1051, 11255, -1053, 11254, -527, 10428, -527, 10429, 1123, 4769, 1128, 8060, 3893, 11850, 1613, 12736, -3317, 5908, -3233, 2031, -3296, 2072, -961, 2031, 4182, 11054, 4170)
+polygon = PackedVector2Array(4847, 4161, 4775, -1052, 6595, -1053, 6596, -1136, 10585, -1154, 10603, -1072, 11400, -1061, 11400, -413, 10574, -402, 10581, 1241, 4784, 1255, 4854, 4180, 10842, 4174, 12736, -3317, 5908, -3233, 2031, -3296, 2072, -961, 2031, 4182)
 
 [node name="Polygon2D" type="Polygon2D" parent="Outside"]
 material = ExtResource("14_8b4dd")
@@ -438,6 +436,19 @@ texture = ExtResource("26_p8qqn")
 position = Vector2(-5122, -1983)
 scale = Vector2(2.87026, 2.87026)
 texture = ExtResource("27_dsy6r")
+
+[node name="LevelStargate" parent="." instance=ExtResource("13_vok5r")]
+position = Vector2(-2067, 4060)
+
+[node name="Portal" parent="." node_paths=PackedStringArray("connected_portal") instance=ExtResource("28_vok5r")]
+position = Vector2(-7424, -187)
+scale = Vector2(2.195, 2.195)
+connected_portal = NodePath("../Portal2")
+
+[node name="Portal2" parent="." node_paths=PackedStringArray("connected_portal") instance=ExtResource("28_vok5r")]
+position = Vector2(-2920, 4089)
+scale = Vector2(2.195, 2.195)
+connected_portal = NodePath("../Portal")
 
 [connection signal="visibility_changed" from="MenuPause" to="MenuPause" method="_on_visibility_changed"]
 [connection signal="pressed" from="MenuPause/VBoxContainer/PlayBtn" to="MenuPause" method="_on_play_btn_pressed"]

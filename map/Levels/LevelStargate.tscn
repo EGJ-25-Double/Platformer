@@ -2,8 +2,8 @@
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_4pv0d"]
 [ext_resource type="PackedScene" uid="uid://dg3iwlvof32n6" path="res://StargateKey/StargateKey.tscn" id="1_sn2vb"]
-[ext_resource type="Script" path="res://map/Levels/stargate.gd" id="4_860xh"]
-[ext_resource type="Script" path="res://StargateKey/Stargate.gd" id="5_860xh"]
+[ext_resource type="Script" uid="uid://cwqc1gvimwogh" path="res://map/Levels/stargate.gd" id="4_860xh"]
+[ext_resource type="Script" uid="uid://c1g0asrslhota" path="res://StargateKey/Stargate.gd" id="5_860xh"]
 [ext_resource type="Texture2D" uid="uid://cgro8b6vadmyv" path="res://assets/Stargate_ON.png" id="6_860xh"]
 [ext_resource type="Texture2D" uid="uid://dvw6xlpyn43jp" path="res://assets/Stargate_OFF.png" id="7_cl1ts"]
 
@@ -21,7 +21,7 @@ scale = Vector2(0.2, 0.2)
 tile_map_data = PackedByteArray("AAD7/wEAAAAAAAAAAAD8/wEAAAABAAAAAAD9/wEAAAACAAAAAAD+/wEAAAAAAAAAAAD//wEAAAABAAAAAAAAAAEAAAACAAAAAAABAAEAAAAAAAAAAAACAAEAAAABAAAAAAADAAEAAAACAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAABAAAAAAAGAAEAAAACAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAABAAAAAAAJAAEAAAACAAAAAAD4/wEAAAAAAAAAAAD5/wEAAAABAAAAAAD6/wEAAAACAAAAAAD1/wEAAAAAAAAAAAD2/wEAAAABAAAAAAD3/wEAAAACAAAAAAD0/wEAAAAOAAAAAAAKAAEAAAAPAAAAAAD0/wAAAAAKAAAAAAD0////AAAKAAAAAAD0//7/AAAKAAAAAAD0//3/AAAKAAAAAAD0//z/AAAKAAAAAAD0//v/AAAKAAAAAAD0//r/AAAKAAAAAAD0//n/AAAKAAAAAAD0//j/AAAKAAAAAAAKAAAAAAALAAAAAAAKAP//AAALAAAAAAAKAP7/AAALAAAAAAAKAP3/AAALAAAAAAAKAPz/AAALAAAAAAAKAPv/AAALAAAAAAAKAPr/AAALAAAAAAAKAPn/AAALAAAAAAAKAPj/AAALAAAAAAD1//f/AAAFAAAAAAD2//f/AAAFAAAAAAD3//f/AAAEAAAAAAD4//f/AAAEAAAAAAD5//f/AAAEAAAAAAD6//f/AAAFAAAAAAD7//f/AAAFAAAAAAD8//f/AAADAAAAAAD9//f/AAAFAAAAAAD+//f/AAAEAAAAAAD///f/AAADAAAAAAAAAPf/AAAEAAAAAAABAPf/AAAFAAAAAAACAPf/AAAEAAAAAAADAPf/AAADAAAAAAAEAPf/AAADAAAAAAAFAPf/AAADAAAAAAAGAPf/AAAFAAAAAAAHAPf/AAAFAAAAAAAIAPf/AAADAAAAAAAJAPf/AAAFAAAAAAD0//f/AAAMAAAAAAAKAPf/AAANAAAAAAA=")
 tile_set = ExtResource("1_4pv0d")
 
-[node name="Stargate" type="Node" parent="."]
+[node name="Stargate" type="Node2D" parent="."]
 script = ExtResource("4_860xh")
 
 [node name="Stargate" type="StaticBody2D" parent="Stargate"]
@@ -48,10 +48,10 @@ position = Vector2(0.5, -26)
 shape = SubResource("RectangleShape2D_ksyxr")
 debug_color = Color(0.960478, 6.73831e-07, 0.515802, 0.42)
 
-[node name="Keys" type="Node" parent="Stargate"]
+[node name="Keys" type="Node2D" parent="Stargate"]
 
 [node name="StargateKey" parent="Stargate/Keys" instance=ExtResource("1_sn2vb")]
-position = Vector2(-382, 38)
+position = Vector2(-390, 38)
 correct_skin = "Mickey"
 
 [node name="StargateKey2" parent="Stargate/Keys" instance=ExtResource("1_sn2vb")]
