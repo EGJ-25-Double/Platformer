@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=4 uid="uid://b202yu0np10nb"]
+[gd_scene load_steps=9 format=4 uid="uid://b202yu0np10nb"]
 
-[ext_resource type="Texture2D" uid="uid://buk3i837ilsvk" path="res://assets/BG/gradient.png" id="1_vmkry"]
 [ext_resource type="TileSet" uid="uid://cogsx2uykbbdd" path="res://assets/BG/Props Cute.tres" id="2_fmxf8"]
 [ext_resource type="Texture2D" uid="uid://lhvnnigi5dpb" path="res://assets/BG/Ceiling.png" id="2_tmqmo"]
 [ext_resource type="TileSet" uid="uid://2qktjpb68id8" path="res://assets/BG/People.tres" id="3_tmqmo"]
@@ -55,39 +54,6 @@ follow_viewport_enabled = true
 
 [node name="ParalaxZone1" type="Node2D" parent="ParallaxBackground"]
 position = Vector2(-2682, 1572)
-
-[node name="Gradients" type="Parallax2D" parent="ParallaxBackground/ParalaxZone1"]
-scroll_scale = Vector2(0, 0)
-scroll_offset = Vector2(2685, -1567)
-
-[node name="Gradient" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Gradients"]
-modulate = Color(0, 0, 0.505882, 0.403922)
-z_index = -4
-position = Vector2(941.704, 604.595)
-scale = Vector2(3.2794, 2.44921)
-texture = ExtResource("1_vmkry")
-
-[node name="Gradient4" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Gradients"]
-modulate = Color(1, 1, 1, 0.192157)
-z_index = -1
-position = Vector2(944, 615)
-scale = Vector2(3.2794, 2.44921)
-texture = ExtResource("1_vmkry")
-
-[node name="Gradient3" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Gradients"]
-modulate = Color(0.0456938, 0.594252, 0.736161, 0.403922)
-z_index = -6
-position = Vector2(941.704, 604.595)
-scale = Vector2(3.26872, 2.52872)
-texture = ExtResource("1_vmkry")
-
-[node name="Gradient2" type="Sprite2D" parent="ParallaxBackground/ParalaxZone1/Gradients"]
-modulate = Color(0, 0, 0.505882, 0.403922)
-z_index = -2
-position = Vector2(941.704, 604.595)
-scale = Vector2(3.24536, 2.52585)
-texture = ExtResource("1_vmkry")
-flip_v = true
 
 [node name="1Lobby" type="Node2D" parent="ParallaxBackground/ParalaxZone1"]
 
