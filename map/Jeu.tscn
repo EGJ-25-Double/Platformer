@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=37 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="PackedScene" uid="uid://b202yu0np10nb" path="res://map/parallax_background.tscn" id="2_7myag"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="3_gl2p0"]
@@ -26,10 +26,16 @@
 [ext_resource type="Texture2D" uid="uid://dof7er8kr1dot" path="res://ui/Menus/MainMenu/1.png" id="21_eserf"]
 [ext_resource type="Texture2D" uid="uid://cxhwe6q2k62gu" path="res://ui/Menus/MainMenu/2.png" id="22_0hub7"]
 [ext_resource type="Texture2D" uid="uid://cyi3u8rqvwl28" path="res://ui/Menus/MainMenu/3.png" id="23_lhch6"]
-[ext_resource type="Texture2D" uid="uid://c6tmdqpoyh3au" path="res://assets/posters/chien1.png" id="25_7myag"]
+[ext_resource type="Texture2D" uid="uid://cg4us648fsd2e" path="res://assets/posters/doggoCake.png" id="24_vok5r"]
+[ext_resource type="Texture2D" uid="uid://clpm70b05ycb" path="res://assets/posters/doggo_boussole.png" id="25_ffm4h"]
+[ext_resource type="Texture2D" uid="uid://bxhmn8mdsdllc" path="res://assets/posters/cleanup_poster.png" id="26_eserf"]
 [ext_resource type="Texture2D" uid="uid://bw4tq017twrt" path="res://assets/clue2-double.png" id="26_p8qqn"]
+[ext_resource type="Texture2D" uid="uid://dj1aa8jeg5o0w" path="res://assets/posters/gamer_alien.png" id="27_0hub7"]
 [ext_resource type="Texture2D" uid="uid://d2xhtdml43jdx" path="res://assets/clue4.png" id="27_dsy6r"]
+[ext_resource type="Texture2D" uid="uid://dipqrv2e5nhij" path="res://assets/posters/fall_warning_poster.png" id="28_lhch6"]
 [ext_resource type="PackedScene" uid="uid://cxt54yhtnihov" path="res://Portal/Portal.tscn" id="28_vok5r"]
+[ext_resource type="Texture2D" uid="uid://j37ew7noojmj" path="res://assets/posters/color_poster.png" id="29_w62k0"]
+[ext_resource type="Texture2D" uid="uid://dkuvlsu0mh6ra" path="res://assets/posters/pouet_spotlight.png" id="30_y5k0b"]
 
 [sub_resource type="GDScript" id="GDScript_w62k0"]
 script/source = "extends TextureRect
@@ -420,10 +426,45 @@ position = Vector2(6102, -534)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("11_p8qqn")
 
-[node name="Chien1" type="Sprite2D" parent="Clue"]
-position = Vector2(2982, -434)
-scale = Vector2(0.14, 0.14)
-texture = ExtResource("25_7myag")
+[node name="chien cake" type="Sprite2D" parent="Clue"]
+position = Vector2(2929, 544)
+scale = Vector2(0.471995, 0.471995)
+texture = ExtResource("24_vok5r")
+
+[node name="dog boussole" type="Sprite2D" parent="Clue"]
+position = Vector2(3318.93, 206.442)
+scale = Vector2(0.471995, 0.471995)
+texture = ExtResource("25_ffm4h")
+
+[node name="dog boussole2" type="Sprite2D" parent="Clue"]
+position = Vector2(3626.93, 206.442)
+scale = Vector2(0.471995, 0.471995)
+texture = ExtResource("25_ffm4h")
+
+[node name="cleanup" type="Sprite2D" parent="Clue"]
+position = Vector2(-2571, -2011)
+scale = Vector2(0.471995, 0.471995)
+texture = ExtResource("26_eserf")
+
+[node name="alien gaming" type="Sprite2D" parent="Clue"]
+position = Vector2(-5058, -1597)
+scale = Vector2(0.601623, 0.601623)
+texture = ExtResource("27_0hub7")
+
+[node name="fall" type="Sprite2D" parent="Clue"]
+position = Vector2(-4325, -2190)
+scale = Vector2(0.471995, 0.471995)
+texture = ExtResource("28_lhch6")
+
+[node name="color" type="Sprite2D" parent="Clue"]
+position = Vector2(-3881, -2077)
+scale = Vector2(0.471995, 0.471995)
+texture = ExtResource("29_w62k0")
+
+[node name="spotlight" type="Sprite2D" parent="Clue"]
+position = Vector2(-1942, 3717)
+scale = Vector2(0.471995, 0.471995)
+texture = ExtResource("30_y5k0b")
 
 [node name="Clue2-double" type="Sprite2D" parent="."]
 position = Vector2(3721, -1259)

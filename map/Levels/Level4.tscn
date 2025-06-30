@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bhrdw4rjoqr2k"]
+[gd_scene load_steps=10 format=4 uid="uid://bhrdw4rjoqr2k"]
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_0a07s"]
 [ext_resource type="PackedScene" uid="uid://cv28xrom8uhf1" path="res://Ladder/Ladder.tscn" id="2_6tffa"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://b3kq1rdrm2srj" path="res://assets/scene.png" id="5_3uecj"]
 [ext_resource type="Script" uid="uid://wiun1ls2lqap" path="res://map/Levels/scene.gd" id="6_hihk3"]
 [ext_resource type="PackedScene" uid="uid://bkcflwywxj5dl" path="res://map/CheckPoint/CheckPoint.tscn" id="7_hihk3"]
-[ext_resource type="Texture2D" uid="uid://bejwn6pxq50r4" path="res://assets/posters/mium4.png" id="8_0tp7s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3uecj"]
 size = Vector2(240, 30)
@@ -735,11 +734,6 @@ debug_color = Color(0.960478, 6.73831e-07, 0.515802, 0.42)
 
 [node name="CheckPoint" parent="." instance=ExtResource("7_hihk3")]
 position = Vector2(1631, -909)
-
-[node name="Mium4" type="Sprite2D" parent="."]
-position = Vector2(282, -1084)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_0tp7s")
 
 [connection signal="body_entered" from="Scene/Area2D" to="Scene" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Scene/Area2D" to="Scene" method="_on_area_2d_body_exited"]
