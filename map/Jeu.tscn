@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=33 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="PackedScene" uid="uid://b202yu0np10nb" path="res://map/parallax_background.tscn" id="2_7myag"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="3_gl2p0"]
@@ -13,8 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://pild07ifitmv" path="res://assets/posters/physics21.png" id="11_p8qqn"]
 [ext_resource type="PackedScene" uid="uid://b5tko8bdcr62r" path="res://map/Levels/LevelStargate.tscn" id="13_vok5r"]
 [ext_resource type="Material" uid="uid://dughalr4yr48t" path="res://assets/BG/Ground/Background.tres" id="14_8b4dd"]
+[ext_resource type="AudioStream" uid="uid://dek3y6gpl8tyx" path="res://sounds/Musique/EGJ25_Musique_Menu_V1.mp3" id="14_eserf"]
 [ext_resource type="Script" uid="uid://xn0o4hxvohn1" path="res://map/menu_pause.gd" id="14_ouisi"]
 [ext_resource type="Texture2D" uid="uid://dsiic4vmttln2" path="res://assets/posters/maytheforce.png" id="15_dsy6r"]
+[ext_resource type="PackedScene" uid="uid://c7w2pcpcy1rbm" path="res://ui/scene/ButtonWithSound.tscn" id="15_ffm4h"]
 [ext_resource type="Texture2D" uid="uid://vjbrtjwm7ly7" path="res://ui/Menus/MainMenu/mainmenu_bg_cartoonAsset 72.png" id="15_vok5r"]
 [ext_resource type="Theme" uid="uid://coiuj78tsqptn" path="res://assets/Themes/label.tres" id="16_7myag"]
 [ext_resource type="Texture2D" uid="uid://bev3cwh8ycy45" path="res://ui/Menus/MainMenu/background2.jpg" id="17_p8qqn"]
@@ -58,7 +60,6 @@ position = Vector2(-1498, 2185)
 [node name="Music" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("4_5y575")
-autoplay = true
 
 [node name="Levels" type="Node2D" parent="."]
 
@@ -98,6 +99,11 @@ offset = Vector2(-1350, -340)
 process_mode = 3
 script = ExtResource("14_ouisi")
 
+[node name="MenuMusic" type="AudioStreamPlayer" parent="MenuPause"]
+process_mode = 3
+stream = ExtResource("14_eserf")
+autoplay = true
+
 [node name="Background" type="TextureRect" parent="MenuPause"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -120,29 +126,24 @@ offset_bottom = -42.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="PlayBtn" type="Button" parent="MenuPause/VBoxContainer"]
+[node name="PlayBtn" parent="MenuPause/VBoxContainer" instance=ExtResource("15_ffm4h")]
 layout_mode = 2
-theme = ExtResource("16_7myag")
 text = "Play"
 
-[node name="HelpBtn" type="Button" parent="MenuPause/VBoxContainer"]
+[node name="HelpBtn" parent="MenuPause/VBoxContainer" instance=ExtResource("15_ffm4h")]
 layout_mode = 2
-theme = ExtResource("16_7myag")
 text = "Help"
 
-[node name="OptionsBtn" type="Button" parent="MenuPause/VBoxContainer"]
+[node name="OptionsBtn" parent="MenuPause/VBoxContainer" instance=ExtResource("15_ffm4h")]
 layout_mode = 2
-theme = ExtResource("16_7myag")
 text = "Options"
 
-[node name="CreditsBtn" type="Button" parent="MenuPause/VBoxContainer"]
+[node name="CreditsBtn" parent="MenuPause/VBoxContainer" instance=ExtResource("15_ffm4h")]
 layout_mode = 2
-theme = ExtResource("16_7myag")
 text = "Credits"
 
-[node name="QuitBtn" type="Button" parent="MenuPause/VBoxContainer"]
+[node name="QuitBtn" parent="MenuPause/VBoxContainer" instance=ExtResource("15_ffm4h")]
 layout_mode = 2
-theme = ExtResource("16_7myag")
 text = "Quit"
 
 [node name="HelpUI" type="Control" parent="MenuPause"]
@@ -165,7 +166,7 @@ texture = ExtResource("17_p8qqn")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Button" type="Button" parent="MenuPause/HelpUI"]
+[node name="Button" parent="MenuPause/HelpUI" instance=ExtResource("15_ffm4h")]
 layout_mode = 2
 offset_left = 402.222
 offset_top = 294.444
@@ -175,7 +176,7 @@ theme_override_font_sizes/font_size = 35
 text = "Go to the helping website
 "
 
-[node name="HelpBackBtn" type="Button" parent="MenuPause/HelpUI"]
+[node name="HelpBackBtn" parent="MenuPause/HelpUI" instance=ExtResource("15_ffm4h")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -188,7 +189,6 @@ offset_right = 52.0
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("16_7myag")
 text = "Back"
 
 [node name="CreditsUI" type="Control" parent="MenuPause"]
@@ -248,7 +248,7 @@ Credits to
 
 Kenney - Font assets"
 
-[node name="CreditsBackBtn" type="Button" parent="MenuPause/CreditsUI"]
+[node name="CreditsBackBtn" parent="MenuPause/CreditsUI" instance=ExtResource("15_ffm4h")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -261,7 +261,6 @@ offset_right = 38.0
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("16_7myag")
 text = "Back"
 
 [node name="OptionsUI" type="Control" parent="MenuPause"]
@@ -299,7 +298,7 @@ theme_override_font_sizes/font_size = 30
 text = "OPTIONS
 "
 
-[node name="OptionsBackBtn" type="Button" parent="MenuPause/OptionsUI"]
+[node name="OptionsBackBtn" parent="MenuPause/OptionsUI" instance=ExtResource("15_ffm4h")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -312,7 +311,6 @@ offset_right = 38.0
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("16_7myag")
 text = "Back"
 
 [node name="Control" type="Control" parent="MenuPause/OptionsUI"]
@@ -451,6 +449,7 @@ scale = Vector2(2.195, 2.195)
 connected_portal = NodePath("../Portal")
 
 [connection signal="visibility_changed" from="MenuPause" to="MenuPause" method="_on_visibility_changed"]
+[connection signal="pressed" from="MenuPause/VBoxContainer/PlayBtn" to="MenuPause" method="_on_play_btn_pressed_once" flags=6]
 [connection signal="pressed" from="MenuPause/VBoxContainer/PlayBtn" to="MenuPause" method="_on_play_btn_pressed"]
 [connection signal="pressed" from="MenuPause/VBoxContainer/HelpBtn" to="MenuPause" method="_on_help_btn_pressed"]
 [connection signal="pressed" from="MenuPause/VBoxContainer/OptionsBtn" to="MenuPause" method="_on_options_btn_pressed"]

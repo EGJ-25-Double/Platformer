@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7w2pcpcy1rbm"]
+
+[ext_resource type="Theme" uid="uid://coiuj78tsqptn" path="res://assets/Themes/label.tres" id="1_vmd68"]
+[ext_resource type="Script" uid="uid://b86cg8vmxhupn" path="res://map/btn_with_sound.gd" id="2_5mh6r"]
+[ext_resource type="AudioStream" uid="uid://oqn2sxgreoh4" path="res://sounds/UI/EGJ25_UI_Clic_V1.mp3" id="2_bhoc5"]
+[ext_resource type="AudioStream" uid="uid://bp468ojcid28g" path="res://sounds/UI/EGJ25_UI_Hover_V1.mp3" id="3_5mh6r"]
+
+[node name="ButtonWithSound" type="Button"]
+theme = ExtResource("1_vmd68")
+script = ExtResource("2_5mh6r")
+
+[node name="ClickPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bhoc5")
+bus = &"SFX"
+
+[node name="HoverPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5mh6r")
+bus = &"SFX"
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

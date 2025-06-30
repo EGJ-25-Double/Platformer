@@ -70,3 +70,7 @@ func check_if_code_is_correct():
 
 func _on_visibility_changed() -> void:
 	get_tree().paused = visible
+
+func _on_play_btn_pressed_once():
+	$MenuMusic.stop()
+	GameState.music.play()

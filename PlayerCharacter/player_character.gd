@@ -18,6 +18,7 @@ var teleport_cooldown = 5.0
 var current_skin: SkinData
 
 var can_move := true
+@onready var audio_jump_impact = %AudioJumpImpact
 
 @onready var tremor := $"JumpFeedback/Sprite2D"
 var tremor_tween: Tween
@@ -37,7 +38,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	GameState.player = self
-	tremor.hide()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("jump") and (animState == AnimState.CLIMBING or is_on_floor()):
@@ -112,3 +112,9 @@ func premature_kill_land_tremor() -> void:
 	if is_instance_valid(tremor_tween) and tremor_tween.is_running():
 		tremor_tween.kill()
 	tremor.hide()
+
+
+
+func _on_sprite_2d_visibility_changed():
+	if tremor.visible:
+		audio_jump_impact.play()

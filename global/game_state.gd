@@ -10,7 +10,7 @@ var scene_target: Node2D
 var current_checkpoint: CheckPoint
 
 @onready var skins_list = preload("res://data/Skins.tscn").instantiate() as SkinsSet
-@onready var music = get_tree().root.get_node("Jeu/Music")
+@onready var music: AudioStreamPlayer = get_tree().root.get_node("Jeu/Music")
 var skins_owned: Array[SkinData]
 
 func _ready():
