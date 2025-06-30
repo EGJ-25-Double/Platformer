@@ -562,7 +562,7 @@ scale = Vector2(2.195, 2.195)
 connected_portal = NodePath("../Portal2")
 
 [node name="Portal2" parent="." node_paths=PackedStringArray("connected_portal") instance=ExtResource("28_vok5r")]
-position = Vector2(-2301, 3892)
+position = Vector2(-875, 3239)
 scale = Vector2(2.195, 2.195)
 connected_portal = NodePath("../Portal")
 
