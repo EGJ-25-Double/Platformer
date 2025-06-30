@@ -1,16 +1,18 @@
-[gd_scene load_steps=8 format=4 uid="uid://b5tko8bdcr62r"]
+[gd_scene load_steps=10 format=4 uid="uid://b5tko8bdcr62r"]
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_4pv0d"]
 [ext_resource type="PackedScene" uid="uid://dg3iwlvof32n6" path="res://StargateKey/StargateKey.tscn" id="1_sn2vb"]
 [ext_resource type="Script" uid="uid://cwqc1gvimwogh" path="res://map/Levels/stargate.gd" id="4_860xh"]
+[ext_resource type="Texture2D" uid="uid://l6pac4dh3145" path="res://assets/Stargate_activated.png" id="4_bph7f"]
+[ext_resource type="Texture2D" uid="uid://dkq7133vq2xij" path="res://assets/Stargate_deactivated.png" id="5_4aeou"]
 [ext_resource type="Script" uid="uid://c1g0asrslhota" path="res://StargateKey/Stargate.gd" id="5_860xh"]
-[ext_resource type="Texture2D" uid="uid://dvw6xlpyn43jp" path="res://assets/Stargate_OFF.png" id="7_cl1ts"]
+[ext_resource type="Texture2D" uid="uid://dkdl6t2lqcvae" path="res://assets/Stargate_portal.png" id="5_cl1ts"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wprx6"]
-size = Vector2(240, 30)
+size = Vector2(134, 41)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ksyxr"]
-size = Vector2(239, 132)
+size = Vector2(334, 341)
 
 [node name="LevelStargate" type="Node2D"]
 
@@ -28,13 +30,23 @@ position = Vector2(563, 8)
 script = ExtResource("5_860xh")
 
 [node name="OnSprite" type="Sprite2D" parent="Stargate/Stargate"]
-position = Vector2(1, 0)
+visible = false
+position = Vector2(-50, -113)
+scale = Vector2(0.808981, 0.808981)
+texture = ExtResource("4_bph7f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stargate/Stargate/OnSprite"]
+position = Vector2(-1.23615, 3.70838)
+scale = Vector2(0.86454, 0.86454)
+texture = ExtResource("5_cl1ts")
 
 [node name="OffSprite" type="Sprite2D" parent="Stargate/Stargate"]
-texture = ExtResource("7_cl1ts")
+position = Vector2(-50.875, -114.897)
+scale = Vector2(0.794236, 0.794236)
+texture = ExtResource("5_4aeou")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stargate/Stargate"]
-position = Vector2(0, 57)
+position = Vector2(-54, 51.5)
 shape = SubResource("RectangleShape2D_wprx6")
 
 [node name="Area2D" type="Area2D" parent="Stargate/Stargate"]
@@ -42,15 +54,14 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stargate/Stargate/Area2D"]
-position = Vector2(0.5, -26)
+position = Vector2(-47, -142.5)
 shape = SubResource("RectangleShape2D_ksyxr")
 debug_color = Color(0.960478, 6.73831e-07, 0.515802, 0.42)
 
 [node name="Label" type="Label" parent="Stargate/Stargate"]
-offset_left = -53.0
-offset_top = -209.0
-offset_right = 44.0
-offset_bottom = -140.0
+offset_left = -97.0
+offset_top = -293.0
+offset_bottom = -224.0
 theme_override_font_sizes/font_size = 50
 text = "DBL"
 horizontal_alignment = 1
