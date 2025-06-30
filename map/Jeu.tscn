@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://bsi74v8i41bk7"]
+[gd_scene load_steps=38 format=4 uid="uid://bsi74v8i41bk7"]
 
 [ext_resource type="PackedScene" uid="uid://b202yu0np10nb" path="res://map/parallax_background.tscn" id="2_7myag"]
 [ext_resource type="PackedScene" uid="uid://ds3igeg01sjso" path="res://PlayerCharacter/PlayerCharacter.tscn" id="3_gl2p0"]
@@ -60,7 +60,7 @@ tile_set = ExtResource("7_xpr5j")
 [node name="BG" parent="BG" instance=ExtResource("2_7myag")]
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_gl2p0")]
-position = Vector2(-1498, 2185)
+position = Vector2(-1672, 2233)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 process_mode = 3

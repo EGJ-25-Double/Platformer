@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://b5tko8bdcr62r"]
+[gd_scene load_steps=11 format=4 uid="uid://b5tko8bdcr62r"]
 
 [ext_resource type="TileSet" uid="uid://2mojldldkpe6" path="res://map/map2.tres" id="1_4pv0d"]
 [ext_resource type="PackedScene" uid="uid://dg3iwlvof32n6" path="res://StargateKey/StargateKey.tscn" id="1_sn2vb"]
 [ext_resource type="Script" uid="uid://cwqc1gvimwogh" path="res://map/Levels/stargate.gd" id="4_860xh"]
 [ext_resource type="Texture2D" uid="uid://l6pac4dh3145" path="res://assets/Stargate_activated.png" id="4_bph7f"]
+[ext_resource type="Texture2D" uid="uid://bxvghiu74hqhp" path="res://assets/victory.png" id="4_cl1ts"]
 [ext_resource type="Texture2D" uid="uid://dkq7133vq2xij" path="res://assets/Stargate_deactivated.png" id="5_4aeou"]
 [ext_resource type="Script" uid="uid://c1g0asrslhota" path="res://StargateKey/Stargate.gd" id="5_860xh"]
 [ext_resource type="Texture2D" uid="uid://dkdl6t2lqcvae" path="res://assets/Stargate_portal.png" id="5_cl1ts"]
@@ -28,6 +29,14 @@ script = ExtResource("4_860xh")
 [node name="Stargate" type="StaticBody2D" parent="Stargate"]
 position = Vector2(563, 8)
 script = ExtResource("5_860xh")
+
+[node name="TextureRect" type="TextureRect" parent="Stargate/Stargate"]
+top_level = true
+offset_left = -193.0
+offset_top = -914.0
+offset_right = 831.0
+offset_bottom = 92.0
+texture = ExtResource("4_cl1ts")
 
 [node name="OnSprite" type="Sprite2D" parent="Stargate/Stargate"]
 visible = false
@@ -69,16 +78,16 @@ horizontal_alignment = 1
 [node name="Keys" type="Node2D" parent="Stargate"]
 
 [node name="StargateKey" parent="Stargate/Keys" instance=ExtResource("1_sn2vb")]
-position = Vector2(-390, 38)
-correct_skin = "Mickey"
+position = Vector2(-474, 41)
+correct_skin = "Mario"
 
 [node name="StargateKey2" parent="Stargate/Keys" instance=ExtResource("1_sn2vb")]
-position = Vector2(-307, 38)
-correct_skin = "Mickey"
+position = Vector2(-339, 41)
+correct_skin = "Link"
 
 [node name="StargateKey3" parent="Stargate/Keys" instance=ExtResource("1_sn2vb")]
-position = Vector2(-476, 39)
-correct_skin = "Mickey"
+position = Vector2(-210, 41)
+correct_skin = "Vador"
 
 [connection signal="body_entered" from="Stargate/Stargate/Area2D" to="Stargate/Stargate" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Stargate/Stargate/Area2D" to="Stargate/Stargate" method="_on_area_2d_body_exited"]

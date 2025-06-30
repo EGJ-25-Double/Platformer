@@ -23,4 +23,4 @@ func _input(event: InputEvent) -> void:
 	if not player_ready_to_tp and not open:
 		return
 	if event.is_action_pressed("jump"):
-		print('fini bravo') #TODO: Teleport to next level
+		$TextureRect.visible = true
